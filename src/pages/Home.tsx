@@ -45,7 +45,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           {/* Quick Stats */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-3xl font-bold text-blue-600 mb-2">3+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">3.5+</div>
               <div className="text-gray-600">Years Experience</div>
             </div>
             <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
@@ -53,7 +53,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <div className="text-gray-600">Projects Completed</div>
             </div>
             <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-3xl font-bold text-green-600 mb-2">2</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">4</div>
               <div className="text-gray-600">Languages</div>
             </div>
           </div>

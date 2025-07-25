@@ -49,6 +49,19 @@ export interface ContactInfo {
   linkedin?: string;
 }
 
+export interface SoftSkill {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  color: string;
+}
+
+export interface SkillCategory {
+  title: string;
+  skills: string[];
+  color: string;
+}
+
 export interface Translations {
   en: TranslationContent;
   ko: TranslationContent;
@@ -73,27 +86,22 @@ export interface TranslationContent {
   about: {
     title: string;
     description: string;
+    extendedDescription?: string; // Made optional since not used in current implementation
     residence: string;
     languages: string;
     residenceInfo: string;
     languageInfo: string;
-    skills: string;
-    education: string;
   };
   experience: {
     title: string;
     current: string;
     achievements: string;
-    technologies: string;
   };
   projects: {
     title: string;
     viewProject: string;
-    viewCode: string;
     techStack: string;
     role: string;
-    status: string;
-    featured: string;
   };
   contact: {
     title: string;
@@ -101,12 +109,44 @@ export interface TranslationContent {
     email: string;
     phone: string;
     location: string;
-    sendMessage: string;
   };
-  common: {
-    loading: string;
-    error: string;
-    retry: string;
-    comingSoon: string;
-  };
+}
+
+// Additional interfaces for enhanced functionality
+export interface ResumeDownloadHook {
+  downloadResume: () => void;
+  isDownloading: boolean;
+  error: string | null;
+}
+
+export interface ButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+  disabled?: boolean;
+  loading?: boolean;
+}
+
+export interface PageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export interface NavbarProps {
+  currentPage: string;
+  onPageChange: (page: string) => void;
+}
+
+// Environment variables interface
+export interface EnvVars {
+  VITE_APP_NAME?: string;
+  VITE_APP_VERSION?: string;
+  VITE_CONTACT_EMAIL?: string;
+  VITE_CONTACT_PHONE?: string;
+  VITE_GITHUB_URL?: string;
+  VITE_PORTFOLIO_URL?: string;
+  VITE_RESUME_URL?: string;
+  VITE_RESUME_FILENAME?: string;
 }
