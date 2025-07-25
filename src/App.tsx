@@ -1,35 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.tsx
+
+import { useEffect, useState } from 'react';
+import './App.css';
+import { Navbar } from './components/layout/Navbar';
+import { LanguageProvider } from './context/LanguageContext';
+import { AboutPage } from './pages/About';
+import { ContactPage } from './pages/Contact';
+import { ExperiencePage } from './pages/Experience';
+import { HomePage } from './pages/Home';
+import { ProjectsPage } from './pages/Projects';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentPage, setCurrentPage] = useState('home');
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time for smooth transitions
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <HomePage onNavigate={setCurrentPage} />;
+      case 'about':
+        return <AboutPage />;
+      case 'experience':
+        return <ExperiencePage />;
+      case 'projects':
+        return <ProjectsPage />;
+      case 'contact':
+        return <ContactPage />;
+      default:
+        return <HomePage onNavigate={setCurrentPage} />;
+    }
+  };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600 text-lg">Loading Portfolio...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <LanguageProvider>
+      <div className="min-h-screen">
+        <Navbar currentPage={currentPage} onPageChange={setCurrentPage} />
+        <main className="transition-all duration-500 ease-in-out">
+          {renderPage()}
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </LanguageProvider>
+  );
 }
 
-export default App
+export default App;
