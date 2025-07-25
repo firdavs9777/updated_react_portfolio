@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { Navbar } from './components/layout/Navbar';
-import { LanguageProvider } from './context/LanguageContext';
+import { LanguageProvider } from './context/languageContext';
 import { AboutPage } from './pages/About';
 import { ContactPage } from './pages/Contact';
 import { ExperiencePage } from './pages/Experience';
