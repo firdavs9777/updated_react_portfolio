@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Menu, X, User, Briefcase, FolderOpen, MessageCircle, Home } from 'lucide-react';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '../../context/languageContext';
 import { LanguageToggle } from '../common/LanguageToggle';
 
 interface NavbarProps {
