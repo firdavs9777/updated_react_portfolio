@@ -72,7 +72,7 @@ export const ContactPage: React.FC = () => {
     {
       icon: Globe,
       name: 'Portfolio',
-      url: 'https://davedevportfolio.com/',
+      url: 'https://firdavs.dev',
       color: 'blue'
     }
   ];

@@ -36,25 +36,61 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               {t.hero.cta}
               <ChevronRight className="w-5 h-5 ml-2" />
             </button>
-            <button className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-200 hover:-translate-y-1">
+
+            {/* Fixed Resume Download Button */}
+            <a
+              href="/Davis_resume.pdf"
+              download="Davis_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-200 hover:-translate-y-1"
+            >
               <Download className="w-5 h-5 mr-2" />
               {t.hero.resume}
-            </button>
+            </a>
           </div>
 
           {/* Quick Stats */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-3xl font-bold text-blue-600 mb-2">3.5+</div>
+            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover">
+              <div className="text-3xl font-bold text-blue-600 mb-2">3+</div>
               <div className="text-gray-600">Years Experience</div>
             </div>
-            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover">
               <div className="text-3xl font-bold text-purple-600 mb-2">6+</div>
               <div className="text-gray-600">Projects Completed</div>
             </div>
-            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-3xl font-bold text-green-600 mb-2">4</div>
+            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover">
+              <div className="text-3xl font-bold text-green-600 mb-2">2</div>
               <div className="text-gray-600">Languages</div>
+            </div>
+          </div>
+
+          {/* Resume Preview Section */}
+          <div className="mt-16 max-w-2xl mx-auto">
+            <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Professional Resume</h3>
+              <p className="text-gray-600 mb-6">
+                Download my complete resume with detailed work experience, skills, and achievements.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/Davis_resume.pdf"
+                  download="Davis_Resume.pdf"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-1"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Resume
+                </a>
+                <a
+                  href="/Davis_resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 font-semibold rounded-lg transition-all duration-200 hover:-translate-y-1"
+                >
+                  View Online
+                </a>
+              </div>
             </div>
           </div>
         </div>
