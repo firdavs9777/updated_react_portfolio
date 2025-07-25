@@ -2,7 +2,7 @@
 
 import { Github, Globe, Mail, MapPin, MessageCircle, Phone, Send } from 'lucide-react';
 import React, { useState } from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/languageContext';
 
 export const ContactPage: React.FC = () => {
   const { t } = useLanguage();

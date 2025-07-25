@@ -2,7 +2,7 @@
 
 import { Award, BookOpen, Globe, MapPin } from 'lucide-react';
 import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/languageContext';
 
 export const AboutPage: React.FC = () => {
   const { t } = useLanguage();

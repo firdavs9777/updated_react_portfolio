@@ -2,7 +2,7 @@
 
 import { ChevronRight, Download } from 'lucide-react';
 import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/languageContext';
 
 interface HomePageProps {
   onNavigate: (page: string) => void;

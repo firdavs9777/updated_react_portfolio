@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ExternalLink, Github, Calendar, User } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/languageContext';
 
 export const ProjectsPage: React.FC = () => {
   const { language, t } = useLanguage();

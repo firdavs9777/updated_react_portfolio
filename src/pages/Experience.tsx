@@ -2,7 +2,7 @@
 
 import { Award, Calendar, MapPin } from 'lucide-react';
 import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/languageContext';
 
 export const ExperiencePage: React.FC = () => {
   const { language, t } = useLanguage();
