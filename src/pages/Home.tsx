@@ -135,8 +135,16 @@ export const HomePage: React.FC = () => {
               </button>
 
               <a
-                href="/Davis_resume.pdf"
-                download="Davis_Resume.pdf"
+                href={
+                  language === "ko"
+                    ? "/davis_resume_korean.pdf"
+                    : "/Davis_resume.pdf"
+                }
+                download={
+                  language === "ko"
+                    ? "Davis_Resume_Korean.pdf"
+                    : "Davis_Resume.pdf"
+                }
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-200 hover:-translate-y-1"
