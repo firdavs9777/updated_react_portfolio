@@ -1,17 +1,17 @@
 // src/App.tsx
 
-import { useEffect, useState } from 'react';
-import './App.css';
-import { Navbar } from './components/layout/Navbar';
-import { LanguageProvider } from './context/languageContext';
-import { AboutPage } from './pages/About';
-import { ContactPage } from './pages/Contact';
-import { ExperiencePage } from './pages/Experience';
-import { HomePage } from './pages/Home';
-import { ProjectsPage } from './pages/Projects';
+import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import "./App.css";
+import { Navbar } from "./components/layout/Navbar";
+import { LanguageProvider } from "./context/languageContext";
+import { AboutPage } from "./pages/About";
+import { ContactPage } from "./pages/Contact";
+import { ExperiencePage } from "./pages/Experience";
+import { HomePage } from "./pages/Home";
+import { ProjectsPage } from "./pages/Projects";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -22,23 +22,6 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return <HomePage onNavigate={setCurrentPage} />;
-      case 'about':
-        return <AboutPage />;
-      case 'experience':
-        return <ExperiencePage />;
-      case 'projects':
-        return <ProjectsPage />;
-      case 'contact':
-        return <ContactPage />;
-      default:
-        return <HomePage onNavigate={setCurrentPage} />;
-    }
-  };
 
   if (isLoading) {
     return (
@@ -53,12 +36,21 @@ function App() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen">
-        <Navbar currentPage={currentPage} onPageChange={setCurrentPage} />
-        <main className="transition-all duration-500 ease-in-out">
-          {renderPage()}
-        </main>
-      </div>
+      <BrowserRouter>
+        <div className="min-h-screen">
+          <Navbar />
+          <main className="transition-all duration-500 ease-in-out">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/experience" element={<ExperiencePage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </main>
+        </div>
+      </BrowserRouter>
     </LanguageProvider>
   );
 }
