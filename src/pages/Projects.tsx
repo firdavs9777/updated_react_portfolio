@@ -9,6 +9,38 @@ export const ProjectsPage: React.FC = () => {
 
   const projects = [
     {
+      id: 0,
+      title:
+        language === "ko"
+          ? "HackSeoul 2025 우승 프로젝트 - StylerX"
+          : "HackSeoul 2025 Winner Project - StylerX",
+      description:
+        language === "ko"
+          ? "AI 기반 패션 추천 및 스타일 분석 플랫폼으로, 사용자의 옷장을 분석하고 최적의 코디를 제안합니다. HackSeoul 2025에서 수상한 혁신적인 팀 프로젝트입니다."
+          : "AI-powered fashion recommendation and style analysis platform that analyzes your wardrobe and suggests the best outfits. An award-winning project at HackSeoul 2025.",
+      role:
+        language === "ko"
+          ? "팀 리드 & 풀스택 개발자"
+          : "Team Lead & Full-Stack Developer",
+      year: "2025",
+      tech: [
+        "Python",
+        "FastAPI",
+        "Google Gemini AI",
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Router",
+        "MongoDB",
+        "Firebase",
+      ],
+      url: "https://github.com/AkmalMakh/StylerX",
+      github: "https://github.com/AkmalMakh/StylerX",
+      featured: true,
+      status: "completed",
+      image: "🏆",
+    },
+    {
       id: 1,
       title:
         language === "ko"
@@ -16,8 +48,8 @@ export const ProjectsPage: React.FC = () => {
           : "AI Buddy Chatbot Project",
       description:
         language === "ko"
-          ? "AI 기반 대화형 챗봇 웹 애플리케이션으로 실시간 메시징 기능과 지능형 응답 생성 기능을 제공합니다."
-          : "AI-powered conversational chatbot web application with real-time messaging capabilities and intelligent response generation.",
+          ? `AI 기반 대화형 챗봇 웹 애플리케이션으로 실시간 메시징 기능과 지능형 응답 생성 기능을 제공합니다.  Username: pinetree, Password: pinetree`
+          : "AI-powered conversational chatbot web application with real-time messaging capabilities and intelligent response generation. Username: pinetree, password: pinetree  ",
       role: language === "ko" ? "풀스택 개발자" : "Full-Stack Developer",
       year: "2024",
       tech: ["TypeScript", "React", "AI API", "WebSocket", "CSS3"],

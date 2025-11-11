@@ -25,6 +25,7 @@ export const AboutPage: React.FC = () => {
         "Next.js",
         "Nuxt.js",
         "TypeScript",
+        "React Native",
         "Flutter",
         "Tailwind CSS",
       ],

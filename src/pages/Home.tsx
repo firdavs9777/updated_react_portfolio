@@ -11,6 +11,9 @@ import {
   Sparkles,
   Github,
   Linkedin,
+  FileText,
+  Video,
+  Trophy,
 } from "lucide-react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -81,6 +84,125 @@ export const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="animate-fade-in-up">
+              <div className="mb-12 animate-fade-in-down">
+                <div className="relative inline-block">
+                  {/* Winner Badge Overlay */}
+                  <div className="absolute -top-4 -right-4 z-20">
+                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full shadow-lg animate-bounce-slow">
+                      <div className="flex items-center gap-2">
+                        <Trophy className="w-5 h-5" />
+                        <span className="font-bold text-sm">
+                          {language === "ko" ? "2등상" : "2nd Prize"}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Main Image */}
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-yellow-400 hover:scale-105 transition-transform duration-300">
+                    <img
+                      src="/hack_seoul_project.jpg"
+                      alt="HackSeoul 2025 Winner Team"
+                      className="w-full max-w-xl h-auto object-cover rounded-md"
+                    />
+
+                    {/* Image Overlay with Info */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
+                      <div className="text-white text-left">
+                        <h3 className="text-2xl font-bold mb-2">
+                          🏆 HackSeoul 2025
+                        </h3>
+                        <p className="text-sm font-medium text-yellow-300">
+                          {language === "ko"
+                            ? "AI for Real-World Impact & Future Ventures - 2등상"
+                            : "AI for Real-World Impact & Future Ventures - 2nd Prize"}
+                        </p>
+                        <p className="text-lg font-bold text-yellow-400 mt-2">
+                          ₩3,000,000
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Decorative sparkles around image */}
+                  <div className="absolute -top-2 -left-2 text-yellow-400 animate-pulse">
+                    <Sparkles className="w-8 h-8" />
+                  </div>
+                  <div
+                    className="absolute -bottom-2 -right-2 text-orange-400 animate-pulse"
+                    style={{ animationDelay: "0.5s" }}
+                  >
+                    <Sparkles className="w-8 h-8" />
+                  </div>
+                </div>
+
+                {/* Quick Links Below Image */}
+                <div className="flex flex-col items-center gap-5 justify-center mt-8">
+                  {/* Links */}
+                  <div className="flex flex-wrap gap-3 justify-center">
+                    <a
+                      href="/hackseoul_2025_project.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
+                    >
+                      <FileText className="w-4 h-4" />
+                      {language === "ko" ? "프로젝트 문서" : "Project PDF"}
+                    </a>
+
+                    <a
+                      href="https://drive.google.com/file/d/1bMCQeOvgk4OuYmLMOd3A29fCpR2FIpwB/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white text-sm font-semibold rounded-lg hover:bg-red-700 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
+                    >
+                      <Video className="w-4 h-4" />
+                      {language === "ko" ? "데모 영상" : "Demo Video"}
+                    </a>
+
+                    <a
+                      href="https://github.com/AkmalMakh/StylerX"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white text-sm font-semibold rounded-lg hover:bg-gray-900 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
+                    >
+                      <Github className="w-4 h-4" />
+                      GitHub Repo
+                    </a>
+                  </div>
+
+                  {/* Tech Stack Badges */}
+                  <div className="flex flex-wrap justify-center gap-2 mt-3">
+                    {[
+                      "Python",
+                      "FastAPI",
+                      "Google Gemini AI",
+                      "React Native",
+                      "Expo",
+                      "TypeScript",
+                      "Router",
+                      "MongoDB",
+                      "Firebase",
+                    ].map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-gradient-to-r from-blue-50 to-purple-50 text-gray-700 border border-gray-200 rounded-full text-xs font-medium shadow-sm hover:border-blue-300 hover:shadow-md transition-all duration-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Tagline */}
+                  <p className="text-sm text-gray-500 mt-2 text-center max-w-md">
+                    {language === "ko"
+                      ? "AI 기반 패션 추천 및 스타일 분석 플랫폼 – HackSeoul 2025 수상작"
+                      : "AI-powered fashion recommendation and style analysis platform — HackSeoul 2025 Winner Project"}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="animate-fade-in-up">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6 animate-bounce-slow">
                 <Sparkles className="w-4 h-4" />
@@ -137,13 +259,11 @@ export const HomePage: React.FC = () => {
               <a
                 href={
                   language === "ko"
-                    ? "/davis_resume_korean.pdf"
-                    : "/Davis_resume.pdf"
+                    ? "/resume_english.doc"
+                    : "/resume_korean.doc"
                 }
                 download={
-                  language === "ko"
-                    ? "Davis_Resume_Korean.pdf"
-                    : "Davis_Resume.pdf"
+                  language === "ko" ? "resume_english.doc" : "resume_korean.doc"
                 }
                 target="_blank"
                 rel="noopener noreferrer"
