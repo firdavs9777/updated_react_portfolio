@@ -20,6 +20,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "deploy": "NODE_OPTIONS='--max-old-space-size=2048' GENERATE_SOURCEMAP=false npm run build && sudo nginx -s reload && echo '✅ Deployed!'",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
