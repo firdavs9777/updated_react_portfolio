@@ -99,7 +99,7 @@ export const HomePage: React.FC = () => {
                   </div>
 
                   {/* Main Image */}
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-yellow-400 hover:scale-105 transition-transform duration-300">
+                  <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-yellow-400 hover:scale-105 transition-transform duration-300">
                     <img
                       src="/hack_seoul_project.jpg"
                       alt="HackSeoul 2025 Winner Team"
@@ -543,6 +543,7 @@ export const HomePage: React.FC = () => {
                   "TypeScript",
                   "Node.js",
                   "Django",
+                  "Java Spring Boot",
                   "Flutter",
                   "PostgreSQL",
                   "MongoDB",
@@ -559,7 +560,6 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Resume Section */}
             <div className="max-w-3xl mx-auto">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-2xl">
                 <h3 className="text-2xl font-bold mb-4">
@@ -572,15 +572,27 @@ export const HomePage: React.FC = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="/Davis_resume.pdf"
-                    download="Davis_Resume.pdf"
+                    href={
+                      language === "ko"
+                        ? "/resume_korean.doc"
+                        : "/resume_english.doc"
+                    }
+                    download={
+                      language === "ko"
+                        ? "resume_korean.doc"
+                        : "resume_english.doc"
+                    }
                     className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-1"
                   >
                     <Download className="w-5 h-5 mr-2" />
                     {language === "ko" ? "이력서 다운로드" : "Download Resume"}
                   </a>
                   <a
-                    href="/Davis_resume.pdf"
+                    href={
+                      language === "ko"
+                        ? "/resume_korean.doc"
+                        : "/resume_english.doc"
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-all duration-200 hover:-translate-y-1"

@@ -32,7 +32,14 @@ export const AboutPage: React.FC = () => {
     },
     {
       title: "Backend",
-      skills: ["Node.js", "Python", "Django", "AWS Lambda", "REST APIs"],
+      skills: [
+        "Node.js",
+        "Python",
+        "Django",
+        "AWS Lambda",
+        "REST APIs",
+        "Java Spring Boot",
+      ],
       color: "green",
     },
     {

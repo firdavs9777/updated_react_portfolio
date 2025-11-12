@@ -37,6 +37,7 @@ export const AboutPage: React.FC = () => {
         "Node.js",
         "Python",
         "Django",
+        "Java Spring Boot",
         "Express.js",
         "AWS Lambda",
         "REST APIs",

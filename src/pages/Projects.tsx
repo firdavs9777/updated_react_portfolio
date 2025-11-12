@@ -349,6 +349,24 @@ export const ProjectsPage: React.FC = () => {
       status: "completed",
       image: "🐍",
     },
+    {
+      id: 18,
+      title:
+        language === "ko"
+          ? "Spring Boot 백엔드 애플리케이션"
+          : "Spring Boot Backend Application",
+      description:
+        language === "ko"
+          ? "Spring Boot와 PostgreSQL을 사용한 백엔드 애플리케이션으로 REST API 엔드포인트와 데이터베이스 관리 기능을 제공합니다."
+          : "Spring Boot backend application with PostgreSQL, featuring REST API endpoints and database management capabilities.",
+      role: language === "ko" ? "백엔드 개발자" : "Backend Developer",
+      year: "2025",
+      tech: ["Java", "Spring Boot", "PostgreSQL", "REST API", "Hibernate"],
+      github: "https://github.com/firdavs9777/spring_boot_backend",
+      featured: true,
+      status: "in progress",
+      image: "☕️",
+    },
   ];
 
   const featuredProjects = projects.filter((p) => p.featured);
@@ -487,7 +505,6 @@ export const ProjectsPage: React.FC = () => {
             solutions.
           </p>
         </div>
-        {/* Tech Stack Overview Section */}
         <div className="mb-16">
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
@@ -513,6 +530,7 @@ export const ProjectsPage: React.FC = () => {
                 </p>
               </div>
 
+              {/* Mobile / App */}
               <div className="text-center p-4 bg-cyan-50 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">💎</div>
                 <p className="text-sm font-semibold text-gray-800">Flutter</p>
@@ -536,6 +554,13 @@ export const ProjectsPage: React.FC = () => {
               <div className="text-center p-4 bg-green-50 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🟢</div>
                 <p className="text-sm font-semibold text-gray-800">Node.js</p>
+              </div>
+
+              <div className="text-center p-4 bg-emerald-50 rounded-lg hover:shadow-md transition-shadow">
+                <div className="text-3xl mb-2">☕️</div>
+                <p className="text-sm font-semibold text-gray-800">
+                  Java / Spring Boot
+                </p>
               </div>
 
               <div className="text-center p-4 bg-emerald-50 rounded-lg hover:shadow-md transition-shadow">
