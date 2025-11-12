@@ -117,9 +117,6 @@ export const HomePage: React.FC = () => {
                             ? "AI for Real-World Impact & Future Ventures - 2등상"
                             : "AI for Real-World Impact & Future Ventures - 2nd Prize"}
                         </p>
-                        <p className="text-lg font-bold text-yellow-400 mt-2">
-                          ₩3,000,000
-                        </p>
                       </div>
                     </div>
                   </div>
