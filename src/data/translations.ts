@@ -9,6 +9,8 @@ export const translations: Translations = {
       about: "About",
       experience: "Experience",
       projects: "Projects",
+      certificates: "Certificates",
+      liveProjects: "Live Projects",
       contact: "Contact",
     },
     hero: {
@@ -57,6 +59,8 @@ export const translations: Translations = {
       about: "소개",
       experience: "경험",
       projects: "프로젝트",
+      certificates: "자격증",
+      liveProjects: "실제 프로젝트",
       contact: "연락처",
     },
     hero: {

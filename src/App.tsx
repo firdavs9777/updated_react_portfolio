@@ -6,9 +6,11 @@ import "./App.css";
 import { Navbar } from "./components/layout/Navbar";
 import { LanguageProvider } from "./context/languageContext";
 import { AboutPage } from "./pages/About";
+import { CertificatesPage } from "./pages/Certificates";
 import { ContactPage } from "./pages/Contact";
 import { ExperiencePage } from "./pages/Experience";
 import { HomePage } from "./pages/Home";
+import { LiveProjectsPage } from "./pages/LiveProjects";
 import { ProjectsPage } from "./pages/Projects";
 
 function App() {
@@ -45,6 +47,8 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/experience" element={<ExperiencePage />} />
               <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/certificates" element={<CertificatesPage />} />
+              <Route path="/live-projects" element={<LiveProjectsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>

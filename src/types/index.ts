@@ -73,6 +73,8 @@ export interface TranslationContent {
     about: string;
     experience: string;
     projects: string;
+    certificates: string;
+    liveProjects: string;
     contact: string;
   };
   hero: {
