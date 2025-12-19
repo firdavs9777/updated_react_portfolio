@@ -18,6 +18,7 @@ import {
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/languageContext";
+import { SEO } from "../utils/seo";
 
 export const HomePage: React.FC = () => {
   const { t, language } = useLanguage();
@@ -78,7 +79,13 @@ export const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <>
+      <SEO
+        title={t.hero.name + " - " + t.hero.title}
+        description={t.hero.subtitle}
+        url="https://firdavs.dev"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <div className="flex items-center justify-center pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -208,14 +215,14 @@ export const HomePage: React.FC = () => {
                   : "Available for New Opportunities"}
               </div>
 
-              <p className="text-lg text-gray-600 mb-4">{t.hero.greeting}</p>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">{t.hero.greeting}</p>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-6 animate-float">
                 {t.hero.name}
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
                 {t.hero.title}
               </h2>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                 {t.hero.subtitle}
               </p>
 
@@ -264,7 +271,7 @@ export const HomePage: React.FC = () => {
                 }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-200 hover:-translate-y-1"
+                className="inline-flex items-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 hover:-translate-y-1"
               >
                 <Download className="w-5 h-5 mr-2" />
                 {t.hero.resume}
@@ -272,7 +279,7 @@ export const HomePage: React.FC = () => {
 
               <button
                 onClick={() => navigate("/projects")}
-                className="inline-flex items-center px-8 py-4 bg-white text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1 border border-gray-200"
+                className="inline-flex items-center px-8 py-4 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
               >
                 {language === "ko" ? "프로젝트 보기" : "View Projects"}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -280,11 +287,11 @@ export const HomePage: React.FC = () => {
             </div>
             {/* Visa & Work Authorization Section */}
             <div className="mb-16 max-w-4xl mx-auto">
-              <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 border-2 border-green-200 shadow-lg">
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 border-2 border-green-200 dark:border-gray-700 shadow-lg">
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-green-600"
+                      className="w-6 h-6 text-green-600 dark:text-green-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -297,7 +304,7 @@ export const HomePage: React.FC = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                     {language === "ko"
                       ? "비자 및 근무 자격"
                       : "Visa & Work Authorization"}
@@ -305,15 +312,15 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-md mb-4">
+                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 rounded-full shadow-md mb-4">
                     <span className="text-3xl">🇰🇷</span>
                     <div className="text-left">
-                      <p className="text-sm text-gray-600 font-medium">
+                      <p className="text-sm text-gray-600 dark:text-gray-300 font-medium">
                         {language === "ko"
                           ? "대한민국 결혼이민 비자"
                           : "South Korea Marriage Immigrant Visa"}
                       </p>
-                      <p className="text-lg font-bold text-green-600">
+                      <p className="text-lg font-bold text-green-600 dark:text-green-400">
                         F-6{" "}
                         {language === "ko"
                           ? "(결혼이민)"
@@ -324,42 +331,42 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-4 mb-6">
-                  <div className="bg-white p-4 rounded-lg shadow-md text-center">
-                    <div className="text-green-600 text-2xl mb-2">✓</div>
-                    <p className="text-sm font-semibold text-gray-900">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+                    <div className="text-green-600 dark:text-green-400 text-2xl mb-2">✓</div>
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">
                       {language === "ko"
                         ? "즉시 근무 가능"
                         : "Immediate Availability"}
                     </p>
-                    <p className="text-xs text-gray-600 mt-1">
+                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                       {language === "ko"
                         ? "스폰서십 불필요"
                         : "No Sponsorship Required"}
                     </p>
                   </div>
 
-                  <div className="bg-white p-4 rounded-lg shadow-md text-center">
-                    <div className="text-green-600 text-2xl mb-2">✓</div>
-                    <p className="text-sm font-semibold text-gray-900">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+                    <div className="text-green-600 dark:text-green-400 text-2xl mb-2">✓</div>
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">
                       {language === "ko"
                         ? "무제한 취업 활동"
                         : "Unlimited Employment"}
                     </p>
-                    <p className="text-xs text-gray-600 mt-1">
+                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                       {language === "ko"
                         ? "직종 제한 없음"
                         : "No Job Type Restrictions"}
                     </p>
                   </div>
 
-                  <div className="bg-white p-4 rounded-lg shadow-md text-center">
-                    <div className="text-green-600 text-2xl mb-2">✓</div>
-                    <p className="text-sm font-semibold text-gray-900">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+                    <div className="text-green-600 dark:text-green-400 text-2xl mb-2">✓</div>
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">
                       {language === "ko"
                         ? "영주권 신청 가능"
                         : "Permanent Residence Eligible"}
                     </p>
-                    <p className="text-xs text-gray-600 mt-1">
+                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                       {language === "ko"
                         ? "장기 정착 가능"
                         : "Long-term Settlement"}
@@ -367,7 +374,7 @@ export const HomePage: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-center text-gray-700 font-medium">
+                <p className="text-center text-gray-700 dark:text-gray-300 font-medium">
                   {language === "ko"
                     ? "한국에서 합법적으로 취업 및 거주 가능하며, 별도의 비자 스폰서십이 필요하지 않습니다."
                     : "Legally authorized to work and reside in South Korea with no visa sponsorship required."}
@@ -376,33 +383,33 @@ export const HomePage: React.FC = () => {
             </div>
             {/* Language Skills Section */}
             <div className="mb-16">
-              <h3 className="text-3xl font-bold text-gray-900 mb-8">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
                 {language === "ko" ? "언어 능력" : "Language Proficiency"}
               </h3>
               <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 {/* English */}
-                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                   <div className="text-5xl mb-4 text-center">🇺🇸</div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-center">
                     {language === "ko" ? "영어" : "English"}
                   </h4>
                   <div className="mb-4">
                     <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium text-gray-600">
+                      <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
                         {language === "ko" ? "원어민 수준" : "Native Level"}
                       </span>
-                      <span className="text-sm font-bold text-green-600">
+                      <span className="text-sm font-bold text-green-600 dark:text-green-400">
                         100%
                       </span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                       <div
                         className="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full"
                         style={{ width: "100%" }}
                       ></div>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 text-center">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
                     {language === "ko"
                       ? "완벽한 읽기, 쓰기, 말하기 능력"
                       : "Fluent in reading, writing, and speaking"}
@@ -410,62 +417,62 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 {/* Korean */}
-                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                   <div className="text-5xl mb-4 text-center">🇰🇷</div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-center">
                     {language === "ko" ? "한국어" : "Korean"}
                   </h4>
                   <div className="mb-4">
                     <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium text-gray-600">
+                      <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
                         {language === "ko" ? "고급" : "Advanced"}
                       </span>
-                      <span className="text-sm font-bold text-blue-600">
+                      <span className="text-sm font-bold text-blue-600 dark:text-blue-400">
                         85%
                       </span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                       <div
                         className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full"
                         style={{ width: "85%" }}
                       ></div>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 text-center">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
                     {language === "ko"
                       ? "비즈니스 및 일상 대화 가능"
                       : "Business & daily conversation proficient"}
                   </p>
                   <div className="mt-3 text-center">
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+                    <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs font-medium">
                       KIIP Level 5
                     </span>
                   </div>
                 </div>
 
                 {/* Uzbek */}
-                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                   <div className="text-5xl mb-4 text-center">🇺🇿</div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-center">
                     {language === "ko" ? "우즈베크어" : "Uzbek"}
                   </h4>
                   <div className="mb-4">
                     <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium text-gray-600">
+                      <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
                         {language === "ko" ? "원어민" : "Native"}
                       </span>
-                      <span className="text-sm font-bold text-purple-600">
+                      <span className="text-sm font-bold text-purple-600 dark:text-purple-400">
                         100%
                       </span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                       <div
                         className="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full"
                         style={{ width: "100%" }}
                       ></div>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 text-center">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
                     {language === "ko"
                       ? "모국어 - 완벽한 구사 능력"
                       : "Mother tongue - Full proficiency"}
@@ -475,7 +482,7 @@ export const HomePage: React.FC = () => {
 
               {/* Additional Info */}
               <div className="mt-8 text-center">
-                <p className="text-gray-600 max-w-2xl mx-auto">
+                <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                   {language === "ko"
                     ? "다국어 능력으로 글로벌 팀과 원활하게 협업하며, 다양한 문화적 배경을 이해하고 존중합니다."
                     : "Multilingual capabilities enable seamless collaboration with global teams and appreciation for diverse cultural backgrounds."}
@@ -490,17 +497,17 @@ export const HomePage: React.FC = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+                    className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700"
                   >
                     <Icon
-                      className={`w-8 h-8 text-${item.color}-600 mx-auto mb-3`}
+                      className={`w-8 h-8 text-${item.color}-600 dark:text-${item.color}-400 mx-auto mb-3`}
                     />
                     <div
-                      className={`text-3xl font-bold text-${item.color}-600 mb-2`}
+                      className={`text-3xl font-bold text-${item.color}-600 dark:text-${item.color}-400 mb-2`}
                     >
                       {item.number}
                     </div>
-                    <div className="text-sm text-gray-600 font-medium">
+                    <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">
                       {item.label}
                     </div>
                   </div>
@@ -510,20 +517,20 @@ export const HomePage: React.FC = () => {
 
             {/* Specialties Section */}
             <div className="mb-16">
-              <h3 className="text-3xl font-bold text-gray-900 mb-8">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
                 {language === "ko" ? "전문 분야" : "What I Specialize In"}
               </h3>
               <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 {specialties.map((specialty, index) => (
                   <div
                     key={index}
-                    className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-left"
+                    className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-left"
                   >
                     <div className="text-4xl mb-4">{specialty.icon}</div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                       {specialty.title}
                     </h4>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                       {specialty.description}
                     </p>
                   </div>
@@ -532,8 +539,8 @@ export const HomePage: React.FC = () => {
             </div>
 
             {/* Tech Stack Showcase */}
-            <div className="mb-16 bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="mb-16 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 {language === "ko" ? "주요 기술 스택" : "Core Tech Stack"}
               </h3>
               <div className="flex flex-wrap justify-center gap-3">
@@ -552,7 +559,7 @@ export const HomePage: React.FC = () => {
                 ].map((tech, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-200"
+                    className="px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 hover:shadow-md transition-all duration-200"
                   >
                     {tech}
                   </span>
@@ -561,11 +568,11 @@ export const HomePage: React.FC = () => {
             </div>
 
             <div className="max-w-3xl mx-auto">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-2xl">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-700 dark:to-purple-700 rounded-2xl p-8 text-white shadow-2xl">
                 <h3 className="text-2xl font-bold mb-4">
                   {language === "ko" ? "전문 이력서" : "Professional Resume"}
                 </h3>
-                <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                <p className="text-blue-100 dark:text-blue-200 mb-6 max-w-2xl mx-auto">
                   {language === "ko"
                     ? "상세한 업무 경험, 기술 스택 및 성과가 포함된 완전한 이력서를 다운로드하세요."
                     : "Download my complete resume with detailed work experience, skills, and achievements."}
@@ -605,13 +612,13 @@ export const HomePage: React.FC = () => {
 
             {/* Call to Action */}
             <div className="mt-16 max-w-2xl mx-auto">
-              <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <div className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                   {language === "ko"
                     ? "함께 일하고 싶으신가요?"
                     : "Let's Work Together"}
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 dark:text-gray-300 mb-6">
                   {language === "ko"
                     ? "혁신적인 프로젝트에 대한 새로운 기회를 항상 환영합니다. 연락 주세요!"
                     : "I'm always open to discussing new projects and opportunities. Get in touch!"}
@@ -653,5 +660,6 @@ export const HomePage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };

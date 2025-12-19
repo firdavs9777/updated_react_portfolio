@@ -97,33 +97,33 @@ export const AboutPage: React.FC = () => {
 
   const getColorClasses = (color: string) => {
     const colors = {
-      blue: "bg-blue-100 text-blue-800 border-blue-200",
-      green: "bg-green-100 text-green-800 border-green-200",
-      purple: "bg-purple-100 text-purple-800 border-purple-200",
-      orange: "bg-orange-100 text-orange-800 border-orange-200",
+      blue: "bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 border-blue-200 dark:border-blue-800",
+      green: "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 border-green-200 dark:border-green-800",
+      purple: "bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 border-purple-200 dark:border-purple-800",
+      orange: "bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 border-orange-200 dark:border-orange-800",
     };
     return colors[color as keyof typeof colors] || colors.blue;
   };
 
   const getIconColorClasses = (color: string) => {
     const colors = {
-      blue: "text-blue-600 bg-blue-50",
-      green: "text-green-600 bg-green-50",
-      purple: "text-purple-600 bg-purple-50",
-      orange: "text-orange-600 bg-orange-50",
+      blue: "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30",
+      green: "text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/30",
+      purple: "text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30",
+      orange: "text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/30",
     };
     return colors[color as keyof typeof colors] || colors.blue;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 pt-24 pb-16">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             {t.about.title}
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded"></div>
-          <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 max-w-3xl mx-auto">
             {language === "ko"
               ? "혁신적인 솔루션을 만드는 것에 열정을 가진 풀스택 개발자"
               : "A passionate full-stack developer dedicated to creating innovative solutions"}
@@ -137,17 +137,17 @@ export const AboutPage: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div
                   className={`w-12 h-12 rounded-lg ${getIconColorClasses(highlight.color)} flex items-center justify-center mb-4`}
                 >
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                   {highlight.title}
                 </h3>
-                <p className="text-sm text-gray-600">{highlight.description}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{highlight.description}</p>
               </div>
             );
           })}
@@ -156,19 +156,19 @@ export const AboutPage: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           {/* About Text */}
           <div className="space-y-6 animate-slide-in-left">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 {language === "ko" ? "나에 대해" : "About Me"}
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 {t.about.description}
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 {language === "ko"
                   ? "사용자 중심의 디지털 솔루션을 만드는 것을 전문으로 하며, 복잡한 문제를 우아한 코드로 해결하는 것을 즐깁니다. 프론트엔드부터 백엔드까지 전체 개발 스택을 아우르는 경험을 바탕으로, 혁신적인 제품을 만들어내는 데 기여하고 있습니다."
                   : "I specialize in creating user-centric digital solutions and enjoy solving complex problems with elegant code. With experience spanning the entire development stack from frontend to backend, I contribute to building innovative products that make a real impact."}
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {language === "ko"
                   ? "현재는 새로운 도전을 모색하고 있으며, 빠르게 변화하는 기술 환경에서 지속적으로 성장하고 배우는 것을 목표로 하고 있습니다. 협업과 코드 품질에 대한 강한 신념을 가지고 있으며, 팀과 함께 최고의 결과를 만들어내는 것을 중요하게 생각합니다."
                   : "Currently seeking new opportunities where I can leverage my expertise to build exceptional products. I believe strongly in collaboration, code quality, and continuous learning in this rapidly evolving tech landscape."}
@@ -177,29 +177,29 @@ export const AboutPage: React.FC = () => {
 
             {/* Personal Info Cards */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-blue-600" />
                   {t.about.residence}
                 </h3>
-                <p className="text-gray-600 whitespace-pre-line">
+                <p className="text-gray-600 dark:text-gray-300 whitespace-pre-line">
                   {t.about.residenceInfo}
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                   <Globe className="w-5 h-5 text-purple-600" />
                   {t.about.languages}
                 </h3>
-                <p className="text-gray-600 whitespace-pre-line">
+                <p className="text-gray-600 dark:text-gray-300 whitespace-pre-line">
                   {t.about.languageInfo}
                 </p>
               </div>
             </div>
 
             {/* What I Do Best */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                 {language === "ko" ? "나의 강점" : "What I Do Best"}
               </h3>
               <ul className="space-y-3">
@@ -221,7 +221,7 @@ export const AboutPage: React.FC = () => {
                 ).map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-3 text-gray-700"
+                    className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
                   >
                     <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mt-2 flex-shrink-0"></div>
                     <span>{item}</span>
@@ -233,23 +233,23 @@ export const AboutPage: React.FC = () => {
 
           {/* Skills Section */}
           <div className="animate-slide-in-right">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               {language === "ko" ? "기술 스택" : "Technical Skills"}
             </h3>
             <div className="space-y-6">
               {skillCategories.map((category, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                  className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                     {category.title}
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className={`px-3 py-1 rounded-full text-sm font-medium border ${getColorClasses(category.color)}`}
+                        className={`px-3 py-1 rounded-full text-sm font-medium border ${getColorClasses(category.color)} dark:bg-opacity-20 dark:border-opacity-30`}
                       >
                         {skill}
                       </span>
@@ -260,8 +260,8 @@ export const AboutPage: React.FC = () => {
             </div>
 
             {/* Soft Skills */}
-            <div className="mt-6 bg-white p-6 rounded-xl shadow-lg">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">
+            <div className="mt-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 {language === "ko" ? "소프트 스킬" : "Soft Skills"}
               </h4>
               <div className="flex flex-wrap gap-2">
@@ -285,7 +285,7 @@ export const AboutPage: React.FC = () => {
                 ).map((skill, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium border border-gray-200"
+                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-600"
                   >
                     {skill}
                   </span>
@@ -296,24 +296,24 @@ export const AboutPage: React.FC = () => {
         </div>
 
         {/* Education Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 animate-fade-in-up">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-8 animate-fade-in-up">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
             <BookOpen className="w-6 h-6 text-blue-600" />
             {language === "ko" ? "학력" : "Education"}
           </h3>
           <div className="border-l-4 border-blue-600 pl-6">
-            <h4 className="text-xl font-semibold text-gray-900">
+            <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
               {language === "ko"
                 ? "컴퓨터공학 및 공학 학사"
                 : "Bachelor of Computer Science and Engineering"}
             </h4>
-            <p className="text-blue-600 font-medium">
+            <p className="text-blue-600 dark:text-blue-400 font-medium">
               {language === "ko" ? "세종대학교" : "Sejong University"}
             </p>
-            <p className="text-gray-600 mt-2">
+            <p className="text-gray-600 dark:text-gray-300 mt-2">
               {language === "ko" ? "졸업: 2022년" : "Graduated: 2022"}
             </p>
-            <p className="text-gray-600 mt-3">
+            <p className="text-gray-600 dark:text-gray-300 mt-3">
               <strong>
                 {language === "ko" ? "주요 과목:" : "Key Subjects:"}
               </strong>{" "}
@@ -325,8 +325,8 @@ export const AboutPage: React.FC = () => {
         </div>
 
         {/* Awards Section */}
-        <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl shadow-xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+        <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl shadow-xl p-8">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
             <Award className="w-6 h-6 text-yellow-600" />
             {language === "ko" ? "수상 및 자격증" : "Awards & Certifications"}
           </h3>
@@ -334,12 +334,12 @@ export const AboutPage: React.FC = () => {
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-yellow-600 rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <h4 className="font-semibold text-gray-900">
+                <h4 className="font-semibold text-gray-900 dark:text-white">
                   {language === "ko"
                     ? "KIIP 레벨 5 수료"
                     : "KIIP Level 5 Completion"}
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   {language === "ko"
                     ? "한국 이민 통합 프로그램 - 2023"
                     : "Korean Immigration & Integration Program - 2023"}
@@ -349,12 +349,12 @@ export const AboutPage: React.FC = () => {
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-yellow-600 rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <h4 className="font-semibold text-gray-900">
+                <h4 className="font-semibold text-gray-900 dark:text-white">
                   {language === "ko"
                     ? "우수 프로젝트 성과상"
                     : "Outstanding Project Achievement Award"}
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   {language === "ko"
                     ? "에브리지 월드 - 2022"
                     : "Ebridge World - 2022"}

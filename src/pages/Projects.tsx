@@ -3,6 +3,7 @@
 import React from "react";
 import { ExternalLink, Github, Calendar, User } from "lucide-react";
 import { useLanguage } from "../context/languageContext";
+import { SEO } from "../utils/seo";
 
 export const ProjectsPage: React.FC = () => {
   const { language, t } = useLanguage();
@@ -377,7 +378,7 @@ export const ProjectsPage: React.FC = () => {
     featured?: boolean;
   }> = ({ project, featured = false }) => (
     <div
-      className={`bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
+      className={`bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
         featured ? "lg:col-span-2" : ""
       }`}
     >
@@ -386,7 +387,7 @@ export const ProjectsPage: React.FC = () => {
           <div className="flex items-center gap-3">
             <span className="text-4xl">{project.image}</span>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 leading-tight">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
                 {project.title}
               </h3>
               {featured && (
@@ -413,7 +414,7 @@ export const ProjectsPage: React.FC = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-800 transition-colors p-2 hover:bg-gray-50 rounded-lg"
+                className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors p-2 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg"
                 title="View Code"
               >
                 <Github className="w-5 h-5" />
@@ -422,7 +423,7 @@ export const ProjectsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
+        <div className="flex items-center gap-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
           <div className="flex items-center gap-1">
             <User className="w-4 h-4" />
             <span>
@@ -436,19 +437,19 @@ export const ProjectsPage: React.FC = () => {
           </div>
         </div>
 
-        <p className="text-gray-700 mb-6 leading-relaxed">
+        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
           {project.description}
         </p>
 
         <div className="mb-6">
-          <h4 className="text-sm font-semibold text-gray-900 mb-2">
+          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
             {t.projects.techStack}
           </h4>
           <div className="flex flex-wrap gap-2">
             {project.tech.map((tech, techIndex) => (
               <span
                 key={techIndex}
-                className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-medium border border-green-200"
+                className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded text-xs font-medium border border-green-200 dark:border-green-800"
               >
                 {tech}
               </span>
@@ -467,7 +468,7 @@ export const ProjectsPage: React.FC = () => {
                     : "bg-gray-400"
               }`}
             ></span>
-            <span className="text-sm text-gray-600 capitalize">
+            <span className="text-sm text-gray-600 dark:text-gray-400 capitalize">
               {project.status === "in-progress" ? "In Progress" : "Completed"}
             </span>
           </div>
@@ -493,135 +494,141 @@ export const ProjectsPage: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 pt-24 pb-16">
+    <>
+      <SEO
+        title={t.projects.title}
+        description="A showcase of my recent work and contributions to innovative digital solutions."
+        url="https://firdavs.dev/projects"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             {t.projects.title}
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-blue-600 mx-auto rounded"></div>
-          <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 max-w-3xl mx-auto">
             A showcase of my recent work and contributions to innovative digital
             solutions.
           </p>
         </div>
         <div className="mb-16">
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
               {language === "ko" ? "기술 스택" : "Tech Stack"}
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {/* Frontend */}
-              <div className="text-center p-4 bg-blue-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">⚛️</div>
-                <p className="text-sm font-semibold text-gray-800">React</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">React</p>
               </div>
 
-              <div className="text-center p-4 bg-green-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">💚</div>
-                <p className="text-sm font-semibold text-gray-800">Vue.js</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Vue.js</p>
               </div>
 
-              <div className="text-center p-4 bg-blue-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">📘</div>
-                <p className="text-sm font-semibold text-gray-800">
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">
                   TypeScript
                 </p>
               </div>
 
               {/* Mobile / App */}
-              <div className="text-center p-4 bg-cyan-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-cyan-50 dark:bg-cyan-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">💎</div>
-                <p className="text-sm font-semibold text-gray-800">Flutter</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Flutter</p>
               </div>
 
-              <div className="text-center p-4 bg-purple-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">📱</div>
-                <p className="text-sm font-semibold text-gray-800">
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">
                   React Native
                 </p>
               </div>
 
-              <div className="text-center p-4 bg-teal-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-teal-50 dark:bg-teal-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🎨</div>
-                <p className="text-sm font-semibold text-gray-800">
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">
                   Tailwind CSS
                 </p>
               </div>
 
               {/* Backend */}
-              <div className="text-center p-4 bg-green-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🟢</div>
-                <p className="text-sm font-semibold text-gray-800">Node.js</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Node.js</p>
               </div>
 
-              <div className="text-center p-4 bg-emerald-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">☕️</div>
-                <p className="text-sm font-semibold text-gray-800">
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">
                   Java / Spring Boot
                 </p>
               </div>
 
-              <div className="text-center p-4 bg-emerald-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🐍</div>
-                <p className="text-sm font-semibold text-gray-800">Django</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Django</p>
               </div>
 
-              <div className="text-center p-4 bg-gray-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">⚡</div>
-                <p className="text-sm font-semibold text-gray-800">
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">
                   Express.js
                 </p>
               </div>
 
               {/* Database */}
-              <div className="text-center p-4 bg-blue-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🐘</div>
-                <p className="text-sm font-semibold text-gray-800">
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">
                   PostgreSQL
                 </p>
               </div>
 
-              <div className="text-center p-4 bg-green-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🍃</div>
-                <p className="text-sm font-semibold text-gray-800">MongoDB</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">MongoDB</p>
               </div>
 
-              <div className="text-center p-4 bg-orange-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🔥</div>
-                <p className="text-sm font-semibold text-gray-800">Firebase</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Firebase</p>
               </div>
 
-              <div className="text-center p-4 bg-blue-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🗄️</div>
-                <p className="text-sm font-semibold text-gray-800">MySQL</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">MySQL</p>
               </div>
 
-              <div className="text-center p-4 bg-red-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-red-50 dark:bg-red-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">📦</div>
-                <p className="text-sm font-semibold text-gray-800">Redis</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Redis</p>
               </div>
 
               {/* Tools & Others */}
-              <div className="text-center p-4 bg-blue-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🐳</div>
-                <p className="text-sm font-semibold text-gray-800">Docker</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Docker</p>
               </div>
 
-              <div className="text-center p-4 bg-orange-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">☁️</div>
-                <p className="text-sm font-semibold text-gray-800">AWS</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">AWS</p>
               </div>
 
-              <div className="text-center p-4 bg-purple-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🔌</div>
-                <p className="text-sm font-semibold text-gray-800">REST API</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">REST API</p>
               </div>
 
-              <div className="text-center p-4 bg-indigo-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">🔗</div>
-                <p className="text-sm font-semibold text-gray-800">WebSocket</p>
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">WebSocket</p>
               </div>
             </div>
           </div>
@@ -629,7 +636,7 @@ export const ProjectsPage: React.FC = () => {
 
         {/* Featured Projects */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center gap-2">
             <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
             Featured Projects
           </h2>
@@ -651,7 +658,7 @@ export const ProjectsPage: React.FC = () => {
 
         {/* Other Projects */}
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center gap-2">
             <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
             Other Projects
           </h2>
@@ -682,7 +689,7 @@ export const ProjectsPage: React.FC = () => {
               href="https://github.com/firdavs9777"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
             >
               <Github className="w-5 h-5" />
               View More on GitHub
@@ -691,5 +698,6 @@ export const ProjectsPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
