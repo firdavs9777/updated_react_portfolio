@@ -18,7 +18,7 @@ export const translations: Translations = {
       name: "Davis",
       title: "Full-Stack Developer & Project Manager",
       subtitle:
-        "Building innovative digital solutions with 4+ years of experience in web and mobile development",
+        "4+ years in web & mobile development | React, Vue.js, Node.js specialist | Based in Seoul | Available immediately",
       cta: "Get In Touch",
       resume: "Download Resume",
     },
@@ -68,14 +68,14 @@ export const translations: Translations = {
       name: "데이비스",
       title: "풀스택 개발자 & 프로젝트 관리자",
       subtitle:
-        "3년 이상의 웹 및 모바일 개발 경험으로 혁신적인 디지털 솔루션을 구축합니다",
+        "4년 이상의 웹 및 모바일 개발 경험 | React, Vue.js, Node.js 전문 | 한국 8년 거주 | 즉시 입사 가능",
       cta: "연락하기",
       resume: "이력서 다운로드",
     },
     about: {
       title: "소개",
       description:
-        "웹 및 모바일 애플리케이션 개발 분야에서 3년 이상의 경험을 가진 열정적인 풀스택 개발자입니다. React, Vue.js, Flutter, Node.js 등 최신 기술에 능숙하며, 사용자 친화적인 디지털 솔루션을 만들고 팀을 이끌어 혁신적인 애플리케이션을 구축하는 것을 즐깁니다. 어려운 프로젝트에서도 팀원들과 원활하게 협업하며, 뛰어난 의사소통 능력과 문제 해결 능력을 바탕으로 모든 팀에 기여합니다. 개인 개발부터 다기능 팀 리딩까지 다양한 경험을 통해 기술적 요구사항과 비즈니스 목표를 모두 만족하는 고품질 솔루션 제공에 집중하고 있습니다.",
+        "웹 및 모바일 애플리케이션 개발 분야에서 4년 이상의 경험을 가진 열정적인 풀스택 개발자입니다. React, Vue.js, Flutter, Node.js 등 최신 기술에 능숙하며, 사용자 친화적인 디지털 솔루션을 만들고 팀을 이끌어 혁신적인 애플리케이션을 구축하는 것을 즐깁니다. 어려운 프로젝트에서도 팀원들과 원활하게 협업하며, 뛰어난 의사소통 능력과 문제 해결 능력을 바탕으로 모든 팀에 기여합니다. 개인 개발부터 다기능 팀 리딩까지 다양한 경험을 통해 기술적 요구사항과 비즈니스 목표를 모두 만족하는 고품질 솔루션 제공에 집중하고 있습니다.",
       extendedDescription:
         "경력 전반에 걸쳐 다양한 시간대와 문화적 배경을 가진 팀들과 성공적으로 협업해왔으며, 적응력과 효과적인 다문화 의사소통 능력을 보여주었습니다. 훌륭한 소프트웨어는 강력한 팀워크, 명확한 의사소통, 그리고 공유된 비전을 통해 만들어진다고 믿습니다. 한국어와 영어에 능통한 이중언어 능력을 통해 의사소통의 격차를 해소하고 다문화 환경에서 원활한 프로젝트 진행을 촉진해왔습니다.",
       residence: "거주 현황",

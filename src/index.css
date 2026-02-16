@@ -426,6 +426,61 @@ html {
   }
 }
 
+/* Mobile bottom navigation safe area */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Mobile body padding for bottom nav */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 80px;
+  }
+
+  /* Improve touch targets on mobile */
+  button, a {
+    min-height: 44px;
+  }
+
+  /* Better text sizes for mobile readability */
+  .text-5xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .text-4xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+/* Fade in down animation for mobile menus */
+.animate-fade-in-down {
+  animation: fadeInDown 0.3s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Active state for touch devices */
+@media (hover: none) {
+  .active\:scale-95:active {
+    transform: scale(0.95);
+  }
+
+  .active\:scale-90:active {
+    transform: scale(0.90);
+  }
+}
+
 /* Dark mode support */
 .dark {
   --color-text: #f9fafb;

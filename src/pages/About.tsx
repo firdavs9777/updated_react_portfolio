@@ -170,8 +170,8 @@ export const AboutPage: React.FC = () => {
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {language === "ko"
-                  ? "현재는 새로운 도전을 모색하고 있으며, 빠르게 변화하는 기술 환경에서 지속적으로 성장하고 배우는 것을 목표로 하고 있습니다. 협업과 코드 품질에 대한 강한 신념을 가지고 있으며, 팀과 함께 최고의 결과를 만들어내는 것을 중요하게 생각합니다."
-                  : "Currently seeking new opportunities where I can leverage my expertise to build exceptional products. I believe strongly in collaboration, code quality, and continuous learning in this rapidly evolving tech landscape."}
+                  ? "현재 3R 이노베이션에서 풀스택 개발자로 일하며, AI 에듀테크 분야에서 학생들의 학습과 웰빙을 지원하는 기술 솔루션을 개발하고 있습니다. 협업과 코드 품질에 대한 강한 신념을 가지고 있으며, 팀과 함께 최고의 결과를 만들어내는 것을 중요하게 생각합니다."
+                  : "Currently working at 3R Innovation Inc. as a Full-Stack Developer, building technology solutions that support student learning and wellbeing in the AI EdTech space. I believe strongly in collaboration, code quality, and continuous learning in this rapidly evolving tech landscape."}
               </p>
             </div>
 

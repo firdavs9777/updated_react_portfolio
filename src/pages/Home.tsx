@@ -110,7 +110,7 @@ export const HomePage: React.FC = () => {
                     <img
                       src="/hack_seoul_project.jpg"
                       alt="HackSeoul 2025 Winner Team"
-                      className="w-full max-w-xl h-auto object-cover rounded-md"
+                      className="w-full max-w-sm h-auto object-cover rounded-md"
                     />
 
                     {/* Image Overlay with Info */}
@@ -208,11 +208,11 @@ export const HomePage: React.FC = () => {
             </div>
             <div className="animate-fade-in-up">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6 animate-bounce-slow">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-6 animate-bounce-slow">
                 <Sparkles className="w-4 h-4" />
                 {language === "ko"
-                  ? "새로운 기회를 찾고 있습니다"
-                  : "Available for New Opportunities"}
+                  ? "3R 이노베이션 풀스택 개발자"
+                  : "Full-Stack Developer @ 3R Innovation"}
               </div>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">{t.hero.greeting}</p>
@@ -227,34 +227,34 @@ export const HomePage: React.FC = () => {
               </p>
 
               {/* Social Links */}
-              <div className="flex items-center justify-center gap-4 mb-12">
+              <div className="flex items-center justify-center gap-3 sm:gap-4 mb-12 px-4 sm:px-0">
                 <a
                   href="https://github.com/firdavs9777"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
+                  className="flex items-center gap-2 px-4 sm:px-5 py-3 bg-gray-800 text-white rounded-xl hover:bg-gray-900 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 sm:hover:-translate-y-1"
                   title="GitHub Profile"
                 >
                   <Github className="w-5 h-5" />
-                  <span className="font-medium">GitHub</span>
+                  <span className="font-medium text-sm sm:text-base">GitHub</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/firdavs-mutalipov-a630ba185/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1"
+                  className="flex items-center gap-2 px-4 sm:px-5 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 sm:hover:-translate-y-1"
                   title="LinkedIn Profile"
                 >
                   <Linkedin className="w-5 h-5" />
-                  <span className="font-medium">LinkedIn</span>
+                  <span className="font-medium text-sm sm:text-base">LinkedIn</span>
                 </a>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up mb-16">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-slide-up mb-16 px-4 sm:px-0">
               <button
                 onClick={() => navigate("/contact")}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 sm:hover:-translate-y-1"
               >
                 {t.hero.cta}
                 <ChevronRight className="w-5 h-5 ml-2" />
@@ -271,7 +271,7 @@ export const HomePage: React.FC = () => {
                 }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 active:scale-95 sm:hover:-translate-y-1"
               >
                 <Download className="w-5 h-5 mr-2" />
                 {t.hero.resume}
@@ -279,7 +279,7 @@ export const HomePage: React.FC = () => {
 
               <button
                 onClick={() => navigate("/projects")}
-                className="inline-flex items-center px-8 py-4 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-4 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 sm:hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
               >
                 {language === "ko" ? "프로젝트 보기" : "View Projects"}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -330,8 +330,8 @@ export const HomePage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-4 mb-6">
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md text-center active:scale-95 transition-transform">
                     <div className="text-green-600 dark:text-green-400 text-2xl mb-2">✓</div>
                     <p className="text-sm font-semibold text-gray-900 dark:text-white">
                       {language === "ko"
@@ -345,7 +345,7 @@ export const HomePage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md text-center active:scale-95 transition-transform">
                     <div className="text-green-600 dark:text-green-400 text-2xl mb-2">✓</div>
                     <p className="text-sm font-semibold text-gray-900 dark:text-white">
                       {language === "ko"
@@ -359,7 +359,7 @@ export const HomePage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md text-center active:scale-95 transition-transform">
                     <div className="text-green-600 dark:text-green-400 text-2xl mb-2">✓</div>
                     <p className="text-sm font-semibold text-gray-900 dark:text-white">
                       {language === "ko"
@@ -491,23 +491,23 @@ export const HomePage: React.FC = () => {
             </div>
 
             {/* Highlights Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-5xl mx-auto mb-16 px-2 sm:px-0">
               {highlights.map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={index}
-                    className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700"
+                    className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 sm:hover:-translate-y-2 border border-gray-100 dark:border-gray-700"
                   >
                     <Icon
-                      className={`w-8 h-8 text-${item.color}-600 dark:text-${item.color}-400 mx-auto mb-3`}
+                      className={`w-6 sm:w-8 h-6 sm:h-8 text-${item.color}-600 dark:text-${item.color}-400 mx-auto mb-2 sm:mb-3`}
                     />
                     <div
-                      className={`text-3xl font-bold text-${item.color}-600 dark:text-${item.color}-400 mb-2`}
+                      className={`text-2xl sm:text-3xl font-bold text-${item.color}-600 dark:text-${item.color}-400 mb-1 sm:mb-2`}
                     >
                       {item.number}
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">
+                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 font-medium">
                       {item.label}
                     </div>
                   </div>
@@ -516,15 +516,15 @@ export const HomePage: React.FC = () => {
             </div>
 
             {/* Specialties Section */}
-            <div className="mb-16">
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            <div className="mb-16 px-2 sm:px-0">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8">
                 {language === "ko" ? "전문 분야" : "What I Specialize In"}
               </h3>
-              <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
                 {specialties.map((specialty, index) => (
                   <div
                     key={index}
-                    className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-left"
+                    className="bg-white dark:bg-gray-800 p-5 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 sm:hover:-translate-y-2 text-left"
                   >
                     <div className="text-4xl mb-4">{specialty.icon}</div>
                     <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">

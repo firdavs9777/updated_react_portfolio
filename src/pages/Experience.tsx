@@ -10,7 +10,7 @@ export const ExperiencePage: React.FC = () => {
   const experiences = [
     {
       id: 1,
-      company: language === "ko" ? "구직 중" : "Seeking New Opportunities",
+      company: language === "ko" ? "3R 이노베이션 주식회사" : "3R Innovation Inc.",
       position: language === "ko" ? "풀스택 개발자" : "Full-Stack Developer",
       duration:
         language === "ko" ? "2025년 10월 - 현재" : "October 2025 - Present",
@@ -35,18 +35,14 @@ export const ExperiencePage: React.FC = () => {
       achievements:
         language === "ko"
           ? [
-              "풀스택 개발 전문성을 발휘할 수 있는 새로운 기회를 찾고 있습니다. React, Vue.js, Flutter 등 최신 기술로 혁신적인 프로젝트에 기여하고 싶습니다.",
-              "백엔드부터 프론트엔드까지 전체 개발 프로세스를 이해하고 있습니다. 데이터베이스 설계부터 사용자 인터페이스 구현까지, 프로젝트의 모든 단계에서 가치를 제공할 수 있습니다.",
-              "빠르게 변화하는 기술 환경에서 새로운 도구와 프레임워크를 빠르게 학습하고 적용할 수 있습니다. 문제를 해결하는 것을 즐기며, 팀에 즉시 기여할 준비가 되어 있습니다.",
-              "다양한 프로젝트 경험을 통해 기술적 도전뿐만 아니라 비즈니스 목표를 이해하고 달성하는 것의 중요성을 배웠습니다. 코드를 넘어서 사용자와 비즈니스에 가치를 제공하는 개발자가 되고자 합니다.",
-              "협업과 소통을 중시하며, 팀의 성공을 위해 적극적으로 기여합니다. 코드 리뷰, 기술 공유, 멘토링을 통해 팀 전체의 성장에 기여하고 싶습니다.",
+              "3R 이노베이션에 풀스택 개발자로 합류하게 되어 기쁩니다. 3R 이노베이션은 센서 기반 디지털 표현형 분석과 AI 분석을 활용하여 학생들의 학습 방식을 이해하고, 집중력과 스트레스를 모니터링하며, 정신 건강을 지원하는 AI 에듀테크 스타트업입니다.",
+              "이 역할에서 확장 가능한 웹 애플리케이션을 구축하고, 학습 분석을 위한 데이터 파이프라인을 개발하며, 교육자와 학생들이 AI 기반 인사이트와 상호작용할 수 있는 직관적인 인터페이스를 만들고 있습니다.",
+              "학생들의 학습과 웰빙을 강화하는 기술 솔루션을 만들어가는 것을 기대하고 있습니다!",
             ]
           : [
-              "Seeking new opportunities where I can leverage my full-stack development expertise. Excited to contribute to innovative projects using modern technologies like React, Vue.js, and Flutter.",
-              "I understand the entire development process from backend to frontend. From database design to user interface implementation, I can add value at every stage of a project.",
-              "I thrive in fast-changing tech environments, quickly learning and applying new tools and frameworks. I enjoy solving problems and am ready to make an immediate impact on any team.",
-              "Through diverse project experiences, I've learned that understanding and achieving business goals is just as important as technical challenges. I aim to be a developer who delivers value beyond code—to users and businesses.",
-              "I value collaboration and communication, actively contributing to team success. I'm eager to help the team grow through code reviews, knowledge sharing, and mentoring.",
+              "I'm excited to share that I've joined 3R Innovation Inc. as a Full-Stack Developer. 3R Innovation is an AI EdTech startup that uses sensor-based digital phenotyping and AI analytics to understand how students learn, monitor attention and stress, and support their mental wellbeing.",
+              "In this role, I'll be building scalable web applications, developing data pipelines for learning analytics, and creating intuitive interfaces that help educators and students interact with our AI-powered insights.",
+              "Looking forward to crafting technology solutions that strengthen student learning and wellbeing!",
             ],
     },
     {
