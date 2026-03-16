@@ -1,6 +1,6 @@
 // src/types/index.ts
 
-export type Language = 'en' | 'ko';
+export type Language = 'en' | 'ko' | 'uz';
 
 export interface NavItem {
   id: string;
@@ -65,6 +65,7 @@ export interface SkillCategory {
 export interface Translations {
   en: TranslationContent;
   ko: TranslationContent;
+  uz: TranslationContent;
 }
 
 export interface TranslationContent {

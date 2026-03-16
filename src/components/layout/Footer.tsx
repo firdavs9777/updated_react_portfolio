@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/languageContext";
 
 export const Footer: React.FC = () => {
-  const { language, t } = useLanguage();
+  const { language, t, tx } = useLanguage();
 
   const currentYear = new Date().getFullYear();
 
@@ -48,12 +48,14 @@ export const Footer: React.FC = () => {
           {/* About Section */}
           <div>
             <h3 className="text-xl font-bold mb-4 gradient-text bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {language === "ko" ? "데이비스" : "Davis"}
+              {tx({ en: "Davis", ko: "데이비스", uz: "Davis" })}
             </h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              {language === "ko"
-                ? "풀스택 개발자 및 프로젝트 관리자로, 혁신적인 디지털 솔루션을 만드는 것에 열정을 가지고 있습니다."
-                : "Full-Stack Developer & Project Manager passionate about creating innovative digital solutions."}
+              {tx({
+                en: "Full-Stack Developer & Project Manager passionate about creating innovative digital solutions.",
+                ko: "풀스택 개발자 및 프로젝트 관리자로, 혁신적인 디지털 솔루션을 만드는 것에 열정을 가지고 있습니다.",
+                uz: "Innovatsion raqamli yechimlar yaratishga ishtiyoqli to'liq stekli dasturchi va loyiha boshqaruvchisi.",
+              })}
             </p>
             <div className="flex items-center gap-2 text-gray-400 text-sm">
               <MapPin className="w-4 h-4" />
@@ -64,7 +66,7 @@ export const Footer: React.FC = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-4">
-              {language === "ko" ? "빠른 링크" : "Quick Links"}
+              {tx({ en: "Quick Links", ko: "빠른 링크", uz: "Tezkor havolalar" })}
             </h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -84,7 +86,7 @@ export const Footer: React.FC = () => {
           {/* Contact & Social */}
           <div>
             <h3 className="text-xl font-bold mb-4">
-              {language === "ko" ? "연락처" : "Contact"}
+              {tx({ en: "Contact", ko: "연락처", uz: "Aloqa" })}
             </h3>
             <ul className="space-y-3 mb-6">
               <li>
@@ -130,10 +132,12 @@ export const Footer: React.FC = () => {
         <div className="border-t border-gray-700 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {currentYear} {language === "ko" ? "데이비스" : "Davis"}.{" "}
-              {language === "ko"
-                ? "모든 권리 보유"
-                : "All rights reserved."}
+              &copy; {currentYear} {tx({ en: "Davis", ko: "데이비스", uz: "Davis" })}.{" "}
+              {tx({
+                en: "All rights reserved.",
+                ko: "모든 권리 보유",
+                uz: "Barcha huquqlar himoyalangan.",
+              })}
             </p>
             <div className="flex gap-6 text-sm">
               <a
@@ -142,14 +146,14 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
               >
-                {language === "ko" ? "포트폴리오" : "Portfolio"}
+                {tx({ en: "Portfolio", ko: "포트폴리오", uz: "Portfolio" })}
               </a>
               <span className="text-gray-600">|</span>
               <Link
                 to="/contact"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
               >
-                {language === "ko" ? "연락하기" : "Contact"}
+                {tx({ en: "Contact", ko: "연락하기", uz: "Aloqa" })}
               </Link>
             </div>
           </div>
@@ -158,4 +162,3 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
-

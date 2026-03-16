@@ -14,20 +14,26 @@ import {
 import { useLanguage } from "../context/languageContext";
 
 export const LiveProjectsPage: React.FC = () => {
-  const { language, t } = useLanguage();
+  const { t, tx } = useLanguage();
 
   const liveProjects = [
     {
       id: 1,
-      title:
-        language === "ko"
-          ? "BanaTalk 언어교환 플랫폼"
-          : "BanaTalk Language Exchange Platform",
-      description:
-        language === "ko"
-          ? "전 세계 언어 학습자들을 연결하여 회화 연습과 문화 교류를 지원하는 국제 언어교환 플랫폼입니다."
-          : "International language exchange platform connecting learners worldwide for conversation practice and cultural exchange.",
-      role: language === "ko" ? "풀스택 개발자" : "Full-Stack Developer",
+      title: tx({
+        en: "BananaTalk Language Exchange App",
+        ko: "BananaTalk 언어교환 앱",
+        uz: "BananaTalk Til Almashish Ilovasi",
+      }),
+      description: tx({
+        en: "Free language exchange app connecting people with native speakers across 100+ languages — from English and Spanish to Korean, Japanese, Arabic, and beyond. No flashcards or scripted lessons — just real conversations through instant chat, voice messages, smart translation, and AI study tools. Free forever on iOS and Android, with new features every week.",
+        ko: "100개 이상의 언어를 지원하는 무료 언어교환 앱입니다. 원어민과 실시간 채팅, 음성 메시지, 스마트 번역, AI 학습 도구를 통해 실제 대화로 언어를 배울 수 있습니다. iOS와 Android에서 영원히 무료로 이용 가능하며, 매주 새로운 기능이 업데이트됩니다.",
+        uz: "100 dan ortiq tilda ona tili so'zlashuvchilar bilan bog'laydigan bepul til almashish ilovasi. Tezkor chat, ovozli xabarlar, aqlli tarjimon va AI o'quv vositalari orqali haqiqiy suhbatlar. iOS va Android'da abadiy bepul, har hafta yangi funksiyalar.",
+      }),
+      role: tx({
+        en: "Owner & Full-Stack Developer",
+        ko: "오너 & 풀스택 개발자",
+        uz: "Egasi & Full-Stack Dasturchi",
+      }),
       year: "2024",
       tech: [
         "Flutter",
@@ -46,30 +52,39 @@ export const LiveProjectsPage: React.FC = () => {
       url: "https://banatalk.com",
       iosUrl:
         "https://apps.apple.com/kr/app/bananatalk-language-exchange/id6755862146?l=en-GB",
+      androidUrl:
+        "https://play.google.com/store/apps/details?id=com.bananatalk.app",
       github: "https://github.com/firdavs9777/language_exchange_web_front",
       status: "live",
       image: "🌍",
     },
     {
       id: 2,
-      title:
-        language === "ko"
-          ? "TezSell 전자상거래 플랫폼"
-          : "TezSell E-commerce Platform",
-      description:
-        language === "ko"
-          ? "한국의 당근마켓과 유사한 우즈베키스탄 현지 마켓플레이스로, 위치 기반 서비스를 통한 개인 간 중고거래 플랫폼입니다. Flutter로 개발된 iOS 및 Android 앱이 App Store와 Google Play에서 다운로드 가능합니다."
-          : "Local marketplace platform similar to Korea's Carrot Market, enabling peer-to-peer buying and selling in Uzbekistan with location-based services. Flutter-based iOS and Android app available on App Store and Google Play.",
-      role: language === "ko" ? "리드 개발자" : "Lead Developer",
+      title: tx({
+        en: "TezSell - Neighborhood Marketplace",
+        ko: "TezSell - Mahalla Bozori",
+        uz: "TezSell - Mahalla Bozori",
+      }),
+      description: tx({
+        en: "Neighborhood marketplace app for Uzbekistan. Buy and sell items, offer services, and list real estate with your neighbors. Features direct chat, secure transactions, and is completely free. Available on both iOS and Android via App Store and Google Play.",
+        ko: "우즈베키스탄의 동네 마켓플레이스 앱입니다. 이웃과 함께 물건을 사고팔고, 서비스를 제공하며, 부동산 매물을 등록할 수 있습니다. 직접 채팅, 안전한 거래, 무료 이용이 가능합니다. Flutter로 개발된 iOS 및 Android 앱이 App Store와 Google Play에서 다운로드 가능합니다.",
+        uz: "O'zbekiston uchun mahalla bozori ilovasi. Qo'shnilaringiz bilan narsalarni sotib oling va soting, xizmatlar taklif qiling va ko'chmas mulk e'lonlarini joylashtiring. To'g'ridan-to'g'ri chat, xavfsiz tranzaksiyalar, butunlay bepul. iOS va Android'da App Store va Google Play orqali mavjud.",
+      }),
+      role: tx({
+        en: "Owner & Lead Developer",
+        ko: "오너 & 리드 개발자",
+        uz: "Egasi & Bosh Dasturchi",
+      }),
       year: "2024-2025",
       tech: [
         "Flutter",
         "Flutter Riverpod",
         "Flutter Go Router",
-        "Firebase",
         "React",
         "Django",
         "PostgreSQL",
+        "Digital Ocean",
+        "Nginx",
         "Redis",
         "REST API",
       ],
@@ -83,15 +98,21 @@ export const LiveProjectsPage: React.FC = () => {
     },
     {
       id: 3,
-      title:
-        language === "ko"
-          ? "AI Buddy 챗봇 프로젝트"
-          : "AI Buddy Chatbot Project",
-      description:
-        language === "ko"
-          ? `AI 기반 대화형 챗봇 웹 애플리케이션으로 실시간 메시징 기능과 지능형 응답 생성 기능을 제공합니다. Username: pinetree, Password: pinetree`
-          : "AI-powered conversational chatbot web application with real-time messaging capabilities and intelligent response generation. Username: pinetree, Password: pinetree",
-      role: language === "ko" ? "풀스택 개발자" : "Full-Stack Developer",
+      title: tx({
+        en: "AI Buddy Chatbot Project",
+        ko: "AI Buddy 챗봇 프로젝트",
+        uz: "AI Buddy Chatbot Loyihasi",
+      }),
+      description: tx({
+        en: "AI-powered conversational chatbot web application with real-time messaging capabilities and intelligent response generation. Username: pinetree, Password: pinetree",
+        ko: "AI 기반 대화형 챗봇 웹 애플리케이션으로 실시간 메시징 기능과 지능형 응답 생성 기능을 제공합니다. Username: pinetree, Password: pinetree",
+        uz: "Sun'iy intellektga asoslangan suhbat chatbot veb ilovasi. Real vaqtda xabar almashish va aqlli javob yaratish imkoniyatlari. Foydalanuvchi nomi: pinetree, Parol: pinetree",
+      }),
+      role: tx({
+        en: "Full-Stack Developer",
+        ko: "풀스택 개발자",
+        uz: "Full-Stack Dasturchi",
+      }),
       year: "2024",
       tech: ["TypeScript", "React", "AI API", "WebSocket", "CSS3"],
       url: "https://app-aibuddy.calsplatz.com:8000/gen-bi",
@@ -129,7 +150,7 @@ export const LiveProjectsPage: React.FC = () => {
                   )}
                   <span className="inline-flex items-center gap-1 px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full border border-green-200">
                     <Globe className="w-3 h-3" />
-                    {language === "ko" ? "라이브" : "Live"}
+                    {tx({ en: "Live", ko: "라이브", uz: "Katta" })}
                   </span>
                 </div>
               </div>
@@ -152,9 +173,11 @@ export const LiveProjectsPage: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-purple-600 hover:text-purple-800 transition-colors p-2 hover:bg-purple-50 rounded-lg"
-                  title={
-                    language === "ko" ? "iOS 앱 다운로드" : "Download iOS App"
-                  }
+                  title={tx({
+                    en: "Download iOS App",
+                    ko: "iOS 앱 다운로드",
+                    uz: "iOS ilovasini yuklab olish",
+                  })}
                 >
                   <Smartphone className="w-5 h-5" />
                 </a>
@@ -174,7 +197,7 @@ export const LiveProjectsPage: React.FC = () => {
                 <button
                   onClick={() => setShowQRCode(!showQRCode)}
                   className="text-green-600 hover:text-green-800 transition-colors p-2 hover:bg-green-50 rounded-lg"
-                  title={language === "ko" ? "QR 코드 보기" : "Show QR Code"}
+                  title={tx({ en: "Show QR Code", ko: "QR 코드 보기", uz: "QR kodni ko'rsatish" })}
                 >
                   <QrCode className="w-5 h-5" />
                 </button>
@@ -225,7 +248,7 @@ export const LiveProjectsPage: React.FC = () => {
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
               >
                 <Globe className="w-4 h-4" />
-                {language === "ko" ? "웹사이트 방문" : "Visit Website"}
+                {tx({ en: "Visit Website", ko: "웹사이트 방문", uz: "Veb-saytga tashrif buyurish" })}
                 <ExternalLink className="w-4 h-4" />
               </a>
             )}
@@ -237,7 +260,7 @@ export const LiveProjectsPage: React.FC = () => {
                 className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
               >
                 <Smartphone className="w-4 h-4" />
-                {language === "ko" ? "iOS 앱 다운로드" : "Download iOS App"}
+                {tx({ en: "Download iOS App", ko: "iOS 앱 다운로드", uz: "iOS ilovasini yuklab olish" })}
                 <ExternalLink className="w-4 h-4" />
               </a>
             )}
@@ -250,9 +273,7 @@ export const LiveProjectsPage: React.FC = () => {
                 className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
               >
                 <Smartphone className="w-4 h-4" />
-                {language === "ko"
-                  ? "Android 앱 다운로드"
-                  : "Download Android App"}
+                {tx({ en: "Download Android App", ko: "Android 앱 다운로드", uz: "Android ilovasini yuklab olish" })}
                 <ExternalLink className="w-4 h-4" />
               </a>
             )}
@@ -280,9 +301,11 @@ export const LiveProjectsPage: React.FC = () => {
                       {project.title}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    {language === "ko"
-                      ? "QR 코드를 스캔하여 iOS 앱을 다운로드하세요"
-                      : "Scan QR code to download iOS app"}
+                    {tx({
+                      en: "Scan QR code to download iOS app",
+                      ko: "QR 코드를 스캔하여 iOS 앱을 다운로드하세요",
+                      uz: "iOS ilovasini yuklab olish uchun QR kodni skanerlang",
+                    })}
                   </p>
                   <div className="bg-white p-4 rounded-lg inline-block mb-4 border-2 border-gray-200">
                     {/* API-based QR Code - No package needed! */}
@@ -300,9 +323,11 @@ export const LiveProjectsPage: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium"
                     >
-                      {language === "ko"
-                        ? "직접 링크 열기"
-                        : "Open Link Directly"}
+                      {tx({
+                        en: "Open Link Directly",
+                        ko: "직접 링크 열기",
+                        uz: "Havolani to'g'ridan-to'g'ri ochish",
+                      })}
                       <ExternalLink className="w-4 h-4" />
                     </a>
                 </div>
@@ -319,13 +344,15 @@ export const LiveProjectsPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            {language === "ko" ? "실제 프로젝트" : "Live Projects"}
+            {tx({ en: "Live Projects", ko: "실제 프로젝트", uz: "Katta Loyihalar" })}
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto rounded"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 max-w-3xl mx-auto">
-            {language === "ko"
-              ? "현재 운영 중인 프로덕션 프로젝트들을 소개합니다."
-              : "A showcase of my production projects that are currently live and serving users."}
+            {tx({
+              en: "A showcase of my production projects that are currently live and serving users.",
+              ko: "현재 운영 중인 프로덕션 프로젝트들을 소개합니다.",
+              uz: "Hozirda ishlayotgan va foydalanuvchilarga xizmat ko'rsatayotgan ishlab chiqarish loyihalarim.",
+            })}
           </p>
         </div>
 
@@ -351,9 +378,11 @@ export const LiveProjectsPage: React.FC = () => {
           <div className="text-center py-16">
             <Globe className="w-16 h-16 text-gray-400 dark:text-gray-600 mx-auto mb-4" />
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              {language === "ko"
-                ? "라이브 프로젝트 정보가 곧 추가될 예정입니다."
-                : "Live project information will be added soon."}
+              {tx({
+                en: "Live project information will be added soon.",
+                ko: "라이브 프로젝트 정보가 곧 추가될 예정입니다.",
+                uz: "Katta loyiha ma'lumotlari tez orada qo'shiladi.",
+              })}
             </p>
           </div>
         )}
@@ -362,20 +391,24 @@ export const LiveProjectsPage: React.FC = () => {
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-teal-600 dark:from-blue-700 dark:to-teal-700 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
-              {language === "ko"
-                ? "함께 작업하고 싶으신가요?"
-                : "Interested in Working Together?"}
+              {tx({
+                en: "Interested in Working Together?",
+                ko: "함께 작업하고 싶으신가요?",
+                uz: "Birga ishlashni xohlaysizmi?",
+              })}
             </h3>
             <p className="text-blue-100 dark:text-blue-200 mb-6 max-w-2xl mx-auto">
-              {language === "ko"
-                ? "새로운 도전과 혁신적인 프로젝트에 항상 열려있습니다."
-                : "I'm always excited to take on new challenges and collaborate on innovative projects."}
+              {tx({
+                en: "I'm always excited to take on new challenges and collaborate on innovative projects.",
+                ko: "새로운 도전과 혁신적인 프로젝트에 항상 열려있습니다.",
+                uz: "Men har doim yangi qiyinchiliklarni qabul qilish va innovatsion loyihalarda hamkorlik qilishga tayyorman.",
+              })}
             </p>
             <a
               href="/contact"
               className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              {language === "ko" ? "연락하기" : "Get In Touch"}
+              {tx({ en: "Get In Touch", ko: "연락하기", uz: "Bog'lanish" })}
             </a>
           </div>
         </div>

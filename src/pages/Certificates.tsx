@@ -5,80 +5,75 @@ import { Award, Calendar, ExternalLink, Clock } from "lucide-react";
 import { useLanguage } from "../context/languageContext";
 
 export const CertificatesPage: React.FC = () => {
-  const { language } = useLanguage();
+  const { language, tx } = useLanguage();
 
   const certificates = [
     {
       id: 1,
-      title:
-        language === "ko"
-          ? "React 완전정복"
-          : "Complete React Developer",
-      issuer:
-        language === "ko"
-          ? "Udemy"
-          : "Udemy",
+      title: tx({
+        en: "Complete React Developer",
+        ko: "React 완전정복",
+        uz: "To'liq React dasturchi",
+      }),
+      issuer: "Udemy",
       date: "2024",
-      description:
-        language === "ko"
-          ? "React, Redux, Hooks, Context API, GraphQL, Firebase를 포함한 완전한 React 개발자 과정을 완료했습니다."
-          : "Completed comprehensive React developer course including React, Redux, Hooks, Context API, GraphQL, and Firebase.",
+      description: tx({
+        en: "Completed comprehensive React developer course including React, Redux, Hooks, Context API, GraphQL, and Firebase.",
+        ko: "React, Redux, Hooks, Context API, GraphQL, Firebase를 포함한 완전한 React 개발자 과정을 완료했습니다.",
+        uz: "React, Redux, Hooks, Context API, GraphQL va Firebase ni o'z ichiga olgan to'liq React dasturchi kursini tamomladim.",
+      }),
       url: "#",
-      image: "🎓",
+      image: "\uD83C\uDF93",
       status: "completed",
     },
     {
       id: 2,
-      title:
-        language === "ko"
-          ? "풀스택 웹 개발"
-          : "Full Stack Web Development",
-      issuer:
-        language === "ko"
-          ? "Coursera"
-          : "Coursera",
+      title: tx({
+        en: "Full Stack Web Development",
+        ko: "풀스택 웹 개발",
+        uz: "To'liq stekli veb dasturlash",
+      }),
+      issuer: "Coursera",
       date: "2023",
-      description:
-        language === "ko"
-          ? "MERN 스택을 활용한 풀스택 웹 개발 과정을 완료했습니다."
-          : "Completed full stack web development course using MERN stack.",
+      description: tx({
+        en: "Completed full stack web development course using MERN stack.",
+        ko: "MERN 스택을 활용한 풀스택 웹 개발 과정을 완료했습니다.",
+        uz: "MERN stekidan foydalangan holda to'liq stekli veb dasturlash kursini tamomladim.",
+      }),
       url: "#",
-      image: "💻",
+      image: "\uD83D\uDCBB",
       status: "completed",
     },
     {
       id: 3,
-      title:
-        language === "ko"
-          ? "AWS 클라우드 기초"
-          : "AWS Cloud Fundamentals",
-      issuer:
-        language === "ko"
-          ? "AWS"
-          : "AWS",
+      title: tx({
+        en: "AWS Cloud Fundamentals",
+        ko: "AWS 클라우드 기초",
+        uz: "AWS bulut asoslari",
+      }),
+      issuer: "AWS",
       date: "2023",
-      description:
-        language === "ko"
-          ? "AWS 클라우드 인프라 및 서비스에 대한 기초 지식을 습득했습니다."
-          : "Acquired foundational knowledge of AWS cloud infrastructure and services.",
+      description: tx({
+        en: "Acquired foundational knowledge of AWS cloud infrastructure and services.",
+        ko: "AWS 클라우드 인프라 및 서비스에 대한 기초 지식을 습득했습니다.",
+        uz: "AWS bulut infratuzilmasi va xizmatlari bo'yicha asosiy bilimlarni egalladi.",
+      }),
       url: "#",
-      image: "☁️",
+      image: "\u2601\uFE0F",
       status: "completed",
     },
     {
       id: 4,
-      title:
-        language === "ko"
-          ? "AWS Certified Solutions Architect - Associate (SAA-C03)"
-          : "AWS Certified Solutions Architect - Associate (SAA-C03)",
+      title: "AWS Certified Solutions Architect - Associate (SAA-C03)",
       issuer: "AWS",
-      date: language === "ko" ? "준비 중" : "In Progress",
-      description:
-        language === "ko"
-          ? "AWS 클라우드 아키텍처 설계 및 배포에 대한 전문 지식을 습득하기 위해 현재 준비 중입니다. 클라우드 컴퓨팅, 인프라 설계, 보안, 비용 최적화 등 종합적인 AWS 솔루션 아키텍트 역량을 개발하고 있습니다."
-          : "Currently preparing for the AWS Certified Solutions Architect Associate certification. Developing comprehensive expertise in cloud computing, infrastructure design, security, cost optimization, and AWS solution architecture.",
+      date: tx({ en: "In Progress", ko: "준비 중", uz: "Tayyorlanmoqda" }),
+      description: tx({
+        en: "Currently preparing for the AWS Certified Solutions Architect Associate certification. Developing comprehensive expertise in cloud computing, infrastructure design, security, cost optimization, and AWS solution architecture.",
+        ko: "AWS 클라우드 아키텍처 설계 및 배포에 대한 전문 지식을 습득하기 위해 현재 준비 중입니다. 클라우드 컴퓨팅, 인프라 설계, 보안, 비용 최적화 등 종합적인 AWS 솔루션 아키텍트 역량을 개발하고 있습니다.",
+        uz: "AWS Certified Solutions Architect Associate sertifikatiga tayyorlanmoqda. Bulut hisoblash, infratuzilma dizayni, xavfsizlik, xarajatlarni optimallashtirish va AWS yechimlar arxitekturasi bo'yicha keng qamrovli tajribani rivojlantirmoqda.",
+      }),
       url: "#",
-      image: "☁️",
+      image: "\u2601\uFE0F",
       status: "in-progress",
     },
   ];
@@ -87,7 +82,7 @@ export const CertificatesPage: React.FC = () => {
     certificate: (typeof certificates)[0];
   }> = ({ certificate }) => {
     const isInProgress = certificate.status === "in-progress";
-    
+
     return (
       <div className={`bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
         isInProgress ? "ring-2 ring-orange-400 dark:ring-orange-500" : ""
@@ -103,7 +98,7 @@ export const CertificatesPage: React.FC = () => {
                 {isInProgress && (
                   <span className="inline-flex items-center gap-1 px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium border border-orange-200 dark:border-orange-800 whitespace-nowrap">
                     <Clock className="w-3 h-3" />
-                    {language === "ko" ? "준비 중" : "In Progress"}
+                    {tx({ en: "In Progress", ko: "준비 중", uz: "Tayyorlanmoqda" })}
                   </span>
                 )}
               </div>
@@ -129,7 +124,7 @@ export const CertificatesPage: React.FC = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors"
             >
-              {language === "ko" ? "인증서 보기" : "View Certificate"}
+              {tx({ en: "View Certificate", ko: "인증서 보기", uz: "Sertifikatni ko'rish" })}
               <ExternalLink className="w-4 h-4" />
             </a>
           )}
@@ -143,13 +138,19 @@ export const CertificatesPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            {language === "ko" ? "자격증 및 인증서" : "Certificates & Certifications"}
+            {tx({
+              en: "Certificates & Certifications",
+              ko: "자격증 및 인증서",
+              uz: "Sertifikatlar va malaka guvohnomalari",
+            })}
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 max-w-3xl mx-auto">
-            {language === "ko"
-              ? "제가 획득한 자격증 및 인증서를 소개합니다."
-              : "A collection of certificates and certifications I've earned throughout my career."}
+            {tx({
+              en: "A collection of certificates and certifications I've earned throughout my career.",
+              ko: "제가 획득한 자격증 및 인증서를 소개합니다.",
+              uz: "Kasbiy faoliyatim davomida olgan sertifikatlar va malaka guvohnomalarim.",
+            })}
           </p>
         </div>
 
@@ -169,9 +170,11 @@ export const CertificatesPage: React.FC = () => {
           <div className="text-center py-16">
             <Award className="w-16 h-16 text-gray-400 dark:text-gray-600 mx-auto mb-4" />
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              {language === "ko"
-                ? "자격증 정보가 곧 추가될 예정입니다."
-                : "Certificate information will be added soon."}
+              {tx({
+                en: "Certificate information will be added soon.",
+                ko: "자격증 정보가 곧 추가될 예정입니다.",
+                uz: "Sertifikat ma'lumotlari tez orada qo'shiladi.",
+              })}
             </p>
           </div>
         )}
@@ -179,4 +182,3 @@ export const CertificatesPage: React.FC = () => {
     </div>
   );
 };
-

@@ -2,7 +2,7 @@
 
 import { Project } from "../types";
 
-export const projects: Record<"en" | "ko", Project[]> = {
+export const projects: Record<"en" | "ko" | "uz", Project[]> = {
   en: [
     {
       id: "ai-buddy",
@@ -80,18 +80,21 @@ export const projects: Record<"en" | "ko", Project[]> = {
     },
     {
       id: "banatalk",
-      title: "BanaTalk Language Exchange Platform",
+      title: "BananaTalk Language Exchange App",
       description:
-        "International language exchange platform connecting learners worldwide for conversation practice and cultural exchange.",
-      role: "Full-Stack Developer",
+        "Free language exchange app connecting people with native speakers across 100+ languages. No flashcards or scripted lessons — just real conversations through instant chat, voice messages, smart translation, and AI study tools. Free forever on iOS and Android.",
+      role: "Owner & Full-Stack Developer",
       year: "2024",
       technologies: [
+        "Flutter",
         "React",
         "TypeScript",
-        "Django",
-        "PostgreSQL",
+        "Node.js",
+        "MongoDB",
+        "Redis",
         "WebRTC",
         "Socket.io",
+        "Firebase",
       ],
       url: "https://banatalk.com",
       featured: true,
@@ -99,10 +102,10 @@ export const projects: Record<"en" | "ko", Project[]> = {
     },
     {
       id: "tezsell",
-      title: "TezSell E-commerce Platform",
+      title: "TezSell - Neighborhood Marketplace",
       description:
-        "Local marketplace platform similar to Korea's Carrot Market, enabling peer-to-peer buying and selling in Uzbekistan with location-based services.",
-      role: "Lead Developer",
+        "Neighborhood marketplace app for Uzbekistan. Buy and sell items, offer services, and list real estate with your neighbors. Features direct chat, secure transactions, and is completely free. Available on iOS and Android.",
+      role: "Owner & Lead Developer",
       year: "2024-2025",
       technologies: [
         "Flutter",
@@ -110,9 +113,10 @@ export const projects: Record<"en" | "ko", Project[]> = {
         "PostgreSQL",
         "Redis",
         "REST API",
-        "Firebase",
+        "Digital Ocean",
+        "Nginx",
       ],
-      url: "https://tezsell.com",
+      url: "https://webtezsell.com",
       featured: true,
       status: "in-progress",
     },
@@ -194,18 +198,21 @@ export const projects: Record<"en" | "ko", Project[]> = {
     },
     {
       id: "banatalk",
-      title: "BanaTalk 언어교환 플랫폼",
+      title: "BananaTalk 언어교환 앱",
       description:
-        "전 세계 언어 학습자들을 연결하여 회화 연습과 문화 교류를 지원하는 국제 언어교환 플랫폼입니다.",
-      role: "풀스택 개발자",
+        "100개 이상의 언어를 지원하는 무료 언어교환 앱입니다. 원어민과 실시간 채팅, 음성 메시지, 스마트 번역, AI 학습 도구를 통해 실제 대화로 언어를 배울 수 있습니다. iOS와 Android에서 영원히 무료로 이용 가능합니다.",
+      role: "오너 & 풀스택 개발자",
       year: "2024",
       technologies: [
+        "Flutter",
         "React",
         "TypeScript",
-        "Django",
-        "PostgreSQL",
+        "Node.js",
+        "MongoDB",
+        "Redis",
         "WebRTC",
         "Socket.io",
+        "Firebase",
       ],
       url: "https://banatalk.com",
       featured: true,
@@ -213,10 +220,10 @@ export const projects: Record<"en" | "ko", Project[]> = {
     },
     {
       id: "tezsell",
-      title: "TezSell 전자상거래 플랫폼",
+      title: "TezSell - Mahalla Bozori",
       description:
-        "한국의 당근마켓과 유사한 우즈베키스탄 현지 마켓플레이스로, 위치 기반 서비스를 통한 개인 간 중고거래 플랫폼입니다.",
-      role: "리드 개발자",
+        "우즈베키스탄의 동네 마켓플레이스 앱입니다. 이웃과 함께 물건을 사고팔고, 서비스를 제공하며, 부동산 매물을 등록할 수 있습니다. 직접 채팅, 안전한 거래, 무료 이용이 가능합니다. iOS와 Android에서 다운로드 가능합니다.",
+      role: "오너 & 리드 개발자",
       year: "2024-2025",
       technologies: [
         "Flutter",
@@ -224,9 +231,128 @@ export const projects: Record<"en" | "ko", Project[]> = {
         "PostgreSQL",
         "Redis",
         "REST API",
+        "Digital Ocean",
+        "Nginx",
+      ],
+      url: "https://webtezsell.com",
+      featured: true,
+      status: "in-progress",
+    },
+  ],
+  uz: [
+    {
+      id: "ai-buddy",
+      title: "AI Buddy Chatbot Loyihasi",
+      description:
+        "Sun'iy intellektga asoslangan suhbat chatbot veb ilovasi. Real vaqtda xabar almashish va aqlli javob yaratish imkoniyatlari mavjud.",
+      role: "Full-Stack Dasturchi",
+      year: "2024",
+      technologies: ["TypeScript", "React", "AI API", "WebSocket", "CSS3"],
+      url: "https://app-aibuddy.calsplatz.com:8000/gen-bi",
+      featured: true,
+      status: "completed",
+    },
+    {
+      id: "la-airport",
+      title: "LA Xalqaro Aeroport Tizimi",
+      description:
+        "LA Xalqaro aeroporti uchun moliyaviy xizmatlar tizimi — kredit va sug'urta arizalarini qayta ishlash.",
+      role: "Loyiha Boshqaruvchisi",
+      year: "2023",
+      technologies: ["Vue.js", "TypeScript", "Node.js", "AWS Lambda", "MySQL"],
+      featured: true,
+      status: "completed",
+    },
+    {
+      id: "insurance-loan",
+      title: "Sug'urta va Kredit Boshqaruv Tizimi",
+      description:
+        "Filippindagi sug'urta va kredit xizmatlari uchun avtomatik to'lov hisoblash bilan to'liq boshqaruv tizimi.",
+      role: "Loyiha Boshqaruvchisi",
+      year: "2022",
+      technologies: [
+        "Vue.js",
+        "TypeScript",
+        "Node.js",
+        "MySQL",
+        "SQL Procedures",
+      ],
+      featured: true,
+      status: "completed",
+    },
+    {
+      id: "korean-learning",
+      title: "Koreys tili o'rganish veb-sayti",
+      description:
+        "Onlayn koreys tili o'rganish platformasi — kurs boshqaruvi va video yuklash imkoniyatlari bilan.",
+      role: "Frontend Jamoa Rahbari",
+      year: "2021-2022",
+      technologies: ["Vue.js", "TypeScript", "Django", "HTML5", "CSS3"],
+      featured: false,
+      status: "completed",
+    },
+    {
+      id: "github-search",
+      title: "GitHub Foydalanuvchi Qidiruv Loyihasi",
+      description:
+        "GitHub foydalanuvchi profili va repozitoriyalarini real vaqtda qidirish ilovasi.",
+      role: "Yakka Dasturchi",
+      year: "2023",
+      technologies: ["React", "TypeScript", "GitHub API", "CSS3"],
+      github: "https://github.com/firdavs9777/github-search",
+      featured: false,
+      status: "completed",
+    },
+    {
+      id: "coach-finder",
+      title: "Coach Finder Platformasi",
+      description:
+        "Foydalanuvchiga qulay murabbiylik xizmatlarini bron qilish platformasi.",
+      role: "Yakka Dasturchi",
+      year: "2022",
+      technologies: ["Vue.js", "TypeScript", "HTML5", "CSS3", "JavaScript"],
+      featured: false,
+      status: "completed",
+    },
+    {
+      id: "banatalk",
+      title: "BananaTalk Til Almashish Ilovasi",
+      description:
+        "100 dan ortiq tilda ona tili so'zlashuvchilar bilan bog'laydigan bepul til almashish ilovasi. Tezkor chat, ovozli xabarlar, aqlli tarjimon va AI o'quv vositalari orqali haqiqiy suhbatlar. iOS va Android'da abadiy bepul.",
+      role: "Egasi & Full-Stack Dasturchi",
+      year: "2024",
+      technologies: [
+        "Flutter",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "MongoDB",
+        "Redis",
+        "WebRTC",
+        "Socket.io",
         "Firebase",
       ],
-      url: "https://tezsell.com",
+      url: "https://banatalk.com",
+      featured: true,
+      status: "completed",
+    },
+    {
+      id: "tezsell",
+      title: "TezSell - Mahalla Bozori",
+      description:
+        "O'zbekiston uchun mahalla bozori ilovasi. Qo'shnilaringiz bilan narsalarni sotib oling va soting, xizmatlar taklif qiling va ko'chmas mulk e'lonlarini joylashtiring. To'g'ridan-to'g'ri chat, xavfsiz tranzaksiyalar, butunlay bepul.",
+      role: "Egasi & Bosh Dasturchi",
+      year: "2024-2025",
+      technologies: [
+        "Flutter",
+        "Django",
+        "PostgreSQL",
+        "Redis",
+        "REST API",
+        "Digital Ocean",
+        "Nginx",
+      ],
+      url: "https://webtezsell.com",
       featured: true,
       status: "in-progress",
     },

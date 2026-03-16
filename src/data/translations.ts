@@ -103,4 +103,54 @@ export const translations: Translations = {
       location: "위치",
     },
   },
+  uz: {
+    nav: {
+      home: "Bosh sahifa",
+      about: "Men haqimda",
+      experience: "Tajriba",
+      projects: "Loyihalar",
+      certificates: "Sertifikatlar",
+      liveProjects: "Katta Loyihalar",
+      contact: "Aloqa",
+    },
+    hero: {
+      greeting: "Assalomu alaykum, men",
+      name: "Davis",
+      title: "Full-Stack Dasturchi & Loyiha Boshqaruvchisi",
+      subtitle:
+        "4+ yillik veb va mobil dasturlash tajribasi | React, Vue.js, Node.js mutaxassisi | Seulda joylashgan | Darhol ishga tayyor",
+      cta: "Bog'lanish",
+      resume: "Rezyumeni yuklab olish",
+    },
+    about: {
+      title: "Men haqimda",
+      description:
+        "Men veb va mobil ilovalarni ishlab chiqish sohasida 4 yildan ortiq tajribaga ega ishtiyoqli full-stack dasturchiman. React, Vue.js, Flutter va Node.js kabi zamonaviy texnologiyalarda mohirman. Foydalanuvchilarga qulay raqamli yechimlar yaratish va innovatsion ilovalarni yaratish uchun jamoalarni boshqarishni yaxshi ko'raman.",
+      extendedDescription:
+        "Karera davomida turli vaqt zonalari va madaniy muhitlardagi jamoalar bilan muvaffaqiyatli hamkorlik qildim. Koreya va ingliz tillarida erkin gaplashish qobiliyatim ko'p madaniyatli muhitlarda muloqot ko'prigini yaratishga yordam berdi.",
+      residence: "Yashash holati",
+      languages: "Tillar",
+      residenceInfo:
+        "Janubiy Koreya: 8 yil\nViza: F6 (Nikoh migranti)\nHomiylik kerak emas",
+      languageInfo: "Koreys tili: Yuqori daraja (KIIP 5-daraja)\nIngliz tili: Ona tili darajasi",
+    },
+    experience: {
+      title: "Ish tajribasi",
+      current: "Hozirgi",
+      achievements: "Asosiy yutuqlar",
+    },
+    projects: {
+      title: "Asosiy loyihalar",
+      viewProject: "Loyihani ko'rish",
+      techStack: "Texnologiyalar",
+      role: "Rol",
+    },
+    contact: {
+      title: "Bog'lanish",
+      subtitle: "Keyingi loyihangiz haqida gaplashaylik",
+      email: "Elektron pochta",
+      phone: "Telefon",
+      location: "Manzil",
+    },
+  },
 };

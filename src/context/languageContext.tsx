@@ -4,10 +4,13 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import { translations } from '../data/translations';
 import { Language, TranslationContent } from '../types';
 
+type LocaleMap<T = string> = { en: T; ko: T; uz: T };
+
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: TranslationContent;
+  tx: <T = string>(map: LocaleMap<T>) => T;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -29,7 +32,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     // Get from localStorage or default to English
     try {
       const saved = localStorage.getItem('portfolio-language') as Language;
-      return saved && (saved === 'en' || saved === 'ko') ? saved : 'en';
+      return saved && (saved === 'en' || saved === 'ko' || saved === 'uz') ? saved : 'en';
     } catch {
       return 'en';
     }
@@ -47,10 +50,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     }
   }, [language]);
 
+  const tx = (map: LocaleMap) => map[language];
+
   const value: LanguageContextType = {
     language,
     setLanguage,
     t: translations[language],
+    tx,
   };
 
   return (
