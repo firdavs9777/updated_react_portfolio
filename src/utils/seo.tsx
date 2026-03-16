@@ -13,9 +13,9 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title = "Davis - Full-Stack Developer & Project Manager Portfolio",
-  description = "Professional portfolio of Davis, a passionate full-stack developer with 4+ years of experience in React, Vue.js, Flutter, and Node.js. Based in Seoul, South Korea.",
-  keywords = "Davis, Full-Stack Developer, React, Vue.js, Flutter, Node.js, TypeScript, Seoul, South Korea, Portfolio, Web Developer, Mobile Developer, Project Manager",
+  title = "Firdavs Mutalipov (Davis) - Full-Stack Developer | BananaTalk | TezSell",
+  description = "Firdavs Mutalipov (Davis) — Full-Stack Developer & Project Manager. Creator of BananaTalk and TezSell. 4+ years in React, Vue.js, Flutter, Node.js. Seoul, South Korea. | Фирдавс Муталипов — разработчик | Firdavs Mutalipov — dasturchi",
+  keywords = "Firdavs Mutalipov, Davis, Firdavs, Mutalipov, Full-Stack Developer, React, Vue.js, Flutter, Node.js, TypeScript, Seoul, South Korea, Portfolio, Web Developer, Mobile Developer, Project Manager, BananaTalk, TezSell, Mahalla Bozori, language exchange, marketplace, Uzbekistan, uzbek developer, dasturchi, o'zbek dasturchi, veb dasturchi, mobil ilova, Фирдавс Муталипов, узбекский разработчик, разработчик приложений, фулл стек разработчик, программист, 개발자, 풀스택 개발자, HackSeoul, Sejong University",
   image = "https://firdavs.dev/og-image.jpg",
   url = "https://firdavs.dev",
   type = "website",
@@ -38,8 +38,11 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Davis Portfolio" />
+      <meta property="og:site_name" content="Firdavs Mutalipov Portfolio" />
       <meta property="og:locale" content="en_US" />
+      <meta property="og:locale:alternate" content="ko_KR" />
+      <meta property="og:locale:alternate" content="uz_UZ" />
+      <meta property="og:locale:alternate" content="ru_RU" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
