@@ -25,9 +25,9 @@ export const translations: Translations = {
     about: {
       title: "About Me",
       description:
-        "I am a passionate full-stack developer with 4+ years of experience in web and mobile application development. Skilled in modern technologies including React, Vue.js, Flutter, and Node.js, I enjoy creating user-friendly digital solutions and leading teams to build innovative applications. I excel at working collaboratively in challenging projects, bringing strong communication skills and a problem-solving mindset to every team I join. My experience spans from solo development to leading cross-functional teams, always focusing on delivering high-quality solutions that meet both technical requirements and business objectives.",
+        "Full-stack developer with 4+ years of experience in web and mobile application development using Vue.js, React, Node.js, Django, and Flutter. I have built financial service platforms for LAX International Airport and insurance/loan management systems for the Philippines market, serving as both developer and project manager overseeing the full lifecycle from planning to deployment.",
       extendedDescription:
-        "Throughout my career, I have successfully collaborated with diverse teams across different time zones and cultural backgrounds, demonstrating adaptability and effective cross-cultural communication. I believe that great software is built through strong teamwork, clear communication, and shared vision. My bilingual proficiency in Korean and English has enabled me to bridge communication gaps and facilitate smooth project execution in multicultural environments.",
+        "I have deep experience with Vue.js, MySQL, REST API design, and complex business logic implementation including commission calculations, workflow automation, and multi-role permission systems. I have led teams of 4-5 developers across multinational environments (Korea, USA, Philippines). Currently developing 'TezSell,' a marketplace app built with Flutter and launched on both App Store and Play Store, and 'BananaTalk,' a language exchange platform serving users in 100+ languages. Winner of 2nd place at HackSeoul 2025 with an AI clothing color-matching app.",
       residence: "Residence Status",
       languages: "Languages",
       residenceInfo:
@@ -73,16 +73,16 @@ export const translations: Translations = {
       resume: "이력서 다운로드",
     },
     about: {
-      title: "소개",
+      title: "자기소개",
       description:
-        "웹 및 모바일 애플리케이션 개발 분야에서 4년 이상의 경험을 가진 열정적인 풀스택 개발자입니다. React, Vue.js, Flutter, Node.js 등 최신 기술에 능숙하며, 사용자 친화적인 디지털 솔루션을 만들고 팀을 이끌어 혁신적인 애플리케이션을 구축하는 것을 즐깁니다. 어려운 프로젝트에서도 팀원들과 원활하게 협업하며, 뛰어난 의사소통 능력과 문제 해결 능력을 바탕으로 모든 팀에 기여합니다. 개인 개발부터 다기능 팀 리딩까지 다양한 경험을 통해 기술적 요구사항과 비즈니스 목표를 모두 만족하는 고품질 솔루션 제공에 집중하고 있습니다.",
+        "Vue.js, React, Node.js, Django, Flutter를 활용한 4년 이상의 풀스택 웹/앱 개발 경력을 보유한 개발자입니다. LA 국제공항 금융 서비스 플랫폼과 필리핀 보험/대출 관리 시스템을 개발했으며, 프로젝트 매니저로서 기획부터 배포까지 전 과정을 담당한 경험이 있습니다.",
       extendedDescription:
-        "경력 전반에 걸쳐 다양한 시간대와 문화적 배경을 가진 팀들과 성공적으로 협업해왔으며, 적응력과 효과적인 다문화 의사소통 능력을 보여주었습니다. 훌륭한 소프트웨어는 강력한 팀워크, 명확한 의사소통, 그리고 공유된 비전을 통해 만들어진다고 믿습니다. 한국어와 영어에 능통한 이중언어 능력을 통해 의사소통의 격차를 해소하고 다문화 환경에서 원활한 프로젝트 진행을 촉진해왔습니다.",
+        "Vue.js와 MySQL을 활용한 개발 경험이 풍부하며, REST API 설계와 복잡한 비즈니스 로직 구현(수수료 자동 계산, 워크플로우 자동화, 다중 사용자 역할 관리)에 강점이 있습니다. 4~5명 개발팀 리더십 경험과 다국적 팀(한국, 미국, 필리핀) 협업 경험을 보유하고 있습니다. 현재 Flutter로 개발한 'TezSell' 중고거래 앱을 App Store 및 Play Store에 정식 출시하여 운영 중이며, 'BananaTalk' 언어 교환 플랫폼을 React로 개발하고 있습니다. HackSeoul 2025에서 AI 의류 색상 매칭 앱으로 2위를 수상했습니다.",
       residence: "거주 현황",
       languages: "언어 능력",
       residenceInfo:
-        "한국 거주: 8년\n비자: F6 (결혼이민비자)\n스폰서십) 불필요",
-      languageInfo: "한국어: 고급 (KIIP 5단계 수료)\n영어: 네이티브 수준",
+        "한국 거주: 8년\n비자: F6 (결혼이민비자)\n스폰서십 불필요",
+      languageInfo: "한국어: 고급 (KIIP 5단계 수료)\n영어: 원어민 수준",
     },
     experience: {
       title: "주요 경험",
@@ -125,9 +125,9 @@ export const translations: Translations = {
     about: {
       title: "Men haqimda",
       description:
-        "Men veb va mobil ilovalarni ishlab chiqish sohasida 4 yildan ortiq tajribaga ega ishtiyoqli full-stack dasturchiman. React, Vue.js, Flutter va Node.js kabi zamonaviy texnologiyalarda mohirman. Foydalanuvchilarga qulay raqamli yechimlar yaratish va innovatsion ilovalarni yaratish uchun jamoalarni boshqarishni yaxshi ko'raman.",
+        "Vue.js, React, Node.js, Django va Flutter yordamida 4 yildan ortiq veb va mobil ilovalar ishlab chiqish tajribasiga ega full-stack dasturchiman. LA xalqaro aeroporti uchun moliyaviy xizmatlar platformasi va Filippin bozori uchun sug'urta/kredit boshqaruv tizimini ishlab chiqdim. Loyiha menejeri sifatida rejalashtrishdan tortib deploy qilishgacha butun jarayonni boshqardim.",
       extendedDescription:
-        "Karera davomida turli vaqt zonalari va madaniy muhitlardagi jamoalar bilan muvaffaqiyatli hamkorlik qildim. Koreya va ingliz tillarida erkin gaplashish qobiliyatim ko'p madaniyatli muhitlarda muloqot ko'prigini yaratishga yordam berdi.",
+        "Vue.js va MySQL bilan chuqur tajribaga egaman, REST API loyihalash va murakkab biznes mantiqini amalga oshirishda (komissiya hisoblash, ish oqimini avtomatlashtirish, ko'p rollli foydalanuvchi boshqaruvi) kuchli tomonlarim bor. 4-5 nafar dasturchilar jamoasini xalqaro muhitda (Koreya, AQSh, Filippin) boshqargan tajribam bor. Hozirda Flutter bilan yaratilgan 'TezSell' bozor ilovasi App Store va Play Store da chop etilgan va faol ishlayapti, 'BananaTalk' til almashish platformasini React bilan ishlab chiqyapman. HackSeoul 2025 da AI kiyim rang moslash ilovasi bilan 2-o'rinni qo'lga kiritdim.",
       residence: "Yashash holati",
       languages: "Tillar",
       residenceInfo:

@@ -1,6 +1,14 @@
 // src/pages/ExperiencePage.tsx
 
-import { Award, Calendar, MapPin, Zap, Users, Target, Code2 } from "lucide-react";
+import {
+  Award,
+  Calendar,
+  MapPin,
+  Zap,
+  Users,
+  Target,
+  Code2,
+} from "lucide-react";
 import React from "react";
 import { useLanguage } from "../context/languageContext";
 
@@ -10,10 +18,26 @@ export const ExperiencePage: React.FC = () => {
   const experiences = [
     {
       id: 1,
-      company: tx({ en: "3R Innovation Inc.", ko: "3R 이노베이션 주식회사", uz: "3R Innovation Inc." }),
-      position: tx({ en: "Full-Stack Developer", ko: "풀스택 개발자", uz: "To'liq stekli dasturchi" }),
-      duration: tx({ en: "October 2025 - Present", ko: "2025년 10월 - 현재", uz: "2025-yil oktyabr - Hozirgi" }),
-      location: tx({ en: "Seoul, South Korea", ko: "서울, 대한민국", uz: "Seul, Janubiy Koreya" }),
+      company: tx({
+        en: "3R Innovation Inc.",
+        ko: "3R 이노베이션 주식회사",
+        uz: "3R Innovation Inc.",
+      }),
+      position: tx({
+        en: "Full-Stack Developer",
+        ko: "풀스택 개발자",
+        uz: "To'liq stekli dasturchi",
+      }),
+      duration: tx({
+        en: "January 2025 - Present",
+        ko: "2026년 01월 - 현재",
+        uz: "2025-yil Yanvar - Hozirgi",
+      }),
+      location: tx({
+        en: "Seoul, South Korea",
+        ko: "서울, 대한민국",
+        uz: "Seul, Janubiy Koreya",
+      }),
       current: true,
       tech: [
         "React",
@@ -33,28 +57,44 @@ export const ExperiencePage: React.FC = () => {
       ],
       achievements: tx({
         en: [
-          "I'm excited to share that I've joined 3R Innovation Inc. as a Full-Stack Developer. 3R Innovation is an AI EdTech startup that uses sensor-based digital phenotyping and AI analytics to understand how students learn, monitor attention and stress, and support their mental wellbeing.",
-          "In this role, I'll be building scalable web applications, developing data pipelines for learning analytics, and creating intuitive interfaces that help educators and students interact with our AI-powered insights.",
-          "Looking forward to crafting technology solutions that strengthen student learning and wellbeing!",
+          "Designed and developed RESTful APIs for an AI-based EdTech platform using Node.js and Express, handling sensor data collection and real-time learning analytics for 500+ concurrent users.",
+          "Architected data pipelines and optimized database schemas across PostgreSQL and MongoDB, reducing query response time by 40% and enabling scalable storage of student behavioral data.",
+          "Built responsive front-end interfaces with React and Next.js (SSR/SSG), and established CI/CD pipelines on AWS (EC2, S3, CloudFront) to achieve zero-downtime deployments.",
         ],
         ko: [
-          "3R 이노베이션에 풀스택 개발자로 합류하게 되어 기쁩니다. 3R 이노베이션은 센서 기반 디지털 표현형 분석과 AI 분석을 활용하여 학생들의 학습 방식을 이해하고, 집중력과 스트레스를 모니터링하며, 정신 건강을 지원하는 AI 에듀테크 스타트업입니다.",
-          "이 역할에서 확장 가능한 웹 애플리케이션을 구축하고, 학습 분석을 위한 데이터 파이프라인을 개발하며, 교육자와 학생들이 AI 기반 인사이트와 상호작용할 수 있는 직관적인 인터페이스를 만들고 있습니다.",
-          "학생들의 학습과 웰빙을 강화하는 기술 솔루션을 만들어가는 것을 기대하고 있습니다!",
+          "Node.js, Express 기반 AI 에듀테크 플랫폼의 RESTful API를 설계 및 개발하여, 센서 데이터 수집과 실시간 학습 분석 기능을 구현하고 동시 접속자 500명 이상의 트래픽을 안정적으로 처리했습니다.",
+          "PostgreSQL과 MongoDB를 활용한 데이터 파이프라인 설계 및 DB 스키마 최적화를 수행하여, 쿼리 응답 시간을 40% 단축하고 학생 행동 데이터의 확장 가능한 저장 구조를 구축했습니다.",
+          "React, Next.js(SSR/SSG)를 활용한 반응형 프론트엔드를 개발하고, AWS(EC2, S3, CloudFront) 기반 CI/CD 파이프라인을 구축하여 무중단 배포 환경을 운영하고 있습니다.",
         ],
         uz: [
-          "3R Innovation Inc. ga to'liq stekli dasturchi sifatida qo'shilganimni xursandchilik bilan e'lon qilaman. 3R Innovation - bu sensor asosidagi raqamli fenotiplash va AI tahlillaridan foydalanib, talabalarning qanday o'rganishini tushunish, diqqat va stressni kuzatish hamda ruhiy salomatlikni qo'llab-quvvatlaydigan AI EdTech startapi.",
-          "Bu lavozimda kengaytiriladigan veb ilovalarni yarataman, o'quv tahlillari uchun ma'lumotlar quvurlarini ishlab chiqaman va o'qituvchilar hamda talabalarga AI asosidagi tushunchalar bilan ishlashga yordam beradigan intuitiv interfeyslarni yarataman.",
-          "Talabalarning o'qishi va farovonligini mustahkamlaydigan texnologik yechimlarni yaratishni intiqlik bilan kutaman!",
+          "Node.js va Express yordamida AI asosidagi EdTech platformasi uchun RESTful API larni loyihalab ishlab chiqdim — sensor ma'lumotlarini yig'ish va real vaqtda o'quv tahlillarini amalga oshirib, 500+ bir vaqtda foydalanuvchi trafigini barqaror boshqardim.",
+          "PostgreSQL va MongoDB bo'yicha ma'lumotlar quvurlari va DB sxemalarini optimallashtirib, so'rov javob vaqtini 40% ga qisqartirdim va talabalar xulq-atvor ma'lumotlarini kengaytiriladigan tarzda saqlash tizimini yaratdim.",
+          "React va Next.js (SSR/SSG) bilan moslashuvchan frontend interfeyslarni yaratdim, AWS (EC2, S3, CloudFront) asosida CI/CD quvurlarini o'rnatib, uzilishsiz deploy muhitini ta'minladim.",
         ],
       }),
     },
     {
       id: 2,
-      company: tx({ en: "Quintet Systems Co., Ltd.", ko: "퀸텟시스템즈 주식회사", uz: "Quintet Systems Co., Ltd." }),
-      position: tx({ en: "Full-Stack Web Developer", ko: "풀스택 웹 개발자", uz: "To'liq stekli veb dasturchi" }),
-      duration: tx({ en: "Mar 2023 - October 2025", ko: "2023년 3월 - 2025년 10월", uz: "2023-yil mart - 2025-yil oktyabr" }),
-      location: tx({ en: "Seoul, South Korea", ko: "서울, 대한민국", uz: "Seul, Janubiy Koreya" }),
+      company: tx({
+        en: "Quintet Systems Co., Ltd.",
+        ko: "퀸텟시스템즈 주식회사",
+        uz: "Quintet Systems Co., Ltd.",
+      }),
+      position: tx({
+        en: "Full-Stack Web Developer",
+        ko: "풀스택 웹 개발자",
+        uz: "To'liq stekli veb dasturchi",
+      }),
+      duration: tx({
+        en: "Mar 2023 - October 2025",
+        ko: "2023년 3월 - 2025년 10월",
+        uz: "2023-yil mart - 2025-yil oktyabr",
+      }),
+      location: tx({
+        en: "Seoul, South Korea",
+        ko: "서울, 대한민국",
+        uz: "Seul, Janubiy Koreya",
+      }),
       current: false,
       tech: [
         "Nuxt.js",
@@ -101,10 +141,26 @@ export const ExperiencePage: React.FC = () => {
     },
     {
       id: 3,
-      company: tx({ en: "Ebridge World Co., Ltd.", ko: "에브리지 월드 주식회사", uz: "Ebridge World Co., Ltd." }),
-      position: tx({ en: "Web Frontend Developer", ko: "웹 프론트엔드 개발자", uz: "Veb frontend dasturchi" }),
-      duration: tx({ en: "2021 - 2023", ko: "2021년 - 2023년", uz: "2021 - 2023" }),
-      location: tx({ en: "Seoul, South Korea", ko: "서울, 대한민국", uz: "Seul, Janubiy Koreya" }),
+      company: tx({
+        en: "Ebridge World Co., Ltd.",
+        ko: "에브리지 월드 주식회사",
+        uz: "Ebridge World Co., Ltd.",
+      }),
+      position: tx({
+        en: "Web Frontend Developer",
+        ko: "웹 프론트엔드 개발자",
+        uz: "Veb frontend dasturchi",
+      }),
+      duration: tx({
+        en: "2021 - 2023",
+        ko: "2021년 - 2023년",
+        uz: "2021 - 2023",
+      }),
+      location: tx({
+        en: "Seoul, South Korea",
+        ko: "서울, 대한민국",
+        uz: "Seul, Janubiy Koreya",
+      }),
       current: false,
       tech: ["Flutter", "Vue.js", "Django", "Python", "Provider", "Bloc"],
       achievements: tx({
@@ -153,7 +209,11 @@ export const ExperiencePage: React.FC = () => {
         <div className="mb-16">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 shadow-xl">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              {tx({ en: "What I Bring", ko: "제가 가져다 드리는 것", uz: "Men nima taklif qilaman" })}
+              {tx({
+                en: "What I Bring",
+                ko: "제가 가져다 드리는 것",
+                uz: "Men nima taklif qilaman",
+              })}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
@@ -161,7 +221,11 @@ export const ExperiencePage: React.FC = () => {
                   <Code2 className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                  {tx({ en: "Full-Stack Expertise", ko: "풀스택 전문성", uz: "To'liq stekli tajriba" })}
+                  {tx({
+                    en: "Full-Stack Expertise",
+                    ko: "풀스택 전문성",
+                    uz: "To'liq stekli tajriba",
+                  })}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {tx({
@@ -177,7 +241,11 @@ export const ExperiencePage: React.FC = () => {
                   <Users className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                  {tx({ en: "Collaboration-Focused", ko: "협업 중심", uz: "Hamkorlikka yo'naltirilgan" })}
+                  {tx({
+                    en: "Collaboration-Focused",
+                    ko: "협업 중심",
+                    uz: "Hamkorlikka yo'naltirilgan",
+                  })}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {tx({
@@ -193,7 +261,11 @@ export const ExperiencePage: React.FC = () => {
                   <Zap className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                  {tx({ en: "Quick Learner", ko: "빠른 학습자", uz: "Tez o'rganuvchi" })}
+                  {tx({
+                    en: "Quick Learner",
+                    ko: "빠른 학습자",
+                    uz: "Tez o'rganuvchi",
+                  })}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {tx({
@@ -209,7 +281,11 @@ export const ExperiencePage: React.FC = () => {
                   <Target className="w-6 h-6 text-orange-600 dark:text-orange-400" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                  {tx({ en: "Problem Solver", ko: "문제 해결자", uz: "Muammolarni hal qiluvchi" })}
+                  {tx({
+                    en: "Problem Solver",
+                    ko: "문제 해결자",
+                    uz: "Muammolarni hal qiluvchi",
+                  })}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {tx({
@@ -264,7 +340,11 @@ export const ExperiencePage: React.FC = () => {
 
               <div className="mb-6">
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                  {tx({ en: "Technologies Used", ko: "사용 기술", uz: "Foydalanilgan texnologiyalar" })}
+                  {tx({
+                    en: "Technologies Used",
+                    ko: "사용 기술",
+                    uz: "Foydalanilgan texnologiyalar",
+                  })}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {exp.tech.map((tech, techIndex) => (
@@ -304,7 +384,11 @@ export const ExperiencePage: React.FC = () => {
           <div className="inline-flex items-center gap-4 bg-white dark:bg-gray-800 px-6 py-3 rounded-full shadow-lg">
             <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
             <span className="text-gray-600 dark:text-gray-300 font-medium">
-              {tx({ en: "Career Journey", ko: "커리어 여정", uz: "Karyera sayohati" })}
+              {tx({
+                en: "Career Journey",
+                ko: "커리어 여정",
+                uz: "Karyera sayohati",
+              })}
             </span>
             <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
           </div>

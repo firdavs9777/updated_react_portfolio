@@ -17,6 +17,7 @@ export default {
         'pulse-slow': 'pulse 3s infinite',
         'float': 'float 3s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        'shimmer': 'shimmer 2s infinite',
       },
       keyframes: {
         fadeIn: {
@@ -46,6 +47,10 @@ export default {
         glow: {
           '0%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
           '100%': { boxShadow: '0 0 30px rgba(147, 51, 234, 0.7)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         }
       },
       colors: {

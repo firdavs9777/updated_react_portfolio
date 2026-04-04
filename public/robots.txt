@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://firdavs.dev/sitemap.xml

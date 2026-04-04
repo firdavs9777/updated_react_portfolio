@@ -129,9 +129,9 @@ export const AboutPage: React.FC = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 max-w-3xl mx-auto">
             {tx({
-              en: "A passionate full-stack developer dedicated to creating innovative solutions",
-              ko: "혁신적인 솔루션을 만드는 것에 열정을 가진 풀스택 개발자",
-              uz: "Innovatsion yechimlar yaratishga bag'ishlangan ishtiyoqli to'liq stekli dasturchi",
+              en: "Full-Stack Developer | Vue.js, React, Node.js, Flutter, Django | Available for hire",
+              ko: "풀스택 개발자 | Vue.js, React, Node.js, Flutter, Django | 즉시 입사 가능",
+              uz: "Full-Stack Dasturchi | Vue.js, React, Node.js, Flutter, Django | Ishga tayyor",
             })}
           </p>
         </div>
@@ -170,17 +170,13 @@ export const AboutPage: React.FC = () => {
                 {t.about.description}
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                {tx({
-                  en: "I specialize in creating user-centric digital solutions and enjoy solving complex problems with elegant code. With experience spanning the entire development stack from frontend to backend, I contribute to building innovative products that make a real impact.",
-                  ko: "사용자 중심의 디지털 솔루션을 만드는 것을 전문으로 하며, 복잡한 문제를 우아한 코드로 해결하는 것을 즐깁니다. 프론트엔드부터 백엔드까지 전체 개발 스택을 아우르는 경험을 바탕으로, 혁신적인 제품을 만들어내는 데 기여하고 있습니다.",
-                  uz: "Foydalanuvchiga yo'naltirilgan raqamli yechimlar yaratishga ixtisoslashganman va murakkab muammolarni nafis kod bilan hal qilishdan zavqlanaman. Frontend dan backend gacha bo'lgan butun ishlab chiqish stekidagi tajribam asosida, haqiqiy ta'sir ko'rsatadigan innovatsion mahsulotlarni yaratishga hissa qo'shaman.",
-                })}
+                {t.about.extendedDescription}
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {tx({
-                  en: "Currently working at 3R Innovation Inc. as a Full-Stack Developer, building technology solutions that support student learning and wellbeing in the AI EdTech space. I believe strongly in collaboration, code quality, and continuous learning in this rapidly evolving tech landscape.",
-                  ko: "현재 3R 이노베이션에서 풀스택 개발자로 일하며, AI 에듀테크 분야에서 학생들의 학습과 웰빙을 지원하는 기술 솔루션을 개발하고 있습니다. 협업과 코드 품질에 대한 강한 신념을 가지고 있으며, 팀과 함께 최고의 결과를 만들어내는 것을 중요하게 생각합니다.",
-                  uz: "Hozirda 3R Innovation Inc. da to'liq stekli dasturchi sifatida ishlayman, AI EdTech sohasida talabalarning o'qishi va farovonligini qo'llab-quvvatlaydigan texnologik yechimlar yarataman. Tez rivojlanayotgan texnologiya landshaftida hamkorlik, kod sifati va doimiy o'rganishga qat'iy ishonaman.",
+                  en: "8 years residing in South Korea with F-6 visa (no sponsorship required). KIIP Level 5 certified — fully capable of business communication in Korean. Currently at 3R Innovation Inc., building AI-powered EdTech solutions. Seeking stable, long-term opportunities where I can contribute immediately.",
+                  ko: "한국 거주 8년차, F-6 비자 소지(스폰서십 불필요). KIIP 5단계 수료로 한국어 업무 소통이 원활합니다. 현재 3R 이노베이션에서 AI 에듀테크 솔루션을 개발하고 있으며, 안정적인 환경에서 즉시 기여할 수 있는 장기 근무 기회를 찾고 있습니다.",
+                  uz: "Janubiy Koreyada 8 yildan beri yashab kelaman, F-6 vizasi (homiylik kerak emas). KIIP 5-daraja sertifikatiga ega — koreys tilida ishga doir muloqot qila olaman. Hozirda 3R Innovation da AI EdTech yechimlari ishlab chiqyapman. Barqaror va uzoq muddatli ish imkoniyatlarini qidirmoqdaman.",
                 })}
               </p>
             </div>
@@ -210,30 +206,33 @@ export const AboutPage: React.FC = () => {
             {/* What I Do Best */}
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                {tx({ en: "What I Do Best", ko: "나의 강점", uz: "Eng yaxshi qiladigan ishlarim" })}
+                {tx({ en: "Core Competencies", ko: "핵심 역량", uz: "Asosiy ko'nikmalar" })}
               </h3>
               <ul className="space-y-3">
                 {(tx({
                   en: [
-                    "Building scalable and maintainable web applications",
-                    "Implementing RESTful APIs and microservices architecture",
-                    "Performance optimization and code refactoring",
-                    "Cross-platform mobile app development (Flutter, React Native)",
-                    "Leading teams and mentoring developers for project success",
+                    "Frontend: Vue.js, Nuxt.js, React, Next.js, Flutter — built financial platforms, marketplace apps, and learning management systems",
+                    "Backend: Node.js, Express, Django, AWS Lambda — RESTful API design, JWT auth, serverless architecture, SQL Stored Procedures",
+                    "Database: MySQL, PostgreSQL, MongoDB — schema design, query optimization, location-based search, real-time data processing",
+                    "Mobile: Flutter cross-platform apps published on App Store & Play Store (TezSell) with real-time chat, payments, and push notifications",
+                    "Project Management: Led 4-5 dev teams, multinational collaboration (Korea/USA/Philippines), full lifecycle from planning to deployment",
+                    "DevOps: Docker, AWS (EC2, S3, CloudFront, Lambda), CI/CD pipelines, production app maintenance and monitoring",
                   ],
                   ko: [
-                    "확장 가능하고 유지보수가 용이한 웹 애플리케이션 설계 및 개발",
-                    "RESTful API 및 마이크로서비스 아키텍처 구현",
-                    "성능 최적화 및 코드 리팩토링을 통한 품질 개선",
-                    "크로스 플랫폼 모바일 애플리케이션 개발 (Flutter, React Native)",
-                    "팀 협업 및 기술 멘토링으로 프로젝트 성공 주도",
+                    "프론트엔드: Vue.js, Nuxt.js, React, Next.js, Flutter — 금융 서비스 플랫폼, 마켓플레이스, 학습 관리 시스템 개발",
+                    "백엔드: Node.js, Express, Django, AWS Lambda — RESTful API 설계, JWT 인증, 서버리스 아키텍처, SQL Stored Procedures 작성",
+                    "데이터베이스: MySQL, PostgreSQL, MongoDB — 스키마 설계, 쿼리 최적화, 위치 기반 검색, 실시간 데이터 처리",
+                    "모바일: Flutter 크로스플랫폼 앱 개발 및 App Store/Play Store 출시(TezSell) — 실시간 채팅, 결제 연동, 푸시 알림 구현",
+                    "프로젝트 관리: 4~5명 개발팀 리더십, 다국적 팀(한국/미국/필리핀) 협업, 기획부터 배포까지 전 과정 담당",
+                    "DevOps: Docker, AWS(EC2, S3, CloudFront, Lambda), CI/CD 파이프라인 구축, 프로덕션 앱 운영 및 모니터링",
                   ],
                   uz: [
-                    "Kengaytiriladigan va texnik xizmat ko'rsatish oson bo'lgan veb ilovalarni loyihalash va ishlab chiqish",
-                    "RESTful API va mikroservislar arxitekturasini joriy etish",
-                    "Samaradorlikni optimallashtirish va kodni qayta ishlash orqali sifatni yaxshilash",
-                    "Kross-platformali mobil ilovalarni ishlab chiqish (Flutter, React Native)",
-                    "Jamoaviy hamkorlik va texnik mentorlik orqali loyiha muvaffaqiyatini ta'minlash",
+                    "Frontend: Vue.js, Nuxt.js, React, Next.js, Flutter — moliyaviy platformalar, bozor ilovalari va o'quv boshqaruv tizimlari yaratilgan",
+                    "Backend: Node.js, Express, Django, AWS Lambda — RESTful API loyihalash, JWT autentifikatsiya, serversiz arxitektura, SQL Stored Procedures",
+                    "Ma'lumotlar bazasi: MySQL, PostgreSQL, MongoDB — sxema loyihalash, so'rov optimallash, joylashuvga asoslangan qidiruv, real vaqtda ma'lumot qayta ishlash",
+                    "Mobil: Flutter kross-platformali ilovalar App Store va Play Store da nashr etilgan (TezSell) — real vaqtda chat, to'lov, push bildirishnomalar",
+                    "Loyiha boshqaruvi: 4-5 kishilik jamoalarni boshqarish, xalqaro hamkorlik (Koreya/AQSh/Filippin), rejalashtrishdan deployga qadar",
+                    "DevOps: Docker, AWS (EC2, S3, CloudFront, Lambda), CI/CD quvurlari, ishlab chiqarish ilovalarini boshqarish va monitoring",
                   ],
                 }) as string[]).map((item, index) => (
                   <li
