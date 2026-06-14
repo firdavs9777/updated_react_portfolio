@@ -1,4 +1,4 @@
-// src/data/translations.ts (Enhanced About Section)
+// src/data/translations.ts
 
 import { Translations } from "../types";
 
@@ -16,23 +16,23 @@ export const translations: Translations = {
     hero: {
       greeting: "Hello, I'm",
       name: "Davis",
-      title: "Full-Stack Developer & Project Manager",
+      title: "Full-Stack Developer · Seoul",
       subtitle:
-        "4+ years in web & mobile development | React, Vue.js, Node.js specialist | Based in Seoul | Available immediately",
-      cta: "Get In Touch",
+        "I ship production web & mobile apps. 1,200+ users on my own products. 4+ years across React, Vue, Flutter, Node, and Django.",
+      cta: "Contact Me",
       resume: "Download Resume",
     },
     about: {
       title: "About Me",
       description:
-        "Full-stack developer with 4+ years of experience in web and mobile application development using Vue.js, React, Node.js, Django, and Flutter. I have built financial service platforms for LAX International Airport and insurance/loan management systems for the Philippines market, serving as both developer and project manager overseeing the full lifecycle from planning to deployment.",
+        "Full-stack developer with 4+ years of experience building web and mobile applications with React, Vue.js, Next.js, Nuxt.js, Flutter, Node.js, and Django. I have shipped financial service platforms, insurance/loan management systems, and consumer marketplace apps — acting as both developer and project manager across the full lifecycle from planning to deployment.",
       extendedDescription:
-        "I have deep experience with Vue.js, MySQL, REST API design, and complex business logic implementation including commission calculations, workflow automation, and multi-role permission systems. I have led teams of 4-5 developers across multinational environments (Korea, USA, Philippines). Currently developing 'TezSell,' a marketplace app built with Flutter and launched on both App Store and Play Store, and 'BananaTalk,' a language exchange platform serving users in 100+ languages. Winner of 2nd place at HackSeoul 2025 with an AI clothing color-matching app.",
-      residence: "Residence Status",
+        "Strong with REST API design, schema modeling, and complex business logic (commission calculations, workflow automation, multi-role permissions). I've led 4-5 person teams across multinational projects. Currently shipping TezSell (Flutter marketplace, live on App Store + Play Store) and BananaTalk (language exchange app, 1,200+ users across iOS and Android). 2nd-prize winner at HackSeoul 2025 for an AI clothing color-matching app.",
+      residence: "Work Authorization",
       languages: "Languages",
       residenceInfo:
-        "South Korea: 8 years\nVisa: F6 (Marriage Migrant)\nNo sponsorship needed",
-      languageInfo: "Korean: Advanced (KIIP Level 5)\nEnglish: Native Level",
+        "Authorized to work in South Korea\nNo visa sponsorship required\nLong-term residence status",
+      languageInfo: "English: Native level\nKorean: Advanced (KIIP Level 5)\nRussian: Conversational",
     },
     experience: {
       title: "Work Experience",
@@ -66,23 +66,23 @@ export const translations: Translations = {
     hero: {
       greeting: "안녕하세요, 저는",
       name: "데이비스",
-      title: "풀스택 개발자 & 프로젝트 관리자",
+      title: "풀스택 개발자 · 서울",
       subtitle:
-        "4년 이상의 웹 및 모바일 개발 경험 | React, Vue.js, Node.js 전문 | 한국 8년 거주 | 즉시 입사 가능",
+        "프로덕션 웹 및 모바일 앱을 직접 출시합니다. 자체 제품에 1,200+ 유저. React, Vue, Flutter, Node, Django로 4년 이상의 경험.",
       cta: "연락하기",
       resume: "이력서 다운로드",
     },
     about: {
       title: "자기소개",
       description:
-        "Vue.js, React, Node.js, Django, Flutter를 활용한 4년 이상의 풀스택 웹/앱 개발 경력을 보유한 개발자입니다. LA 국제공항 금융 서비스 플랫폼과 필리핀 보험/대출 관리 시스템을 개발했으며, 프로젝트 매니저로서 기획부터 배포까지 전 과정을 담당한 경험이 있습니다.",
+        "React, Vue.js, Next.js, Nuxt.js, Flutter, Node.js, Django로 4년 이상 웹 및 모바일 애플리케이션을 개발해온 풀스택 개발자입니다. 금융 서비스 플랫폼, 보험·대출 관리 시스템, 일반 소비자용 마켓플레이스 앱을 출시하며 개발과 프로젝트 매니저 역할을 모두 수행했습니다.",
       extendedDescription:
-        "Vue.js와 MySQL을 활용한 개발 경험이 풍부하며, REST API 설계와 복잡한 비즈니스 로직 구현(수수료 자동 계산, 워크플로우 자동화, 다중 사용자 역할 관리)에 강점이 있습니다. 4~5명 개발팀 리더십 경험과 다국적 팀(한국, 미국, 필리핀) 협업 경험을 보유하고 있습니다. 현재 Flutter로 개발한 'TezSell' 중고거래 앱을 App Store 및 Play Store에 정식 출시하여 운영 중이며, 'BananaTalk' 언어 교환 플랫폼을 React로 개발하고 있습니다. HackSeoul 2025에서 AI 의류 색상 매칭 앱으로 2위를 수상했습니다.",
-      residence: "거주 현황",
+        "REST API 설계, 스키마 모델링, 복잡한 비즈니스 로직 구현(수수료 자동 계산, 워크플로우 자동화, 다중 권한 관리)에 강점이 있습니다. 다국적 프로젝트에서 4~5명 규모의 팀을 리드한 경험이 있으며, 현재 TezSell(Flutter, App Store·Play Store 출시)과 BananaTalk(언어 교환 앱, iOS·Android 합산 1,200+ 유저)를 운영 중입니다. HackSeoul 2025에서 AI 의류 색상 매칭 앱으로 2위를 수상했습니다.",
+      residence: "근무 가능 자격",
       languages: "언어 능력",
       residenceInfo:
-        "한국 거주: 8년\n비자: F6 (결혼이민비자)\n스폰서십 불필요",
-      languageInfo: "한국어: 고급 (KIIP 5단계 수료)\n영어: 원어민 수준",
+        "한국 내 합법 취업 가능\n스폰서십 불필요\n장기 거주 자격 보유",
+      languageInfo: "영어: 원어민 수준\n한국어: 고급 (KIIP 5단계 수료)\n러시아어: 일상 회화 가능",
     },
     experience: {
       title: "주요 경험",
@@ -110,29 +110,29 @@ export const translations: Translations = {
       experience: "Tajriba",
       projects: "Loyihalar",
       certificates: "Sertifikatlar",
-      liveProjects: "Katta Loyihalar",
+      liveProjects: "Faol loyihalar",
       contact: "Aloqa",
     },
     hero: {
       greeting: "Assalomu alaykum, men",
       name: "Davis",
-      title: "Full-Stack Dasturchi & Loyiha Boshqaruvchisi",
+      title: "Full-Stack Dasturchi · Seul",
       subtitle:
-        "4+ yillik veb va mobil dasturlash tajribasi | React, Vue.js, Node.js mutaxassisi | Seulda joylashgan | Darhol ishga tayyor",
+        "Ishlab chiqarish darajasidagi veb va mobil ilovalarni o'zim ishlab chiqaman. Shaxsiy mahsulotlarimda 1,200+ foydalanuvchi. React, Vue, Flutter, Node, Django bo'yicha 4+ yillik tajriba.",
       cta: "Bog'lanish",
       resume: "Rezyumeni yuklab olish",
     },
     about: {
       title: "Men haqimda",
       description:
-        "Vue.js, React, Node.js, Django va Flutter yordamida 4 yildan ortiq veb va mobil ilovalar ishlab chiqish tajribasiga ega full-stack dasturchiman. LA xalqaro aeroporti uchun moliyaviy xizmatlar platformasi va Filippin bozori uchun sug'urta/kredit boshqaruv tizimini ishlab chiqdim. Loyiha menejeri sifatida rejalashtrishdan tortib deploy qilishgacha butun jarayonni boshqardim.",
+        "React, Vue.js, Next.js, Nuxt.js, Flutter, Node.js va Django yordamida 4 yildan ortiq veb va mobil ilovalar ishlab chiqish tajribasiga ega full-stack dasturchi. Moliyaviy xizmat platformalari, sug'urta/kredit boshqaruv tizimlari va iste'molchi bozor ilovalarini ishga tushirganman — rejalashtirishdan deployga qadar dasturchi va loyiha menejeri sifatida ishladim.",
       extendedDescription:
-        "Vue.js va MySQL bilan chuqur tajribaga egaman, REST API loyihalash va murakkab biznes mantiqini amalga oshirishda (komissiya hisoblash, ish oqimini avtomatlashtirish, ko'p rollli foydalanuvchi boshqaruvi) kuchli tomonlarim bor. 4-5 nafar dasturchilar jamoasini xalqaro muhitda (Koreya, AQSh, Filippin) boshqargan tajribam bor. Hozirda Flutter bilan yaratilgan 'TezSell' bozor ilovasi App Store va Play Store da chop etilgan va faol ishlayapti, 'BananaTalk' til almashish platformasini React bilan ishlab chiqyapman. HackSeoul 2025 da AI kiyim rang moslash ilovasi bilan 2-o'rinni qo'lga kiritdim.",
-      residence: "Yashash holati",
+        "REST API loyihalash, sxema modellashtirish va murakkab biznes mantiqi (komissiya hisoblash, ish oqimini avtomatlashtirish, ko'p rolli ruxsatlar) sohalarida kuchli tajribaga egaman. Xalqaro loyihalarda 4-5 kishilik jamoalarni boshqarganman. Hozirda TezSell (Flutter bozor ilovasi, App Store va Play Store'da faol) va BananaTalk (til almashish ilovasi, iOS va Android'da jami 1,200+ foydalanuvchi) loyihalarini olib boryapman. HackSeoul 2025 da AI kiyim rang moslash ilovasi bilan 2-o'rin g'olibi.",
+      residence: "Ish ruxsati",
       languages: "Tillar",
       residenceInfo:
-        "Janubiy Koreya: 8 yil\nViza: F6 (Nikoh migranti)\nHomiylik kerak emas",
-      languageInfo: "Koreys tili: Yuqori daraja (KIIP 5-daraja)\nIngliz tili: Ona tili darajasi",
+        "Janubiy Koreyada qonuniy ishlash huquqiga ega\nViza homiyligi talab qilinmaydi\nUzoq muddatli yashash maqomi",
+      languageInfo: "Ingliz tili: Ona tili darajasi\nKoreys tili: Yuqori daraja (KIIP 5-daraja)\nRus tili: Suhbat darajasi",
     },
     experience: {
       title: "Ish tajribasi",

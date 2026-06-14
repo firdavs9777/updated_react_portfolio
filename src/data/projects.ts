@@ -104,7 +104,7 @@ export const projects: Record<"en" | "ko" | "uz", Project[]> = {
       id: "tezsell",
       title: "TezSell - Neighborhood Marketplace",
       description:
-        "Neighborhood marketplace app for Uzbekistan. Buy and sell items, offer services, and list real estate with your neighbors. Features direct chat, secure transactions, and is completely free. Available on iOS and Android.",
+        "Neighborhood marketplace app. Buy and sell items, offer services, and list real estate with neighbors. Features direct chat, secure transactions, and is completely free. Available on iOS and Android.",
       role: "Owner & Lead Developer",
       year: "2024-2025",
       technologies: [
@@ -340,7 +340,7 @@ export const projects: Record<"en" | "ko" | "uz", Project[]> = {
       id: "tezsell",
       title: "TezSell - Mahalla Bozori",
       description:
-        "O'zbekiston uchun mahalla bozori ilovasi. Qo'shnilaringiz bilan narsalarni sotib oling va soting, xizmatlar taklif qiling va ko'chmas mulk e'lonlarini joylashtiring. To'g'ridan-to'g'ri chat, xavfsiz tranzaksiyalar, butunlay bepul.",
+        "Mahalla bozori ilovasi. Qo'shnilaringiz bilan narsalarni sotib oling va soting, xizmatlar taklif qiling va ko'chmas mulk e'lonlarini joylashtiring. To'g'ridan-to'g'ri chat, xavfsiz tranzaksiyalar, butunlay bepul.",
       role: "Egasi & Bosh Dasturchi",
       year: "2024-2025",
       technologies: [

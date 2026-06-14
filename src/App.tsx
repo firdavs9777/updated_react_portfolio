@@ -1,7 +1,6 @@
 // src/App.tsx
 
-import { useEffect, useState, lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./App.css";
 import { Navbar } from "./components/layout/Navbar";
@@ -19,28 +18,6 @@ import { ProjectsPage } from "./pages/Projects";
 import { NotFoundPage } from "./pages/NotFound";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading time for smooth transitions
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 flex items-center justify-center dark">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-400 mx-auto mb-4"></div>
-          <p className="text-gray-300 text-lg">Loading Portfolio...</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -48,7 +25,7 @@ function App() {
           <BrowserRouter>
             <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
               <Navbar />
-              <main className="transition-all duration-500 ease-in-out">
+              <main className="pt-16 pb-20 md:pb-0 transition-all duration-300 ease-in-out">
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />

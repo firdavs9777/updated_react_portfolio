@@ -23,7 +23,7 @@ export const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const { isScrolled } = useScrollPosition();
-  const { t } = useLanguage();
+  const { t, tx } = useLanguage();
   const location = useLocation();
 
   // Close menus when route changes
@@ -233,7 +233,9 @@ export const Navbar: React.FC = () => {
             }`}
           >
             <MoreHorizontal className="w-6 h-6" />
-            <span className="text-xs mt-1 font-medium">더보기</span>
+            <span className="text-xs mt-1 font-medium">
+              {tx({ en: "More", ko: "더보기", uz: "Ko'proq" })}
+            </span>
           </button>
         </div>
 

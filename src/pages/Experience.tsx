@@ -1,4 +1,4 @@
-// src/pages/ExperiencePage.tsx
+// src/pages/Experience.tsx
 
 import {
   Award,
@@ -8,9 +8,11 @@ import {
   Users,
   Target,
   Code2,
+  Trophy,
 } from "lucide-react";
 import React from "react";
 import { useLanguage } from "../context/languageContext";
+import { SEO } from "../utils/seo";
 
 export const ExperiencePage: React.FC = () => {
   const { t, tx } = useLanguage();
@@ -196,14 +198,83 @@ export const ExperiencePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900 pt-24 pb-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+    <>
+      <SEO
+        title={`${t.experience.title} — ${t.hero.name}`}
+        description={tx({
+          en: "4+ years of full-stack work across 3R Innovation, Quintet Systems, and Ebridge World — shipped financial platforms, AI EdTech, and consumer apps.",
+          ko: "3R Innovation, Quintet Systems, Ebridge World에서 4년 이상의 풀스택 경력 — 금융 플랫폼, AI 에듀테크, 소비자 앱 출시.",
+          uz: "3R Innovation, Quintet Systems va Ebridge World'da 4+ yillik full-stack tajriba — moliyaviy platformalar, AI EdTech va iste'molchi ilovalari.",
+        })}
+        url="https://firdavs.dev/experience"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900 pb-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t.experience.title}
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded"></div>
+          <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded"></div>
         </div>
+
+        {/* Career Highlights */}
+        <section className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+            {tx({ en: "Career Highlights", ko: "주요 성과", uz: "Karyera yutuqlari" })}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/10 dark:to-orange-900/10 rounded-2xl border border-yellow-200 dark:border-yellow-800/50 p-5 sm:p-6 shadow-sm">
+              <Trophy className="w-7 h-7 text-yellow-600 dark:text-yellow-400 mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1">
+                HackSeoul 2025
+              </h3>
+              <p className="text-sm font-semibold text-yellow-700 dark:text-yellow-400 mb-2">
+                {tx({ en: "2nd Prize", ko: "2등상", uz: "2-o'rin" })}
+              </p>
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                {tx({
+                  en: "AI for Real-World Impact & Future Ventures — built an AI clothing color-matching app as team lead.",
+                  ko: "AI for Real-World Impact & Future Ventures — 팀 리드로서 AI 의류 색상 매칭 앱 개발.",
+                  uz: "AI for Real-World Impact & Future Ventures — jamoa rahbari sifatida AI kiyim rang moslash ilovasini yaratdim.",
+                })}
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-6 shadow-sm">
+              <Users className="w-7 h-7 text-blue-600 dark:text-blue-400 mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1">
+                {tx({ en: "1,200+ users", ko: "1,200+ 유저", uz: "1,200+ foydalanuvchi" })}
+              </h3>
+              <p className="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-2">
+                {tx({ en: "On shipped products", ko: "직접 출시한 제품", uz: "Chiqargan mahsulotlarda" })}
+              </p>
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                {tx({
+                  en: "BananaTalk live on iOS + Android. TezSell live on iOS + Android. Real users across both apps.",
+                  ko: "BananaTalk iOS·Android 운영 중. TezSell iOS·Android 운영 중. 두 앱 합산 실제 사용자 보유.",
+                  uz: "BananaTalk iOS va Android'da faol. TezSell iOS va Android'da faol. Ikkala ilovada haqiqiy foydalanuvchilar.",
+                })}
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-6 shadow-sm">
+              <Code2 className="w-7 h-7 text-purple-600 dark:text-purple-400 mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1">
+                {tx({ en: "Team Leadership", ko: "팀 리더십", uz: "Jamoa rahbarligi" })}
+              </h3>
+              <p className="text-sm font-semibold text-purple-700 dark:text-purple-400 mb-2">
+                {tx({ en: "4-5 dev teams · multinational", ko: "4~5명 개발팀 · 다국적", uz: "4-5 kishilik jamoalar · xalqaro" })}
+              </p>
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                {tx({
+                  en: "Led cross-functional teams from planning to deployment — bridging engineering and business.",
+                  ko: "기획부터 배포까지 다기능 팀 리딩 — 엔지니어링과 비즈니스의 가교 역할.",
+                  uz: "Rejalashtrishdan deployga qadar funksiyalararo jamoalarni boshqardim — muhandislik va biznes o'rtasida ko'prik.",
+                })}
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* What I Bring Section */}
         <div className="mb-16">
@@ -380,20 +451,21 @@ export const ExperiencePage: React.FC = () => {
         </div>
 
         {/* Timeline Decoration */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-4 bg-white dark:bg-gray-800 px-6 py-3 rounded-full shadow-lg">
-            <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
-            <span className="text-gray-600 dark:text-gray-300 font-medium">
+        <div className="mt-12 text-center">
+          <div className="inline-flex items-center gap-4 bg-white dark:bg-gray-800 px-5 py-2.5 rounded-full shadow-md">
+            <div className="w-2.5 h-2.5 bg-purple-600 rounded-full"></div>
+            <span className="text-sm text-gray-600 dark:text-gray-300 font-medium">
               {tx({
                 en: "Career Journey",
                 ko: "커리어 여정",
                 uz: "Karyera sayohati",
               })}
             </span>
-            <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+            <div className="w-2.5 h-2.5 bg-blue-600 rounded-full"></div>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 };

@@ -139,13 +139,13 @@ export const ProjectsPage: React.FC = () => {
       id: 3,
       title: tx({
         en: "TezSell - Neighborhood Marketplace",
-        ko: "TezSell - Mahalla Bozori",
+        ko: "TezSell - 동네 마켓플레이스",
         uz: "TezSell - Mahalla Bozori",
       }),
       description: tx({
-        en: "Neighborhood marketplace app for Uzbekistan. Buy and sell items, offer services, and list real estate with your neighbors. Features direct chat, secure transactions, and is completely free. Available on iOS and Android.",
-        ko: "우즈베키스탄의 동네 마켓플레이스 앱입니다. 이웃과 함께 물건을 사고팔고, 서비스를 제공하며, 부동산 매물을 등록할 수 있습니다. 직접 채팅, 안전한 거래, 무료 이용이 가능합니다. iOS와 Android에서 다운로드 가능합니다.",
-        uz: "O'zbekiston uchun mahalla bozori ilovasi. Qo'shnilaringiz bilan narsalarni sotib oling va soting, xizmatlar taklif qiling va ko'chmas mulk e'lonlarini joylashtiring. To'g'ridan-to'g'ri suhbat, xavfsiz tranzaksiyalar va butunlay bepul. iOS va Android'da mavjud.",
+        en: "Neighborhood marketplace app. Buy and sell items, offer services, and list real estate with neighbors. Features direct chat, secure transactions, and is completely free. Available on iOS and Android.",
+        ko: "동네 마켓플레이스 앱. 이웃과 물건을 사고팔고, 서비스를 제공하며, 부동산 매물을 등록할 수 있습니다. 직접 채팅, 안전한 거래, 무료 이용 가능. iOS와 Android에서 다운로드 가능합니다.",
+        uz: "Mahalla bozori ilovasi. Qo'shnilaringiz bilan narsalarni sotib oling va soting, xizmatlar taklif qiling va ko'chmas mulk e'lonlarini joylashtiring. To'g'ridan-to'g'ri suhbat, xavfsiz tranzaksiyalar va butunlay bepul. iOS va Android'da mavjud.",
       }),
       role: tx({
         en: "Owner & Lead Developer",
@@ -576,7 +576,7 @@ export const ProjectsPage: React.FC = () => {
               </h3>
               {featured && (
                 <span className="inline-block px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full border border-yellow-200 mt-1">
-                  Featured
+                  {tx({ en: "Featured", ko: "주요", uz: "Asosiy" })}
                 </span>
               )}
             </div>
@@ -629,16 +629,16 @@ export const ProjectsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-4 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
           <div className="flex items-center gap-1">
-            <User className="w-4 h-4" />
+            <User className="w-3.5 h-3.5" />
             <span>
               {t.projects.role}: {project.role}
             </span>
           </div>
-          <span>•</span>
+          <span className="opacity-50">•</span>
           <div className="flex items-center gap-1">
-            <Calendar className="w-4 h-4" />
+            <Calendar className="w-3.5 h-3.5" />
             <span>{project.year}</span>
           </div>
         </div>
@@ -759,14 +759,14 @@ export const ProjectsPage: React.FC = () => {
         description={seoDescription}
         url={`https://firdavs.dev/projects${selectedTech ? `#${selectedTech}` : ''}`}
       />
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 pt-24 pb-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16">
+        <div className="text-center mb-10 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t.projects.title}
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-blue-600 mx-auto rounded"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mt-6 max-w-3xl mx-auto">
+          <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-green-600 to-blue-600 mx-auto rounded"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-6 max-w-3xl mx-auto">
             {tx({
               en: "A showcase of my recent work and contributions to innovative digital solutions.",
               ko: "혁신적인 디지털 솔루션에 대한 최근 작업과 기여를 소개합니다.",
