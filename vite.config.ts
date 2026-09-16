@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 // vite.config.ts
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
@@ -36,5 +37,12 @@ export default defineConfig({
   },
   preview: {
     port: 4173,
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: ["./src/test/setup.ts"],
+    css: false,
+    include: ["src/**/*.{test,spec}.{ts,tsx}"],
   },
 })
