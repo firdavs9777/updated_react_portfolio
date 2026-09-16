@@ -12,11 +12,21 @@ import type { LocaleText } from "../types";
 /** Date these figures were last checked against the live products. */
 export const FACTS_VERIFIED_ON = "2026-09-16";
 
-/** Combined iOS + Android registered users for BananaTalk. */
-export const BANANATALK_USERS = 1200;
+/** Combined iOS + Android active users for BananaTalk. */
+export const BANANATALK_USERS = 1500;
 
 /** How the user count is written in prose. Derived from BANANATALK_USERS. */
-export const BANANATALK_USERS_DISPLAY = "1,200+";
+export const BANANATALK_USERS_DISPLAY = "1,500+";
+
+/**
+ * Combined iOS + Google Play downloads for BananaTalk. This is a distinct
+ * claim from BANANATALK_USERS (active users) — a download is not the same
+ * as an active user, and the two figures must never be conflated in copy.
+ */
+export const BANANATALK_DOWNLOADS = 3000;
+
+/** How the download count is written in prose. Derived from BANANATALK_DOWNLOADS. */
+export const BANANATALK_DOWNLOADS_DISPLAY = "3,000+";
 
 // Open question for the owner: BananaTalk ships in_app_purchase and
 // google_mobile_ads and has a VIP tier, so the site no longer claims

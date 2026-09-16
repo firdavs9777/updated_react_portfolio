@@ -72,13 +72,13 @@ export const ExperiencePage: React.FC = () => {
                 })}
               </h3>
               <p className="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-2">
-                {tx({ en: "On shipped products", ko: "직접 출시한 제품", uz: "Chiqargan mahsulotlarda" })}
+                {tx({ en: "On BananaTalk", ko: "BananaTalk에서", uz: "BananaTalk'da" })}
               </p>
               <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                 {tx({
-                  en: "BananaTalk live on iOS + Android. TezSell live on iOS + Android. Real users across both apps.",
-                  ko: "BananaTalk iOS·Android 운영 중. TezSell iOS·Android 운영 중. 두 앱 합산 실제 사용자 보유.",
-                  uz: "BananaTalk iOS va Android'da faol. TezSell iOS va Android'da faol. Ikkala ilovada haqiqiy foydalanuvchilar.",
+                  en: "BananaTalk live on iOS + Android — that's where these active users come from. TezSell is also live on iOS + Android.",
+                  ko: "BananaTalk가 iOS·Android에서 운영 중이며, 이 활성 유저 수치는 BananaTalk 기준입니다. TezSell도 iOS·Android에서 함께 운영 중입니다.",
+                  uz: "BananaTalk iOS va Android'da faol — ushbu faol foydalanuvchilar soni BananaTalk'ga tegishli. TezSell ham iOS va Android'da faol.",
                 })}
               </p>
             </div>

@@ -1,4 +1,6 @@
 import {
+  BANANATALK_DOWNLOADS,
+  BANANATALK_DOWNLOADS_DISPLAY,
   BANANATALK_USERS,
   BANANATALK_USERS_DISPLAY,
   FACTS_VERIFIED_ON,
@@ -7,10 +9,24 @@ import {
 
 describe("site facts", () => {
   it("stores the user count as a number and a display string that agree", () => {
-    expect(BANANATALK_USERS).toBe(1200);
-    expect(BANANATALK_USERS_DISPLAY).toBe("1,200+");
+    expect(BANANATALK_USERS).toBe(1500);
+    expect(BANANATALK_USERS_DISPLAY).toBe("1,500+");
     const digits = Number(BANANATALK_USERS_DISPLAY.replace(/[^0-9]/g, ""));
     expect(digits).toBe(BANANATALK_USERS);
+  });
+
+  it("stores the download count as a number and a display string that agree", () => {
+    expect(BANANATALK_DOWNLOADS).toBe(3000);
+    expect(BANANATALK_DOWNLOADS_DISPLAY).toBe("3,000+");
+    const digits = Number(BANANATALK_DOWNLOADS_DISPLAY.replace(/[^0-9]/g, ""));
+    expect(digits).toBe(BANANATALK_DOWNLOADS);
+  });
+
+  it("keeps the download figure distinct from and larger than the active-user figure", () => {
+    // Downloads and active users are different claims — a recruiter who
+    // checks the app stores should never find these blurred together.
+    expect(BANANATALK_DOWNLOADS).not.toBe(BANANATALK_USERS);
+    expect(BANANATALK_DOWNLOADS).toBeGreaterThan(BANANATALK_USERS);
   });
 
   it("records when the facts were last verified, so a stale claim is visible", () => {

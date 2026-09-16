@@ -263,9 +263,9 @@ export const HomePage: React.FC = () => {
               </div>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                 {tx({
-                  en: "users across 2 live apps on App Store and Google Play",
-                  ko: "App Store와 Google Play에 출시된 2개 앱의 누적 유저",
-                  uz: "App Store va Google Play'dagi 2 ta faol ilovada foydalanuvchilar",
+                  en: "BananaTalk active users, combined across App Store and Google Play",
+                  ko: "App Store와 Google Play 합산 BananaTalk 활성 유저",
+                  uz: "App Store va Google Play'da jami faol BananaTalk foydalanuvchilari",
                 })}
               </p>
             </div>

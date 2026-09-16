@@ -4,7 +4,7 @@
 // site-facts so a changed link is corrected in one place.
 
 import type { LiveProjectEntry } from "../types";
-import { BANANATALK_USERS_DISPLAY, STORE_LINKS } from "./site-facts";
+import { BANANATALK_DOWNLOADS_DISPLAY, BANANATALK_USERS_DISPLAY, STORE_LINKS } from "./site-facts";
 
 export const liveProjects: LiveProjectEntry[] = [
   {
@@ -22,9 +22,9 @@ export const liveProjects: LiveProjectEntry[] = [
       uz: `${BANANATALK_USERS_DISPLAY} foydalanuvchi`,
     },
     metricLabel: {
-      en: "across iOS (1,000+) and Android (200+)",
-      ko: "iOS (1,000+) 및 Android (200+) 합산",
-      uz: "iOS (1,000+) va Android (200+)",
+      en: `${BANANATALK_DOWNLOADS_DISPLAY} downloads combined across iOS and Google Play`,
+      ko: `iOS·Google Play 합산 다운로드 ${BANANATALK_DOWNLOADS_DISPLAY}`,
+      uz: `iOS va Google Play'da jami ${BANANATALK_DOWNLOADS_DISPLAY} yuklab olish`,
     },
     problem: {
       en: "Language learners can't find real native speakers to talk to. Flashcards and scripted lessons don't build conversational fluency — only real conversations do.",
