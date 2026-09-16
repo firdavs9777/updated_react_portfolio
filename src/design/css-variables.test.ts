@@ -29,6 +29,13 @@ describe("css variables", () => {
   it("no longer imports fonts from CSS, which blocks rendering", () => {
     expect(css).not.toContain("@import url('https://fonts.googleapis.com");
   });
+
+  it("declares every custom property it references", () => {
+    const referenced = [...css.matchAll(/var\(\s*(--[\w-]+)/g)].map((m) => m[1]);
+    const declared = new Set([...css.matchAll(/^\s*(--[\w-]+)\s*:/gm)].map((m) => m[1]));
+    const undeclared = [...new Set(referenced)].filter((name) => !declared.has(name));
+    expect(undeclared).toEqual([]);
+  });
 });
 
 describe("index.html font loading", () => {

@@ -17,6 +17,12 @@
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
 
   --transition-speed: 300ms;
+
+  /* Legacy effect variables retained for .glass* and .hover-lift. Not part
+     of the design token system — expected to be removed when those effects
+     are dropped in Phase 4. */
+  --blur-amount: 16px;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 .dark {
@@ -27,6 +33,8 @@
   --color-accent: #F97316;
   --color-accent-contrast: #1C1206;
   --color-line: #2A2422;
+
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Fraunces has no Korean glyphs. */
