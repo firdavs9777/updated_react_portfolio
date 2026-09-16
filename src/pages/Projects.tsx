@@ -41,9 +41,9 @@ export const ProjectsPage: React.FC = () => {
     {
       id: 0,
       title: tx({
-        en: "HackSeoul 2025 Winner Project - StylerX",
-        ko: "HackSeoul 2025 우승 프로젝트 - StylerX",
-        uz: "HackSeoul 2025 G'olib Loyiha - StylerX",
+        en: "StylerX — HackSeoul 2025, 2nd Prize",
+        ko: "StylerX — HackSeoul 2025, 2등상",
+        uz: "StylerX — HackSeoul 2025, 2-o'rin",
       }),
       description: tx({
         en: "AI-powered fashion recommendation and style analysis platform that analyzes your wardrobe and suggests the best outfits. An award-winning project at HackSeoul 2025.",

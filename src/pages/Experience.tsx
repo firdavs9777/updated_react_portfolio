@@ -32,7 +32,7 @@ export const ExperiencePage: React.FC = () => {
       }),
       duration: tx({
         en: "January 2025 - Present",
-        ko: "2026년 01월 - 현재",
+        ko: "2025년 01월 - 현재",
         uz: "2025-yil Yanvar - Hozirgi",
       }),
       location: tx({

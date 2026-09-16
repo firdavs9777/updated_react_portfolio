@@ -127,7 +127,7 @@ export const translations: Translations = {
       description:
         "React, Vue.js, Next.js, Nuxt.js, Flutter, Node.js va Django yordamida 4 yildan ortiq veb va mobil ilovalar ishlab chiqish tajribasiga ega full-stack dasturchi. Moliyaviy xizmat platformalari, sug'urta/kredit boshqaruv tizimlari va iste'molchi bozor ilovalarini ishga tushirganman — rejalashtirishdan deployga qadar dasturchi va loyiha menejeri sifatida ishladim.",
       extendedDescription:
-        "REST API loyihalash, sxema modellashtirish va murakkab biznes mantiqi (komissiya hisoblash, ish oqimini avtomatlashtirish, ko'p rolli ruxsatlar) sohalarida kuchli tajribaga egaman. Xalqaro loyihalarda 4-5 kishilik jamoalarni boshqarganman. Hozirda TezSell (Flutter bozor ilovasi, App Store va Play Store'da faol) va BananaTalk (til almashish ilovasi, iOS va Android'da jami 1,200+ foydalanuvchi) loyihalarini olib boryapman. HackSeoul 2025 da AI kiyim rang moslash ilovasi bilan 2-o'rin g'olibi.",
+        "REST API loyihalash, sxema modellashtirish va murakkab biznes mantiqi (komissiya hisoblash, ish oqimini avtomatlashtirish, ko'p rolli ruxsatlar) sohalarida kuchli tajribaga egaman. Xalqaro loyihalarda 4-5 kishilik jamoalarni boshqarganman. Hozirda TezSell (Flutter bozor ilovasi, App Store va Play Store'da faol) va BananaTalk (til almashish ilovasi, iOS va Android'da jami 1,200+ foydalanuvchi) loyihalarini olib boryapman. HackSeoul 2025 da AI kiyim rang moslash ilovasi bilan 2-o'rin sovrindori.",
       residence: "Ish ruxsati",
       languages: "Tillar",
       residenceInfo:
