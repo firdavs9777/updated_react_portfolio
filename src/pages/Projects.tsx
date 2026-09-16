@@ -1,13 +1,13 @@
 // src/pages/ProjectsPage.tsx
 
-import React, { useState, useMemo, useEffect, useCallback } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ExternalLink, Github, Calendar, User, Filter, X, ChevronDown, Hash, Link2, Share2, Smartphone } from "lucide-react";
+import { ExternalLink, Github, Calendar, User, X, ChevronDown, Hash, Share2, Smartphone } from "lucide-react";
 import { useLanguage } from "../context/languageContext";
 import { SEO } from "../utils/seo";
 
 export const ProjectsPage: React.FC = () => {
-  const { t, tx } = useLanguage();
+  const { t, tx, language } = useLanguage();
   const location = useLocation();
   const navigate = useNavigate();
   const [showAllFilters, setShowAllFilters] = useState(false);
@@ -37,7 +37,7 @@ export const ProjectsPage: React.FC = () => {
     });
   }, []);
 
-  const projects = [
+  const projects = useMemo(() => [
     {
       id: 0,
       title: tx({
@@ -528,7 +528,11 @@ export const ProjectsPage: React.FC = () => {
       status: "in progress",
       image: "☕️",
     },
-  ];
+    // `tx` is recreated on every render by useLanguage() but only ever reads
+    // the current `language`, so `language` is the only dependency that
+    // actually needs to invalidate this memo.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  ], [language]);
 
   // Extract all unique technologies and count their occurrences
   const techStats = useMemo(() => {

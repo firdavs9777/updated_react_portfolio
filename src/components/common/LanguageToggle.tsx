@@ -1,6 +1,6 @@
 // src/components/common/LanguageToggle.tsx
 
-import { Globe, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../../context/languageContext';
 import { Language } from '../../types';

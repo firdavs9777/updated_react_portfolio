@@ -15,6 +15,9 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+// The provider and its hook are a single cohesive API; splitting the hook
+// into its own file just to satisfy fast-refresh isn't worth the churn here.
+// eslint-disable-next-line react-refresh/only-export-components
 export const useLanguage = (): LanguageContextType => {
   const context = useContext(LanguageContext);
   if (!context) {

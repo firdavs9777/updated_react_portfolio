@@ -6,7 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useLanguage } from '../context/languageContext';
 
 export const ContactPage: React.FC = () => {
-  const { t, language, tx } = useLanguage();
+  const { t, tx } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',

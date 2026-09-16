@@ -14,7 +14,7 @@ import React from "react";
 import { useLanguage } from "../../context/languageContext";
 
 export const AboutPage: React.FC = () => {
-  const { t, language, tx } = useLanguage();
+  const { t, tx } = useLanguage();
 
   const skillCategories = [
     {

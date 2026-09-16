@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/languageContext";
 
 export const Footer: React.FC = () => {
-  const { language, t, tx } = useLanguage();
+  const { t, tx } = useLanguage();
 
   const currentYear = new Date().getFullYear();
 

@@ -5,7 +5,7 @@ import { Award, Calendar, ExternalLink, Clock } from "lucide-react";
 import { useLanguage } from "../context/languageContext";
 
 export const CertificatesPage: React.FC = () => {
-  const { language, tx } = useLanguage();
+  const { tx } = useLanguage();
 
   const certificates = [
     {

@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/languageContext";
 
 export const NotFoundPage: React.FC = () => {
-  const { language, tx } = useLanguage();
+  const { tx } = useLanguage();
   const navigate = useNavigate();
 
   return (
