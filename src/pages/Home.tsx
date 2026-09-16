@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "../context/languageContext";
 import { SEO } from "../utils/seo";
-import { BANANATALK_USERS_DISPLAY } from "../data/site-facts";
+import { BANANATALK_USERS_DISPLAY, STORE_LINKS } from "../data/site-facts";
 
 const TECH_STACK = [
   "React",
@@ -201,8 +201,8 @@ export const HomePage: React.FC = () => {
               metricLabel={tx({ en: "users", ko: "유저", uz: "foydalanuvchi" })}
               stack={["Flutter", "Node.js", "MongoDB", "WebRTC", "Firebase", "Socket.io"]}
               website="https://banatalk.com"
-              appStore="https://apps.apple.com/kr/app/bananatalk-language-exchange/id6755862146?l=en-GB"
-              playStore="https://play.google.com/store/apps/details?id=com.bananatalk.app"
+              appStore={STORE_LINKS.bananatalk.ios}
+              playStore={STORE_LINKS.bananatalk.android}
               accent="blue"
             />
 
@@ -224,8 +224,8 @@ export const HomePage: React.FC = () => {
               metricLabel={tx({ en: "in production", ko: "운영 중", uz: "ishlamoqda" })}
               stack={["Flutter", "Django", "PostgreSQL", "Redis", "Digital Ocean", "Nginx"]}
               website="https://webtezsell.com"
-              appStore="https://apps.apple.com/kr/app/tezsell/id6755512731?l=en-GB"
-              playStore="https://play.google.com/store/apps/details?id=uz.tezsell.app"
+              appStore={STORE_LINKS.tezsell.ios}
+              playStore={STORE_LINKS.tezsell.android}
               accent="orange"
             />
           </div>

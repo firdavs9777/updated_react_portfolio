@@ -5,14 +5,15 @@
 // constant with no dependency on React or the language context.
 
 import type { ProjectEntry } from "../types";
+import { HACKSEOUL_PLACEMENT, STORE_LINKS } from "./site-facts";
 
 export const projects: ProjectEntry[] = [
   {
     id: "stylerx",
     title: {
-      en: "StylerX — HackSeoul 2025, 2nd Prize",
-      ko: "StylerX — HackSeoul 2025, 2등상",
-      uz: "StylerX — HackSeoul 2025, 2-o'rin",
+      en: `StylerX — ${HACKSEOUL_PLACEMENT.label.en}`,
+      ko: `StylerX — ${HACKSEOUL_PLACEMENT.label.ko}`,
+      uz: `StylerX — ${HACKSEOUL_PLACEMENT.label.uz}`,
     },
     description: {
       en: "AI-powered fashion recommendation and style analysis platform that analyzes your wardrobe and suggests the best outfits. An award-winning project at HackSeoul 2025.",
@@ -74,9 +75,9 @@ export const projects: ProjectEntry[] = [
       uz: "BananaTalk Til Almashish Ilovasi",
     },
     description: {
-      en: "Free language exchange app connecting people with native speakers across 100+ languages. No flashcards or scripted lessons — just real conversations through instant chat, voice messages, smart translation, and AI study tools. Free to use on iOS and Android.",
-      ko: "100개 이상의 언어를 지원하는 무료 언어교환 앱입니다. 원어민과 실시간 채팅, 음성 메시지, 스마트 번역, AI 학습 도구를 통해 실제 대화로 언어를 배울 수 있습니다. iOS와 Android에서 무료로 이용 가능합니다.",
-      uz: "100 dan ortiq tilni qo'llab-quvvatlovchi bepul til almashish ilovasi. Ona tilida so'zlashuvchilar bilan real vaqtda suhbat, ovozli xabarlar, aqlli tarjima va AI o'rganish vositalari orqali tillarni o'rganing. iOS va Android'da bepul.",
+      en: "Language exchange app connecting people with native speakers across 100+ languages. No flashcards or scripted lessons — just real conversations through instant chat, voice messages, smart translation, and AI study tools. Free to use on iOS and Android.",
+      ko: "100개 이상의 언어를 지원하는 언어교환 앱입니다. 원어민과 실시간 채팅, 음성 메시지, 스마트 번역, AI 학습 도구를 통해 실제 대화로 언어를 배울 수 있습니다. iOS와 Android에서 무료로 이용 가능합니다.",
+      uz: "100 dan ortiq tilni qo'llab-quvvatlovchi til almashish ilovasi. Ona tilida so'zlashuvchilar bilan real vaqtda suhbat, ovozli xabarlar, aqlli tarjima va AI o'rganish vositalari orqali tillarni o'rganing. iOS va Android'da bepul foydalanish mumkin.",
     },
     role: {
       en: "Owner & Full-Stack Developer",
@@ -97,8 +98,8 @@ export const projects: ProjectEntry[] = [
       "Firebase",
     ],
     url: "https://banatalk.com",
-    iosUrl: "https://apps.apple.com/kr/app/bananatalk-language-exchange/id6755862146?l=en-GB",
-    androidUrl: "https://play.google.com/store/apps/details?id=com.bananatalk.app",
+    iosUrl: STORE_LINKS.bananatalk.ios,
+    androidUrl: STORE_LINKS.bananatalk.android,
     github: "https://github.com/firdavs9777/language_exchange_web_front",
     featured: true,
     status: "completed",
@@ -133,8 +134,8 @@ export const projects: ProjectEntry[] = [
       "Nginx",
     ],
     url: "https://webtezsell.com",
-    iosUrl: "https://apps.apple.com/kr/app/tezsell/id6755512731?l=en-GB",
-    androidUrl: "https://play.google.com/store/apps/details?id=uz.tezsell.app",
+    iosUrl: STORE_LINKS.tezsell.ios,
+    androidUrl: STORE_LINKS.tezsell.android,
     github: "https://github.com/firdavs9777/tezsell_app_front",
     featured: true,
     status: "in-progress",

@@ -61,13 +61,24 @@ describe("cross-locale consistency", () => {
     expect(mismatched).toEqual([]);
   });
 
-  // Deliberately no general numeric-figure comparison. Korean writes digits
-  // where English writes words (제3자 / "third party", 3월 / "March",
-  // 1인 / "solo"), so comparing digit sets across locales produces constant
-  // false positives. An earlier attempt at this check drove four real
-  // content regressions, including deleting month precision from a Korean CV
-  // entry. Years are safe because a four-digit token means the same thing in
-  // every locale.
+  // One-directional by design: every digit run in the English string must also
+  // appear in Korean and Uzbek. The reverse is NOT required, because Korean
+  // writes digits where English writes words (제3자 / "third party", 3월 /
+  // "March", 1인 / "solo"). A symmetric set-equality check was tried and
+  // deleted — it produced only false positives and drove four content
+  // regressions.
+  it("carries every figure from the English string into the other locales", () => {
+    const missing = texts
+      .map(({ where, text }) => {
+        const enFigures = [...text.en.matchAll(/\d[\d,]*/g)].map((m) => m[0]);
+        const absent = enFigures.filter(
+          (fig) => !text.ko.includes(fig) || !text.uz.includes(fig),
+        );
+        return absent.length ? `${where}: missing ${absent.join(", ")}` : null;
+      })
+      .filter(Boolean);
+    expect(missing).toEqual([]);
+  });
 
   it("never claims a first-place finish at HackSeoul", () => {
     const offenders = texts

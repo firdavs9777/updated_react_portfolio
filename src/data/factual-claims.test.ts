@@ -69,3 +69,21 @@ describe("published copy contains no credentials", () => {
     expect(offenders).toEqual([]);
   });
 });
+
+describe("monetization claims", () => {
+  it("never claims the app is free forever or completely free", () => {
+    const offenders = sources
+      .filter(({ text }) => {
+        const copy = withoutComments(text);
+        return (
+          /free\s+forever/i.test(copy) ||
+          /completely\s+free/i.test(copy) ||
+          copy.includes("영구 무료") ||
+          /abadiy\s+bepul/i.test(copy) ||
+          /butunlay\s+bepul/i.test(copy)
+        );
+      })
+      .map(({ path }) => path);
+    expect(offenders).toEqual([]);
+  });
+});

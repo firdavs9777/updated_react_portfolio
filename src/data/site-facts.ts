@@ -34,9 +34,9 @@ export const HACKSEOUL_PLACEMENT: {
   place: 2,
   year: 2025,
   label: {
-    en: "HackSeoul 2025 — 2nd Prize",
-    ko: "HackSeoul 2025 — 2등상",
-    uz: "HackSeoul 2025 — 2-o'rin",
+    en: "HackSeoul 2025, 2nd Prize",
+    ko: "HackSeoul 2025, 2등상",
+    uz: "HackSeoul 2025, 2-o'rin",
   },
 };
 
