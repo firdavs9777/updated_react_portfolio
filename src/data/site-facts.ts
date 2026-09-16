@@ -20,8 +20,7 @@ export const BANANATALK_USERS_DISPLAY = "1,200+";
 
 /**
  * HackSeoul 2025 result. Second place — not a win.
- * Do not describe this placement with the Korean word for "champion";
- * the correct term for this result is 2등상 (second prize).
+ * The Korean term for first place is 우승; second prize is 2등상.
  */
 export const HACKSEOUL_PLACEMENT: {
   place: 2;

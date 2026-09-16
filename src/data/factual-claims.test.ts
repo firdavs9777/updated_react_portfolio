@@ -14,15 +14,25 @@ const sources = walk(resolve(repoRoot, "src"))
   .filter((f) => /\.tsx?$/.test(f) && !/\.test\.tsx?$/.test(f))
   .map((f) => ({ path: f.replace(repoRoot + "/", ""), text: readFileSync(f, "utf8") }));
 
+/** Source with // line comments and block comments removed, so that
+ *  documentation explaining a term is not mistaken for a claim. */
+function withoutComments(text: string): string {
+  return text
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/(^|[^:])\/\/.*$/gm, "$1");
+}
+
 describe("award claims", () => {
   it("never describes HackSeoul 2025 as a win in any locale", () => {
     const offenders = sources
-      .filter(
-        ({ text }) =>
-          /HackSeoul[^"]*Winner/i.test(text) ||
-          text.includes("우승") ||
-          /HackSeoul[^"]*G'olib/i.test(text),
-      )
+      .filter(({ text }) => {
+        const code = withoutComments(text);
+        return (
+          /HackSeoul[^"]*Winner/i.test(code) ||
+          code.includes("우승") ||
+          /HackSeoul[^"]*G'olib/i.test(code)
+        );
+      })
       .map(({ path }) => path);
 
     expect(offenders).toEqual([]);
