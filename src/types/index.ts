@@ -2,6 +2,13 @@
 
 export type Language = 'en' | 'ko' | 'uz';
 
+/** A string in every supported locale. Every user-facing string in src/data uses this. */
+export interface LocaleText {
+  en: string;
+  ko: string;
+  uz: string;
+}
+
 export interface NavItem {
   id: string;
   icon: React.ReactNode;
