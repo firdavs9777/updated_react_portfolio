@@ -43,6 +43,25 @@ export interface SkillCategory {
   color: string;
 }
 
+export interface ProjectEntry {
+  /** Stable identifier. Kebab-case slug, not an array index. */
+  id: string;
+  title: LocaleText;
+  description: LocaleText;
+  role: LocaleText;
+  year: string;
+  tech: string[];
+  url?: string;
+  github?: string;
+  featured: boolean;
+  /** Card status indicator, e.g. "completed" or "in-progress". */
+  status: string;
+  /** Emoji shown on the project card. */
+  image: string;
+  iosUrl?: string;
+  androidUrl?: string;
+}
+
 export interface Translations {
   en: TranslationContent;
   ko: TranslationContent;

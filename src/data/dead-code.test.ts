@@ -4,8 +4,10 @@ import { resolve } from "node:path";
 const repoRoot = process.cwd();
 
 describe("the orphaned data modules are gone", () => {
-  it("no longer ships the unreferenced projects module", () => {
-    expect(existsSync(resolve(repoRoot, "src/data/projects.ts"))).toBe(false);
+  it("ships src/data/projects.ts only because the Projects page now imports it", () => {
+    expect(existsSync(resolve(repoRoot, "src/data/projects.ts"))).toBe(true);
+    const page = readFileSync(resolve(repoRoot, "src/pages/Projects.tsx"), "utf8");
+    expect(page).toContain('from "../data/projects"');
   });
 
   it("no longer ships the unreferenced experience module", () => {
