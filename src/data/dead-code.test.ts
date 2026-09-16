@@ -15,6 +15,12 @@ describe("the orphaned data modules are gone", () => {
     const page = readFileSync(resolve(repoRoot, "src/pages/Experience.tsx"), "utf8");
     expect(page).toContain('from "../data/experience"');
   });
+
+  it("ships src/data/live-projects.ts only because the LiveProjects page now imports it", () => {
+    expect(existsSync(resolve(repoRoot, "src/data/live-projects.ts"))).toBe(true);
+    const page = readFileSync(resolve(repoRoot, "src/pages/LiveProjects.tsx"), "utf8");
+    expect(page).toContain('from "../data/live-projects"');
+  });
 });
 
 describe("stale interfaces", () => {

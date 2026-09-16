@@ -93,6 +93,28 @@ export interface CertificateEntry {
   status: string;
 }
 
+export interface LiveProjectEntry {
+  /** Stable identifier. Kebab-case slug, not an array index. */
+  id: string;
+  emoji: string;
+  name: string;
+  tagline: LocaleText;
+  metric: LocaleText;
+  metricLabel: LocaleText;
+  problem: LocaleText;
+  solution: LocaleText;
+  results: LocaleText;
+  role: LocaleText;
+  year: string;
+  myStack: string[];
+  backendStack: string[];
+  website?: string;
+  iosUrl?: string;
+  androidUrl?: string;
+  github?: string;
+  accent: "blue" | "orange" | "cyan";
+}
+
 export interface Translations {
   en: TranslationContent;
   ko: TranslationContent;
