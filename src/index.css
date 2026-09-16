@@ -2,24 +2,38 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* Fonts load from index.html via <link>, not @import — a CSS @import is
+   render-blocking and delays first paint. */
 
-/* CSS Variables for theming */
 :root {
-  --color-primary: #3b82f6;
-  --color-secondary: #a855f7;
-  --color-accent: #06b6d4;
-  --color-text: #1f2937;
-  --color-text-light: #6b7280;
-  --color-bg: #ffffff;
-  --color-bg-secondary: #f8fafc;
-  --blur-amount: 16px;
+  --color-surface: #FBFAF8;
+  --color-surface-raised: #FFFFFF;
+  --color-ink: #1C1917;
+  --color-muted: #78716C;
+  --color-accent: #C2410C;
+  --color-accent-contrast: #FFFFFF;
+  --color-line: #E7E5E4;
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+
   --transition-speed: 300ms;
-  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Base styles */
+.dark {
+  --color-surface: #14110F;
+  --color-surface-raised: #1F1B18;
+  --color-ink: #F5F1EC;
+  --color-muted: #A8A29E;
+  --color-accent: #F97316;
+  --color-accent-contrast: #1C1206;
+  --color-line: #2A2422;
+}
+
+/* Fraunces has no Korean glyphs. */
+html[lang="ko"] {
+  --font-display: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Nanum Myeongjo', serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,13 +46,26 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, 'Apple SD Gothic Neo', sans-serif;
   line-height: 1.6;
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  color: var(--color-ink);
+  background-color: var(--color-surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+/* Long-form reading. Applied to case studies and posts in later phases. */
+.prose-reading {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  max-width: 68ch;
+}
+
+@media (min-width: 768px) {
+  .prose-reading {
+    font-size: 1.125rem;
+  }
 }
 
 /* Custom scrollbar */
@@ -52,7 +79,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+  background: var(--color-line);
   border-radius: 4px;
   transition: background var(--transition-speed);
 }
@@ -64,23 +91,23 @@ body {
 /* Firefox scrollbar */
 html {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-primary) #f1f5f9;
+  scrollbar-color: var(--color-accent) #f1f5f9;
 }
 
 /* Selection styles */
 ::selection {
   background-color: rgba(59, 130, 246, 0.2);
-  color: var(--color-text);
+  color: var(--color-ink);
 }
 
 ::-moz-selection {
   background-color: rgba(59, 130, 246, 0.2);
-  color: var(--color-text);
+  color: var(--color-ink);
 }
 
 /* Focus styles */
 :focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
@@ -491,8 +518,8 @@ html {
 }
 
 .dark body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
 }
 
 /* Reduced motion support */
