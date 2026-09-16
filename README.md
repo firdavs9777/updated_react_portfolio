@@ -19,9 +19,14 @@ npm run dev          # http://localhost:3000
 | `npm run preview` | Serve the production build locally |
 | `npm test` | Run the test suite once |
 | `npm run test:watch` | Run tests in watch mode |
-| `npm run type-check` | TypeScript, no emit |
+| `npm run test:coverage` | Run tests and generate coverage report |
+| `npm run type-check` | Type-check every project via `tsc --build --force` |
 | `npm run lint` | ESLint, zero warnings tolerated |
+| `npm run lint:fix` | Auto-fix ESLint violations |
+| `npm run format` | Format code with Prettier |
 | `npm run deploy` | Build and reload nginx |
+
+**Note on `type-check`:** The `--build` flag is required because the root `tsconfig.json` only holds project references and no source files. Plain `tsc --noEmit` would ignore references and check nothing. The `--build` mode respects references and fully type-checks all projects.
 
 ## Design system
 
