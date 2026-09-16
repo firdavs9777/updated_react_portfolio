@@ -1,6 +1,6 @@
 // src/context/LanguageContext.tsx
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { translations } from '../data/translations';
 import { Language, TranslationContent } from '../types';
 
@@ -92,14 +92,17 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     }
   }, [language]);
 
-  const tx = (map: LocaleMap) => map[language];
+  const tx = useCallback(<T,>(map: LocaleMap<T>): T => map[language], [language]);
 
-  const value: LanguageContextType = {
-    language,
-    setLanguage,
-    t: translations[language],
-    tx,
-  };
+  const value: LanguageContextType = useMemo(
+    () => ({
+      language,
+      setLanguage,
+      t: translations[language],
+      tx,
+    }),
+    [language, setLanguage, tx]
+  );
 
   return (
     <LanguageContext.Provider value={value}>

@@ -7,7 +7,7 @@ import { useLanguage } from "../context/languageContext";
 import { SEO } from "../utils/seo";
 
 export const ProjectsPage: React.FC = () => {
-  const { t, tx, language } = useLanguage();
+  const { t, tx } = useLanguage();
   const location = useLocation();
   const navigate = useNavigate();
   const [showAllFilters, setShowAllFilters] = useState(false);
@@ -528,11 +528,7 @@ export const ProjectsPage: React.FC = () => {
       status: "in progress",
       image: "☕️",
     },
-    // `tx` is recreated on every render by useLanguage() but only ever reads
-    // the current `language`, so `language` is the only dependency that
-    // actually needs to invalidate this memo.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  ], [language]);
+  ], [tx]);
 
   // Extract all unique technologies and count their occurrences
   const techStats = useMemo(() => {
