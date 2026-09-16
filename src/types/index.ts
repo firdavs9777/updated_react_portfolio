@@ -15,32 +15,6 @@ export interface NavItem {
   href: string;
 }
 
-export interface Experience {
-  id: string;
-  company: string;
-  position: string;
-  duration: string;
-  location: string;
-  current?: boolean;
-  achievements: string[];
-  technologies: string[];
-  description: string;
-}
-
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  role: string;
-  year: string;
-  technologies: string[];
-  url?: string;
-  github?: string;
-  image?: string;
-  featured?: boolean;
-  status: 'completed' | 'in-progress' | 'planned';
-}
-
 export interface Skill {
   name: string;
   level: 'beginner' | 'intermediate' | 'advanced' | 'expert';
