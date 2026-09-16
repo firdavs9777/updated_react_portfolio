@@ -32,9 +32,11 @@ npm run dev          # http://localhost:3000
 
 Colour, typography, and theme logic live in `src/design/`:
 
-- `tokens.ts` — the light and dark palettes. The single source of colour truth;
-  `tailwind.config.ts` imports it. Every text/background pair is asserted
-  against WCAG AA in `tokens.test.ts`.
+- `tokens.ts` — the light and dark palettes, and the canonical colour values.
+  `src/index.css` mirrors each value as a `--color-*` CSS variable, and
+  `tailwind.config.ts` references those variables rather than importing this
+  file; `css-variables.test.ts` asserts the mirror matches. Every
+  text/background pair is asserted against WCAG AA in `tokens.test.ts`.
 - `typography.ts` — display font per locale. Fraunces carries no Korean
   glyphs, so Korean uses Noto Serif KR.
 - `contrast.ts` — WCAG AA contrast validation. Colours are validated against

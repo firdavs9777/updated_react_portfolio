@@ -54,7 +54,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, 'Apple SD Gothic Neo', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   line-height: 1.6;
   color: var(--color-ink);
   background-color: var(--color-surface);
@@ -82,24 +82,24 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: var(--color-surface-raised);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-line);
+  background: var(--color-muted);
   border-radius: 4px;
   transition: background var(--transition-speed);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #2563eb, #7c3aed);
+  background: var(--color-accent);
 }
 
 /* Firefox scrollbar */
 html {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-accent) #f1f5f9;
+  scrollbar-color: var(--color-muted) var(--color-surface-raised);
 }
 
 /* Selection styles */

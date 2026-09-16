@@ -1,9 +1,11 @@
 // src/design/tokens.ts
 //
-// The single source of colour truth. tailwind.config.ts imports this, so a
-// colour is defined here exactly once. Every pair used for text is covered by
-// a WCAG AA assertion in tokens.test.ts — change a value and the test tells
-// you whether it is still readable.
+// The canonical list of colour values. src/index.css mirrors each one as a
+// --color-* CSS variable, and tailwind.config.ts references those variables
+// (it does not import this file) so theme switching is a single class swap.
+// src/design/css-variables.test.ts asserts the mirror stays in sync. Every
+// pair used for text is covered by a WCAG AA assertion in tokens.test.ts —
+// change a value and the test tells you whether it is still readable.
 
 export type ThemeName = "light" | "dark";
 
