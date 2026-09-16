@@ -153,9 +153,9 @@ const PROJECTS: LiveProject[] = [
       uz: "Ishlab chiqarish",
     },
     metricLabel: {
-      en: "Live demo · login: pinetree / pinetree",
-      ko: "라이브 데모 · 로그인: pinetree / pinetree",
-      uz: "Jonli demo · login: pinetree / pinetree",
+      en: "Live demo",
+      ko: "라이브 데모",
+      uz: "Jonli demo",
     },
     problem: {
       en: "Customer-support style chat experiences need both intelligent responses and real-time UX. Most demos are slow and clunky.",

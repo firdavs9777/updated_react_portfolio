@@ -58,3 +58,14 @@ describe("the current role's start year", () => {
     expect(offenders).toEqual([]);
   });
 });
+
+describe("published copy contains no credentials", () => {
+  it("never ships a username or password in page copy", () => {
+    const offenders = sources
+      .filter(({ text }) =>
+        /\b(username|password|passwd|login)\s*[:=]\s*\S/i.test(withoutComments(text)),
+      )
+      .map(({ path }) => path);
+    expect(offenders).toEqual([]);
+  });
+});

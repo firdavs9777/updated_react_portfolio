@@ -81,9 +81,9 @@ export const ProjectsPage: React.FC = () => {
         uz: "AI Buddy Chatbot Loyihasi",
       }),
       description: tx({
-        en: "AI-powered conversational chatbot web application with real-time messaging capabilities and intelligent response generation. Username: pinetree, password: pinetree  ",
-        ko: `AI 기반 대화형 챗봇 웹 애플리케이션으로 실시간 메시징 기능과 지능형 응답 생성 기능을 제공합니다.  Username: pinetree, Password: pinetree`,
-        uz: "Sun'iy intellektga asoslangan suhbat chatbot veb ilovasi. Real vaqtda xabar almashish va aqlli javob yaratish imkoniyatlari. Username: pinetree, Password: pinetree",
+        en: "AI-powered conversational chatbot web application with real-time messaging capabilities and intelligent response generation.",
+        ko: `AI 기반 대화형 챗봇 웹 애플리케이션으로 실시간 메시징 기능과 지능형 응답 생성 기능을 제공합니다.`,
+        uz: "Sun'iy intellektga asoslangan suhbat chatbot veb ilovasi. Real vaqtda xabar almashish va aqlli javob yaratish imkoniyatlari.",
       }),
       role: tx({
         en: "Full-Stack Developer",
