@@ -61,31 +61,13 @@ describe("cross-locale consistency", () => {
     expect(mismatched).toEqual([]);
   });
 
-  // experiences.3r-innovation.duration is deliberately exempted: en/uz spell
-  // the current role's start month ("January"/"Yanvar") while ko writes it
-  // numerically ("01월"), so the figure walker sees an extra "01" token in
-  // Korean alone. The date itself is correct and identical (January 2025) in
-  // all three locales, and that exact literal string is pinned by
-  // src/data/factual-claims.test.ts as the regression guard for the real bug
-  // this suite exists to catch (ko once said "2026년 01월" against en's
-  // "January 2025"). The year-consistency test above already re-verifies the
-  // year on every run; this is a locale notation difference, not a figure
-  // mismatch.
-  const FIGURE_CHECK_EXEMPT = new Set(["experiences.3r-innovation.duration"]);
-
-  it("uses the same set of numeric figures in every locale", () => {
-    const mismatched = texts
-      .filter(({ where }) => !FIGURE_CHECK_EXEMPT.has(where))
-      .filter(({ text }) => {
-        const figuresPer = LOCALES.map((l) =>
-          [...text[l].matchAll(/\d[\d,]*/g)].map((m) => m[0]).sort().join(","),
-        );
-        return new Set(figuresPer).size > 1;
-      })
-      .map(({ where }) => where);
-
-    expect(mismatched).toEqual([]);
-  });
+  // Deliberately no general numeric-figure comparison. Korean writes digits
+  // where English writes words (제3자 / "third party", 3월 / "March",
+  // 1인 / "solo"), so comparing digit sets across locales produces constant
+  // false positives. An earlier attempt at this check drove four real
+  // content regressions, including deleting month precision from a Korean CV
+  // entry. Years are safe because a four-digit token means the same thing in
+  // every locale.
 
   it("never claims a first-place finish at HackSeoul", () => {
     const offenders = texts

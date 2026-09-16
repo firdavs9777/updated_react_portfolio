@@ -76,9 +76,9 @@ export const experiences: ExperienceEntry[] = [
       uz: "To'liq stekli veb dasturchi",
     },
     duration: {
-      en: "2023 - 2025",
-      ko: "2023년 - 2025년",
-      uz: "2023-yil - 2025-yil",
+      en: "Mar 2023 - October 2025",
+      ko: "2023년 3월 - 2025년 10월",
+      uz: "2023-yil mart - 2025-yil oktyabr",
     },
     location: {
       en: "Seoul, South Korea",
@@ -118,7 +118,7 @@ export const experiences: ExperienceEntry[] = [
       },
       {
         en: "Extended our application's capabilities by integrating various third-party APIs and services to meet business needs. This allowed us to offer users richer functionality and better experiences.",
-        ko: "비즈니스 요구사항을 충족하기 위해 다양한 제삼자 API와 서비스를 통합하여 애플리케이션의 기능을 확장했습니다. 이를 통해 사용자들에게 더 풍부한 기능을 제공할 수 있게 되었습니다.",
+        ko: "비즈니스 요구사항을 충족하기 위해 다양한 제3자 API와 서비스를 통합하여 애플리케이션의 기능을 확장했습니다. 이를 통해 사용자들에게 더 풍부한 기능을 제공할 수 있게 되었습니다.",
         uz: "Biznes ehtiyojlarini qondirish uchun turli uchinchi tomon API va xizmatlarini integratsiya qilib, ilovamiz imkoniyatlarini kengaytirdim. Bu foydalanuvchilarga yanada boy funksionallik va yaxshi tajriba taklif qilish imkonini berdi.",
       },
       {
@@ -185,7 +185,7 @@ export const experiences: ExperienceEntry[] = [
       },
       {
         en: "Extended application functionality by integrating various third-party APIs and services. Added features like payments, maps, and social login to provide users with more value and convenience.",
-        ko: "애플리케이션의 기능을 확장하기 위해 다양한 제삼자 API와 서비스를 통합했습니다. 결제, 지도, 소셜 로그인 등 다양한 기능을 추가하여 사용자들에게 더 많은 가치를 제공했습니다.",
+        ko: "애플리케이션의 기능을 확장하기 위해 다양한 제3자 API와 서비스를 통합했습니다. 결제, 지도, 소셜 로그인 등 다양한 기능을 추가하여 사용자들에게 더 많은 가치를 제공했습니다.",
         uz: "Turli uchinchi tomon API va xizmatlarini integratsiya qilib, ilova funksionalligini kengaytirdim. To'lovlar, xaritalar va ijtimoiy kirish kabi funksiyalarni qo'shib, foydalanuvchilarga ko'proq qiymat va qulaylik taqdim etdim.",
       },
       {

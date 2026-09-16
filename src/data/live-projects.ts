@@ -86,7 +86,7 @@ export const liveProjects: LiveProjectEntry[] = [
     },
     results: {
       en: "Live on App Store + Google Play. Ongoing growth and active users. Built and operated solo, from API and database design to mobile UI and DevOps.",
-      ko: "App Store와 Google Play에서 운영 중. 사용자 지속 증가. API·데이터베이스·모바일 UI·DevOps까지 직접 개발 및 운영.",
+      ko: "App Store와 Google Play에서 운영 중. 사용자 지속 증가. API·데이터베이스·모바일 UI·DevOps까지 1인 개발 및 운영.",
       uz: "App Store va Google Play'da faol. Foydalanuvchilar soni o'sib bormoqda. API, ma'lumotlar bazasi, mobil UI va DevOps — barchasini yakka o'zim olib boryapman.",
     },
     role: {
