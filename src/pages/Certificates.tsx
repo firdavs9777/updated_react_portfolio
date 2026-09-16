@@ -3,80 +3,10 @@
 import React from "react";
 import { Award, Calendar, ExternalLink, Clock } from "lucide-react";
 import { useLanguage } from "../context/languageContext";
+import { certificates } from "../data/certificates";
 
 export const CertificatesPage: React.FC = () => {
   const { tx } = useLanguage();
-
-  const certificates = [
-    {
-      id: 1,
-      title: tx({
-        en: "Complete React Developer",
-        ko: "React 완전정복",
-        uz: "To'liq React dasturchi",
-      }),
-      issuer: "Udemy",
-      date: "2024",
-      description: tx({
-        en: "Completed comprehensive React developer course including React, Redux, Hooks, Context API, GraphQL, and Firebase.",
-        ko: "React, Redux, Hooks, Context API, GraphQL, Firebase를 포함한 완전한 React 개발자 과정을 완료했습니다.",
-        uz: "React, Redux, Hooks, Context API, GraphQL va Firebase ni o'z ichiga olgan to'liq React dasturchi kursini tamomladim.",
-      }),
-      url: "#",
-      image: "\uD83C\uDF93",
-      status: "completed",
-    },
-    {
-      id: 2,
-      title: tx({
-        en: "Full Stack Web Development",
-        ko: "풀스택 웹 개발",
-        uz: "To'liq stekli veb dasturlash",
-      }),
-      issuer: "Coursera",
-      date: "2023",
-      description: tx({
-        en: "Completed full stack web development course using MERN stack.",
-        ko: "MERN 스택을 활용한 풀스택 웹 개발 과정을 완료했습니다.",
-        uz: "MERN stekidan foydalangan holda to'liq stekli veb dasturlash kursini tamomladim.",
-      }),
-      url: "#",
-      image: "\uD83D\uDCBB",
-      status: "completed",
-    },
-    {
-      id: 3,
-      title: tx({
-        en: "AWS Cloud Fundamentals",
-        ko: "AWS 클라우드 기초",
-        uz: "AWS bulut asoslari",
-      }),
-      issuer: "AWS",
-      date: "2023",
-      description: tx({
-        en: "Acquired foundational knowledge of AWS cloud infrastructure and services.",
-        ko: "AWS 클라우드 인프라 및 서비스에 대한 기초 지식을 습득했습니다.",
-        uz: "AWS bulut infratuzilmasi va xizmatlari bo'yicha asosiy bilimlarni egalladi.",
-      }),
-      url: "#",
-      image: "\u2601\uFE0F",
-      status: "completed",
-    },
-    {
-      id: 4,
-      title: "AWS Certified Solutions Architect - Associate (SAA-C03)",
-      issuer: "AWS",
-      date: tx({ en: "In Progress", ko: "준비 중", uz: "Tayyorlanmoqda" }),
-      description: tx({
-        en: "Currently preparing for the AWS Certified Solutions Architect Associate certification. Developing comprehensive expertise in cloud computing, infrastructure design, security, cost optimization, and AWS solution architecture.",
-        ko: "AWS 클라우드 아키텍처 설계 및 배포에 대한 전문 지식을 습득하기 위해 현재 준비 중입니다. 클라우드 컴퓨팅, 인프라 설계, 보안, 비용 최적화 등 종합적인 AWS 솔루션 아키텍트 역량을 개발하고 있습니다.",
-        uz: "AWS Certified Solutions Architect Associate sertifikatiga tayyorlanmoqda. Bulut hisoblash, infratuzilma dizayni, xavfsizlik, xarajatlarni optimallashtirish va AWS yechimlar arxitekturasi bo'yicha keng qamrovli tajribani rivojlantirmoqda.",
-      }),
-      url: "#",
-      image: "\u2601\uFE0F",
-      status: "in-progress",
-    },
-  ];
 
   const CertificateCard: React.FC<{
     certificate: (typeof certificates)[0];
@@ -93,7 +23,7 @@ export const CertificatesPage: React.FC = () => {
             <div className="flex-1">
               <div className="flex items-start justify-between gap-2 mb-2">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
-                  {certificate.title}
+                  {tx(certificate.title)}
                 </h3>
                 {isInProgress && (
                   <span className="inline-flex items-center gap-1 px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium border border-orange-200 dark:border-orange-800 whitespace-nowrap">
@@ -104,17 +34,17 @@ export const CertificatesPage: React.FC = () => {
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-2">
                 <Award className="w-4 h-4" />
-                <span>{certificate.issuer}</span>
+                <span>{tx(certificate.issuer)}</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                 <Calendar className="w-4 h-4" />
-                <span>{certificate.date}</span>
+                <span>{tx(certificate.date)}</span>
               </div>
             </div>
           </div>
 
           <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-            {certificate.description}
+            {tx(certificate.description)}
           </p>
 
           {certificate.url && certificate.url !== "#" && !isInProgress && (

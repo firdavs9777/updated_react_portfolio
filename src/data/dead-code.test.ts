@@ -10,8 +10,10 @@ describe("the orphaned data modules are gone", () => {
     expect(page).toContain('from "../data/projects"');
   });
 
-  it("no longer ships the unreferenced experience module", () => {
-    expect(existsSync(resolve(repoRoot, "src/data/experience.ts"))).toBe(false);
+  it("ships src/data/experience.ts only because the Experience page now imports it", () => {
+    expect(existsSync(resolve(repoRoot, "src/data/experience.ts"))).toBe(true);
+    const page = readFileSync(resolve(repoRoot, "src/pages/Experience.tsx"), "utf8");
+    expect(page).toContain('from "../data/experience"');
   });
 });
 

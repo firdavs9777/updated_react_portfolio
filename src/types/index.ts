@@ -62,6 +62,37 @@ export interface ProjectEntry {
   androidUrl?: string;
 }
 
+export interface ExperienceEntry {
+  /** Stable identifier. Kebab-case slug, not an array index. */
+  id: string;
+  company: LocaleText;
+  position: LocaleText;
+  duration: LocaleText;
+  location: LocaleText;
+  current: boolean;
+  tech: string[];
+  achievements: LocaleText[];
+}
+
+export interface CertificateEntry {
+  /** Stable identifier. Kebab-case slug derived from the English title. */
+  id: string;
+  title: LocaleText;
+  issuer: LocaleText;
+  /**
+   * Certification date. Usually the same year string in every locale, but a
+   * translated status (e.g. "In Progress") for in-flight certifications, so
+   * this is LocaleText rather than a plain string.
+   */
+  date: LocaleText;
+  description: LocaleText;
+  url: string;
+  /** Emoji shown on the certificate card. */
+  image: string;
+  /** Card status indicator, e.g. "completed" or "in-progress". */
+  status: string;
+}
+
 export interface Translations {
   en: TranslationContent;
   ko: TranslationContent;
