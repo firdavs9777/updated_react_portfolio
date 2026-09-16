@@ -18,6 +18,10 @@ export const BANANATALK_USERS = 1200;
 /** How the user count is written in prose. Derived from BANANATALK_USERS. */
 export const BANANATALK_USERS_DISPLAY = "1,200+";
 
+// Open question for the owner: BananaTalk ships in_app_purchase and
+// google_mobile_ads and has a VIP tier, so the site no longer claims
+// "free forever". Confirm the current model and set the wording.
+
 /**
  * HackSeoul 2025 result. Second place — not a win.
  * The Korean term for first place is 우승; second prize is 2등상.

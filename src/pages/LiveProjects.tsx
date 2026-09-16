@@ -18,6 +18,7 @@ import {
 import { useLanguage } from "../context/languageContext";
 import { SEO } from "../utils/seo";
 import { liveProjects } from "../data/live-projects";
+import { BANANATALK_USERS_DISPLAY } from "../data/site-facts";
 import type { LiveProjectEntry } from "../types";
 
 const ACCENT = {
@@ -54,9 +55,9 @@ export const LiveProjectsPage: React.FC = () => {
           uz: "Faol loyihalar — BananaTalk · TezSell · AI Buddy",
         })}
         description={tx({
-          en: "Deep-dive into the production apps I've shipped — BananaTalk (1,200+ users), TezSell (live on iOS + Android), and AI Buddy chatbot.",
-          ko: "직접 출시한 프로덕션 앱 상세 — BananaTalk (1,200+ 유저), TezSell (iOS·Android 운영 중), AI Buddy 챗봇.",
-          uz: "Men chiqargan ishlab chiqarish ilovalari haqida batafsil — BananaTalk (1,200+ foydalanuvchi), TezSell (iOS va Android'da faol), AI Buddy chatbot.",
+          en: `Deep-dive into the production apps I've shipped — BananaTalk (${BANANATALK_USERS_DISPLAY} users), TezSell (live on iOS + Android), and AI Buddy chatbot.`,
+          ko: `직접 출시한 프로덕션 앱 상세 — BananaTalk (${BANANATALK_USERS_DISPLAY} 유저), TezSell (iOS·Android 운영 중), AI Buddy 챗봇.`,
+          uz: `Men chiqargan ishlab chiqarish ilovalari haqida batafsil — BananaTalk (${BANANATALK_USERS_DISPLAY} foydalanuvchi), TezSell (iOS va Android'da faol), AI Buddy chatbot.`,
         })}
         url="https://firdavs.dev/live-projects"
       />

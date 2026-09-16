@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { BANANATALK_USERS_DISPLAY } from "../data/site-facts";
 
 interface SEOProps {
   title?: string;
@@ -14,7 +15,7 @@ interface SEOProps {
 
 const DEFAULT_TITLE = "Firdavs Mutalipov (Davis) — Full-Stack Developer in Seoul";
 const DEFAULT_DESCRIPTION =
-  "Full-Stack Developer in Seoul. 4+ yrs React, Vue, Flutter, Node, Django. 1,200+ users on shipped apps. Available for hire.";
+  `Full-Stack Developer in Seoul. 4+ yrs React, Vue, Flutter, Node, Django. ${BANANATALK_USERS_DISPLAY} users on shipped apps. Available for hire.`;
 const DEFAULT_KEYWORDS =
   "Firdavs Mutalipov, Davis Mutalipov, hire developer Seoul, freelance developer Korea, full-stack developer for hire, React developer Seoul, Vue.js developer, Flutter developer, Node.js developer, TypeScript developer, Django developer, web developer Seoul, mobile app developer Korea, BananaTalk, TezSell, HackSeoul 2025, 풀스택 개발자 채용, 프리랜서 개발자 서울";
 

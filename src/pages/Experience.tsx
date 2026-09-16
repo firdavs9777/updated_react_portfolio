@@ -14,6 +14,7 @@ import React from "react";
 import { useLanguage } from "../context/languageContext";
 import { SEO } from "../utils/seo";
 import { experiences } from "../data/experience";
+import { BANANATALK_USERS_DISPLAY } from "../data/site-facts";
 
 export const ExperiencePage: React.FC = () => {
   const { t, tx } = useLanguage();
@@ -64,7 +65,11 @@ export const ExperiencePage: React.FC = () => {
             <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-6 shadow-sm">
               <Users className="w-7 h-7 text-blue-600 dark:text-blue-400 mb-3" />
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1">
-                {tx({ en: "1,200+ users", ko: "1,200+ 유저", uz: "1,200+ foydalanuvchi" })}
+                {tx({
+                  en: `${BANANATALK_USERS_DISPLAY} users`,
+                  ko: `${BANANATALK_USERS_DISPLAY} 유저`,
+                  uz: `${BANANATALK_USERS_DISPLAY} foydalanuvchi`,
+                })}
               </h3>
               <p className="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-2">
                 {tx({ en: "On shipped products", ko: "직접 출시한 제품", uz: "Chiqargan mahsulotlarda" })}

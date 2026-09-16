@@ -1,6 +1,7 @@
 // src/data/translations.ts
 
 import { Translations } from "../types";
+import { BANANATALK_USERS_DISPLAY } from "./site-facts";
 
 export const translations: Translations = {
   en: {
@@ -18,7 +19,7 @@ export const translations: Translations = {
       name: "Davis",
       title: "Full-Stack Developer · Seoul",
       subtitle:
-        "I ship production web & mobile apps. 1,200+ users on my own products. 4+ years across React, Vue, Flutter, Node, and Django.",
+        `I ship production web & mobile apps. ${BANANATALK_USERS_DISPLAY} users on my own products. 4+ years across React, Vue, Flutter, Node, and Django.`,
       cta: "Contact Me",
       resume: "Download Resume",
     },
@@ -27,7 +28,7 @@ export const translations: Translations = {
       description:
         "Full-stack developer with 4+ years of experience building web and mobile applications with React, Vue.js, Next.js, Nuxt.js, Flutter, Node.js, and Django. I have shipped financial service platforms, insurance/loan management systems, and consumer marketplace apps — acting as both developer and project manager across the full lifecycle from planning to deployment.",
       extendedDescription:
-        "Strong with REST API design, schema modeling, and complex business logic (commission calculations, workflow automation, multi-role permissions). I've led 4-5 person teams across multinational projects. Currently shipping TezSell (Flutter marketplace, live on App Store + Play Store) and BananaTalk (language exchange app, 1,200+ users across iOS and Android). 2nd-prize winner at HackSeoul 2025 for an AI clothing color-matching app.",
+        `Strong with REST API design, schema modeling, and complex business logic (commission calculations, workflow automation, multi-role permissions). I've led 4-5 person teams across multinational projects. Currently shipping TezSell (Flutter marketplace, live on App Store + Play Store) and BananaTalk (language exchange app, ${BANANATALK_USERS_DISPLAY} users across iOS and Android). 2nd-prize winner at HackSeoul 2025 for an AI clothing color-matching app.`,
       residence: "Work Authorization",
       languages: "Languages",
       residenceInfo:
@@ -68,7 +69,7 @@ export const translations: Translations = {
       name: "데이비스",
       title: "풀스택 개발자 · 서울",
       subtitle:
-        "프로덕션 웹 및 모바일 앱을 직접 출시합니다. 자체 제품에 1,200+ 유저. React, Vue, Flutter, Node, Django로 4년 이상의 경험.",
+        `프로덕션 웹 및 모바일 앱을 직접 출시합니다. 자체 제품에 ${BANANATALK_USERS_DISPLAY} 유저. React, Vue, Flutter, Node, Django로 4년 이상의 경험.`,
       cta: "연락하기",
       resume: "이력서 다운로드",
     },
@@ -77,7 +78,7 @@ export const translations: Translations = {
       description:
         "React, Vue.js, Next.js, Nuxt.js, Flutter, Node.js, Django로 4년 이상 웹 및 모바일 애플리케이션을 개발해온 풀스택 개발자입니다. 금융 서비스 플랫폼, 보험·대출 관리 시스템, 일반 소비자용 마켓플레이스 앱을 출시하며 개발과 프로젝트 매니저 역할을 모두 수행했습니다.",
       extendedDescription:
-        "REST API 설계, 스키마 모델링, 복잡한 비즈니스 로직 구현(수수료 자동 계산, 워크플로우 자동화, 다중 권한 관리)에 강점이 있습니다. 다국적 프로젝트에서 4~5명 규모의 팀을 리드한 경험이 있으며, 현재 TezSell(Flutter, App Store·Play Store 출시)과 BananaTalk(언어 교환 앱, iOS·Android 합산 1,200+ 유저)를 운영 중입니다. HackSeoul 2025에서 AI 의류 색상 매칭 앱으로 2위를 수상했습니다.",
+        `REST API 설계, 스키마 모델링, 복잡한 비즈니스 로직 구현(수수료 자동 계산, 워크플로우 자동화, 다중 권한 관리)에 강점이 있습니다. 다국적 프로젝트에서 4~5명 규모의 팀을 리드한 경험이 있으며, 현재 TezSell(Flutter, App Store·Play Store 출시)과 BananaTalk(언어 교환 앱, iOS·Android 합산 ${BANANATALK_USERS_DISPLAY} 유저)를 운영 중입니다. HackSeoul 2025에서 AI 의류 색상 매칭 앱으로 2위를 수상했습니다.`,
       residence: "근무 가능 자격",
       languages: "언어 능력",
       residenceInfo:
@@ -118,7 +119,7 @@ export const translations: Translations = {
       name: "Davis",
       title: "Full-Stack Dasturchi · Seul",
       subtitle:
-        "Ishlab chiqarish darajasidagi veb va mobil ilovalarni o'zim ishlab chiqaman. Shaxsiy mahsulotlarimda 1,200+ foydalanuvchi. React, Vue, Flutter, Node, Django bo'yicha 4+ yillik tajriba.",
+        `Ishlab chiqarish darajasidagi veb va mobil ilovalarni o'zim ishlab chiqaman. Shaxsiy mahsulotlarimda ${BANANATALK_USERS_DISPLAY} foydalanuvchi. React, Vue, Flutter, Node, Django bo'yicha 4+ yillik tajriba.`,
       cta: "Bog'lanish",
       resume: "Rezyumeni yuklab olish",
     },
@@ -127,7 +128,7 @@ export const translations: Translations = {
       description:
         "React, Vue.js, Next.js, Nuxt.js, Flutter, Node.js va Django yordamida 4 yildan ortiq veb va mobil ilovalar ishlab chiqish tajribasiga ega full-stack dasturchi. Moliyaviy xizmat platformalari, sug'urta/kredit boshqaruv tizimlari va iste'molchi bozor ilovalarini ishga tushirganman — rejalashtirishdan deployga qadar dasturchi va loyiha menejeri sifatida ishladim.",
       extendedDescription:
-        "REST API loyihalash, sxema modellashtirish va murakkab biznes mantiqi (komissiya hisoblash, ish oqimini avtomatlashtirish, ko'p rolli ruxsatlar) sohalarida kuchli tajribaga egaman. Xalqaro loyihalarda 4-5 kishilik jamoalarni boshqarganman. Hozirda TezSell (Flutter bozor ilovasi, App Store va Play Store'da faol) va BananaTalk (til almashish ilovasi, iOS va Android'da jami 1,200+ foydalanuvchi) loyihalarini olib boryapman. HackSeoul 2025 da AI kiyim rang moslash ilovasi bilan 2-o'rin sovrindori.",
+        `REST API loyihalash, sxema modellashtirish va murakkab biznes mantiqi (komissiya hisoblash, ish oqimini avtomatlashtirish, ko'p rolli ruxsatlar) sohalarida kuchli tajribaga egaman. Xalqaro loyihalarda 4-5 kishilik jamoalarni boshqarganman. Hozirda TezSell (Flutter bozor ilovasi, App Store va Play Store'da faol) va BananaTalk (til almashish ilovasi, iOS va Android'da jami ${BANANATALK_USERS_DISPLAY} foydalanuvchi) loyihalarini olib boryapman. HackSeoul 2025 da AI kiyim rang moslash ilovasi bilan 2-o'rin sovrindori.`,
       residence: "Ish ruxsati",
       languages: "Tillar",
       residenceInfo:

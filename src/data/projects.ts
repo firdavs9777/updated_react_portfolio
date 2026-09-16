@@ -74,7 +74,7 @@ export const projects: ProjectEntry[] = [
       uz: "BananaTalk Til Almashish Ilovasi",
     },
     description: {
-      en: "Free language exchange app connecting people with native speakers across 100+ languages. No flashcards or scripted lessons — just real conversations through instant chat, voice messages, smart translation, and AI study tools. Free forever on iOS and Android.",
+      en: "Free language exchange app connecting people with native speakers across 100+ languages. No flashcards or scripted lessons — just real conversations through instant chat, voice messages, smart translation, and AI study tools. Free to use on iOS and Android.",
       ko: "100개 이상의 언어를 지원하는 무료 언어교환 앱입니다. 원어민과 실시간 채팅, 음성 메시지, 스마트 번역, AI 학습 도구를 통해 실제 대화로 언어를 배울 수 있습니다. iOS와 Android에서 무료로 이용 가능합니다.",
       uz: "100 dan ortiq tilni qo'llab-quvvatlovchi bepul til almashish ilovasi. Ona tilida so'zlashuvchilar bilan real vaqtda suhbat, ovozli xabarlar, aqlli tarjima va AI o'rganish vositalari orqali tillarni o'rganing. iOS va Android'da bepul.",
     },
@@ -112,9 +112,9 @@ export const projects: ProjectEntry[] = [
       uz: "TezSell - Mahalla Bozori",
     },
     description: {
-      en: "Neighborhood marketplace app. Buy and sell items, offer services, and list real estate with neighbors. Features direct chat, secure transactions, and is completely free. Available on iOS and Android.",
-      ko: "동네 마켓플레이스 앱. 이웃과 물건을 사고팔고, 서비스를 제공하며, 부동산 매물을 등록할 수 있습니다. 직접 채팅, 안전한 거래, 무료 이용 가능. iOS와 Android에서 다운로드 가능합니다.",
-      uz: "Mahalla bozori ilovasi. Qo'shnilaringiz bilan narsalarni sotib oling va soting, xizmatlar taklif qiling va ko'chmas mulk e'lonlarini joylashtiring. To'g'ridan-to'g'ri suhbat, xavfsiz tranzaksiyalar va butunlay bepul. iOS va Android'da mavjud.",
+      en: "Neighborhood marketplace app. Buy and sell items, offer services, and list real estate with neighbors. Features direct chat, secure transactions, and is free to use. Available on iOS and Android.",
+      ko: "동네 마켓플레이스 앱. 이웃과 물건을 사고팔고, 서비스를 제공하며, 부동산 매물을 등록할 수 있습니다. 직접 채팅, 안전한 거래, 무료로 이용 가능. iOS와 Android에서 다운로드 가능합니다.",
+      uz: "Mahalla bozori ilovasi. Qo'shnilaringiz bilan narsalarni sotib oling va soting, xizmatlar taklif qiling va ko'chmas mulk e'lonlarini joylashtiring. To'g'ridan-to'g'ri suhbat, xavfsiz tranzaksiyalar va bepul foydalanish mumkin. iOS va Android'da mavjud.",
     },
     role: {
       en: "Owner & Lead Developer",

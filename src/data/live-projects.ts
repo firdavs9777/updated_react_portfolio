@@ -4,7 +4,7 @@
 // site-facts so a changed link is corrected in one place.
 
 import type { LiveProjectEntry } from "../types";
-import { STORE_LINKS } from "./site-facts";
+import { BANANATALK_USERS_DISPLAY, STORE_LINKS } from "./site-facts";
 
 export const liveProjects: LiveProjectEntry[] = [
   {
@@ -17,9 +17,9 @@ export const liveProjects: LiveProjectEntry[] = [
       uz: "Til almashish ilovasi · iOS + Android · 100+ til",
     },
     metric: {
-      en: "1,200+ users",
-      ko: "1,200+ 유저",
-      uz: "1,200+ foydalanuvchi",
+      en: `${BANANATALK_USERS_DISPLAY} users`,
+      ko: `${BANANATALK_USERS_DISPLAY} 유저`,
+      uz: `${BANANATALK_USERS_DISPLAY} foydalanuvchi`,
     },
     metricLabel: {
       en: "across iOS (1,000+) and Android (200+)",
@@ -32,14 +32,14 @@ export const liveProjects: LiveProjectEntry[] = [
       uz: "Til o'rganuvchilar suhbat quradigan ona tili so'zlashuvchilarni topa olmaydi. Flesh-kartalar va tayyor darslar suhbatda ravonlikka olib kelmaydi — faqat haqiqiy suhbatlar olib keladi.",
     },
     solution: {
-      en: "An app that matches you with native speakers across 100+ languages, with instant chat, voice messages, WebRTC voice/video calls, smart translation, and AI study tools — all free forever.",
-      ko: "100개 이상의 언어를 지원하는 원어민 매칭 앱. 실시간 채팅, 음성 메시지, WebRTC 음성·영상 통화, 스마트 번역, AI 학습 도구를 제공합니다 — 영구 무료.",
-      uz: "100+ til bo'yicha ona tili so'zlashuvchilar bilan tanishtiruvchi ilova: tezkor chat, ovozli xabarlar, WebRTC ovozli va video qo'ng'iroqlar, aqlli tarjimon, AI o'quv vositalari — abadiy bepul.",
+      en: "An app that matches you with native speakers across 100+ languages, with instant chat, voice messages, WebRTC voice/video calls, smart translation, and AI study tools — free to use.",
+      ko: "100개 이상의 언어를 지원하는 원어민 매칭 앱. 실시간 채팅, 음성 메시지, WebRTC 음성·영상 통화, 스마트 번역, AI 학습 도구를 제공합니다 — 무료로 이용 가능.",
+      uz: "100+ til bo'yicha ona tili so'zlashuvchilar bilan tanishtiruvchi ilova: tezkor chat, ovozli xabarlar, WebRTC ovozli va video qo'ng'iroqlar, aqlli tarjimon, AI o'quv vositalari — bepul foydalanish mumkin.",
     },
     results: {
-      en: "1,200+ users across App Store and Google Play. Active community. Weekly feature releases. Designed, built, and operated solo end-to-end.",
-      ko: "App Store와 Google Play 합산 1,200+ 유저. 활성 커뮤니티. 매주 새 기능 출시. 기획·개발·운영 전 과정을 직접 담당.",
-      uz: "App Store va Google Play'da jami 1,200+ foydalanuvchi. Faol jamoa. Har hafta yangi funksiyalar. Loyiha, ishlab chiqish va boshqaruvni yakka o'zim olib boryapman.",
+      en: `${BANANATALK_USERS_DISPLAY} users across App Store and Google Play. Active community. Weekly feature releases. Designed, built, and operated solo end-to-end.`,
+      ko: `App Store와 Google Play 합산 ${BANANATALK_USERS_DISPLAY} 유저. 활성 커뮤니티. 매주 새 기능 출시. 기획·개발·운영 전 과정을 직접 담당.`,
+      uz: `App Store va Google Play'da jami ${BANANATALK_USERS_DISPLAY} foydalanuvchi. Faol jamoa. Har hafta yangi funksiyalar. Loyiha, ishlab chiqish va boshqaruvni yakka o'zim olib boryapman.`,
     },
     role: {
       en: "Owner · Full-Stack Developer",
@@ -80,9 +80,9 @@ export const liveProjects: LiveProjectEntry[] = [
       uz: "Mahalla bozori bo'lingan chat guruhlari va e'lonlarda kechadi — ishonch signallari, chat, joylashuv filtri yo'q, ishqalanish katta.",
     },
     solution: {
-      en: "A single neighborhood marketplace app: buy and sell items, offer services, list real estate. Direct chat between users, location-aware listings, secure transactions, completely free.",
-      ko: "동네 마켓플레이스 앱: 물건 사고팔기, 서비스 제공, 부동산 등록. 사용자 간 직접 채팅, 위치 기반 검색, 안전한 거래, 무료.",
-      uz: "Yagona mahalla bozori ilovasi: narsalarni sotib oling va soting, xizmatlar taklif qiling, ko'chmas mulkni e'lon qiling. Foydalanuvchilar o'rtasida to'g'ridan-to'g'ri chat, joylashuvga asoslangan e'lonlar, xavfsiz va bepul.",
+      en: "A single neighborhood marketplace app: buy and sell items, offer services, list real estate. Direct chat between users, location-aware listings, secure transactions, free to use.",
+      ko: "동네 마켓플레이스 앱: 물건 사고팔기, 서비스 제공, 부동산 등록. 사용자 간 직접 채팅, 위치 기반 검색, 안전한 거래, 무료로 이용 가능.",
+      uz: "Yagona mahalla bozori ilovasi: narsalarni sotib oling va soting, xizmatlar taklif qiling, ko'chmas mulkni e'lon qiling. Foydalanuvchilar o'rtasida to'g'ridan-to'g'ri chat, joylashuvga asoslangan e'lonlar, xavfsiz va bepul foydalanish mumkin.",
     },
     results: {
       en: "Live on App Store + Google Play. Ongoing growth and active users. Built and operated solo, from API and database design to mobile UI and DevOps.",

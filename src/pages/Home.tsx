@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "../context/languageContext";
 import { SEO } from "../utils/seo";
+import { BANANATALK_USERS_DISPLAY } from "../data/site-facts";
 
 const TECH_STACK = [
   "React",
@@ -192,11 +193,11 @@ export const HomePage: React.FC = () => {
                 uz: "Til almashish · 100+ til",
               })}
               description={tx({
-                en: "Real conversations with native speakers — instant chat, voice messages, smart translation, AI study tools. 1,200+ users across iOS and Android. Free forever.",
-                ko: "원어민과 실제 대화 — 실시간 채팅, 음성 메시지, 스마트 번역, AI 학습 도구. iOS와 Android에서 1,200+ 유저. 영구 무료.",
-                uz: "Ona tili so'zlashuvchilar bilan haqiqiy suhbatlar — tezkor chat, ovozli xabarlar, aqlli tarjimon, AI o'quv vositalari. iOS va Android'da 1,200+ foydalanuvchi. Abadiy bepul.",
+                en: `Real conversations with native speakers — instant chat, voice messages, smart translation, AI study tools. ${BANANATALK_USERS_DISPLAY} users across iOS and Android. Free to use.`,
+                ko: `원어민과 실제 대화 — 실시간 채팅, 음성 메시지, 스마트 번역, AI 학습 도구. iOS와 Android에서 ${BANANATALK_USERS_DISPLAY} 유저. 무료로 이용 가능.`,
+                uz: `Ona tili so'zlashuvchilar bilan haqiqiy suhbatlar — tezkor chat, ovozli xabarlar, aqlli tarjimon, AI o'quv vositalari. iOS va Android'da ${BANANATALK_USERS_DISPLAY} foydalanuvchi. Bepul foydalanish mumkin.`,
               })}
-              metric="1,200+"
+              metric={BANANATALK_USERS_DISPLAY}
               metricLabel={tx({ en: "users", ko: "유저", uz: "foydalanuvchi" })}
               stack={["Flutter", "Node.js", "MongoDB", "WebRTC", "Firebase", "Socket.io"]}
               website="https://banatalk.com"
@@ -215,9 +216,9 @@ export const HomePage: React.FC = () => {
                 uz: "Mahalla bozori · iOS + Android",
               })}
               description={tx({
-                en: "Buy and sell items, offer services, and list real estate with neighbors. Direct chat, secure transactions, completely free. Live on App Store and Google Play.",
-                ko: "물건 사고팔기, 서비스 제공, 부동산 등록까지. 직접 채팅, 안전한 거래, 무료. App Store와 Google Play에서 운영 중.",
-                uz: "Narsalarni sotib oling va soting, xizmatlar taklif qiling, ko'chmas mulk e'lonlarini joylashtiring. To'g'ridan-to'g'ri chat, xavfsiz, bepul. App Store va Google Play'da faol.",
+                en: "Buy and sell items, offer services, and list real estate with neighbors. Direct chat, secure transactions, free to use. Live on App Store and Google Play.",
+                ko: "물건 사고팔기, 서비스 제공, 부동산 등록까지. 직접 채팅, 안전한 거래, 무료로 이용 가능. App Store와 Google Play에서 운영 중.",
+                uz: "Narsalarni sotib oling va soting, xizmatlar taklif qiling, ko'chmas mulk e'lonlarini joylashtiring. To'g'ridan-to'g'ri chat, xavfsiz, bepul foydalanish mumkin. App Store va Google Play'da faol.",
               })}
               metric={tx({ en: "Live", ko: "라이브", uz: "Faol" })}
               metricLabel={tx({ en: "in production", ko: "운영 중", uz: "ishlamoqda" })}
@@ -249,7 +250,7 @@ export const HomePage: React.FC = () => {
         {/* ============================================================== */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            {/* 1,200+ users */}
+            {/* BananaTalk user count */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 mb-3">
                 <Users className="w-5 h-5" />
@@ -258,7 +259,7 @@ export const HomePage: React.FC = () => {
                 </span>
               </div>
               <div className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2">
-                1,200+
+                {BANANATALK_USERS_DISPLAY}
               </div>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                 {tx({
