@@ -43,7 +43,7 @@ describe("useTheme", () => {
   });
 
   it("still renders when localStorage throws", async () => {
-    const spy = vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => {
+    const spy = vi.spyOn(window.localStorage, "setItem").mockImplementation(() => {
       throw new Error("denied");
     });
 
@@ -53,6 +53,7 @@ describe("useTheme", () => {
     });
 
     expect(screen.getByTestId("probe")).toHaveTextContent("dark");
+    expect(spy).toHaveBeenCalled();
     spy.mockRestore();
   });
 });
