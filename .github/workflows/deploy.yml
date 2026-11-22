@@ -23,10 +23,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - run: npm ci
       - run: npm run type-check
@@ -61,16 +61,28 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
 
-      - name: Pull, build, and reload nginx on the server
+      # Build into dist-staging, then swap it with dist only if the build
+      # succeeded. The live site never sees a half-built folder, and the
+      # previous release stays in dist-staging until the next deploy.
+      # Roll back by hand:  mv dist dist-swap && mv dist-staging dist && mv dist-swap dist-staging
+      - name: Pull, build, and swap in the new release
         if: steps.secrets.outputs.ready == 'true'
         run: |
           ssh -i ~/.ssh/deploy_key "$DEPLOY_USER@$DEPLOY_HOST" bash -s -- "$DEPLOY_PATH" <<'REMOTE'
           set -euo pipefail
           cd "$1"
+          if [ -e dist-swap ]; then echo "dist-swap exists from an interrupted deploy; fix by hand" >&2; exit 1; fi
           git fetch origin main
           git pull --ff-only origin main
           npm ci --no-audit --no-fund
-          npm run deploy
+          npm run type-check
+          NODE_OPTIONS='--max-old-space-size=2048' npx vite build --outDir dist-staging --emptyOutDir
+          test -f dist-staging/index.html
+          mv dist dist-swap
+          mv dist-staging dist
+          mv dist-swap dist-staging
+          nginx -s reload
+          echo "Deployed $(git rev-parse --short HEAD)"
           REMOTE
 
       - name: Check the live site
