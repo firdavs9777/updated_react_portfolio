@@ -27,6 +27,8 @@ jobs:
             --exclude '^tel:'
             --exclude 'fonts\.(googleapis|gstatic)\.com'
             --exclude 'schema\.org'
+            --exclude 'api\.banatalk\.com'
+            --exclude 'maps\.google\.com'
             'src/**/*.ts'
             'src/**/*.tsx'
             index.html
