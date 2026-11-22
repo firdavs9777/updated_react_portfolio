@@ -38,7 +38,6 @@ export const experiences: ExperienceEntry[] = [
       "WebRTC",
       "REST API",
       "PostgreSQL",
-      "MongoDB",
       "AWS",
       "Docker",
       "CI/CD",
@@ -56,9 +55,9 @@ export const experiences: ExperienceEntry[] = [
         uz: "Real vaqtdagi audio va video uchun WebRTC media serverini hamda REST API'larni (Node.js, Express) ishlab chiqaman — sensor ma'lumotlarini yig'ish va o'quv tahlili, 500+ bir vaqtdagi foydalanuvchi.",
       },
       {
-        en: "Designed PostgreSQL and MongoDB schemas and data pipelines for student behavior data, cutting query response time by 40%.",
-        ko: "학생 행동 데이터용 PostgreSQL·MongoDB 스키마 및 데이터 파이프라인 설계 — 쿼리 응답 시간 40% 단축",
-        uz: "O'quvchilar xulq-atvori ma'lumotlari uchun PostgreSQL va MongoDB sxemalari hamda ma'lumot oqimlarini loyihaladim — so'rov javob vaqti 40% qisqardi.",
+        en: "Designed the PostgreSQL schemas and data pipelines on AWS for student behavior data, cutting query response time by 40%.",
+        ko: "AWS 기반 PostgreSQL 스키마 및 학생 행동 데이터 파이프라인 설계 — 쿼리 응답 시간 40% 단축",
+        uz: "O'quvchilar xulq-atvori ma'lumotlari uchun AWS'dagi PostgreSQL sxemalari va ma'lumot oqimlarini loyihaladim — so'rov javob vaqti 40% qisqardi.",
       },
       {
         en: "Set up and run the AWS infrastructure (EC2, S3, CloudFront) with Docker and CI/CD for zero-downtime releases.",
