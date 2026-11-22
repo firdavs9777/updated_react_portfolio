@@ -9,15 +9,15 @@ import {
 
 describe("site facts", () => {
   it("stores the user count as a number and a display string that agree", () => {
-    expect(BANANATALK_USERS).toBe(1500);
-    expect(BANANATALK_USERS_DISPLAY).toBe("1,500+");
+    expect(BANANATALK_USERS).toBe(2500);
+    expect(BANANATALK_USERS_DISPLAY).toBe("2,500+");
     const digits = Number(BANANATALK_USERS_DISPLAY.replace(/[^0-9]/g, ""));
     expect(digits).toBe(BANANATALK_USERS);
   });
 
   it("stores the download count as a number and a display string that agree", () => {
-    expect(BANANATALK_DOWNLOADS).toBe(3000);
-    expect(BANANATALK_DOWNLOADS_DISPLAY).toBe("3,000+");
+    expect(BANANATALK_DOWNLOADS).toBe(6000);
+    expect(BANANATALK_DOWNLOADS_DISPLAY).toBe("6,000+");
     const digits = Number(BANANATALK_DOWNLOADS_DISPLAY.replace(/[^0-9]/g, ""));
     expect(digits).toBe(BANANATALK_DOWNLOADS);
   });
