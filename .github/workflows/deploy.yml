@@ -1,0 +1,80 @@
+# Test on GitHub, then deploy firdavs.dev on every push to main.
+#
+# Required repository secrets (Settings → Secrets and variables → Actions):
+#   DEPLOY_HOST  server IP or hostname
+#   DEPLOY_USER  SSH user on the server
+#   DEPLOY_KEY   private SSH key whose public half is in the server's authorized_keys
+#   DEPLOY_PATH  absolute path of this repo's clone on the server
+#
+# Until all four secrets exist, the deploy job is skipped (tests still run).
+
+name: Test and deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run type-check
+      - run: npm run lint
+      - run: npm test
+      - run: npx vite build
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+      DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+      DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+    steps:
+      - name: Check deploy secrets
+        id: secrets
+        run: |
+          if [ -z "$DEPLOY_HOST" ] || [ -z "$DEPLOY_USER" ] || [ -z "$DEPLOY_KEY" ] || [ -z "$DEPLOY_PATH" ]; then
+            echo "::notice::Deploy secrets are not set yet; skipping deploy."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up SSH
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+
+      - name: Pull, build, and reload nginx on the server
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          ssh -i ~/.ssh/deploy_key "$DEPLOY_USER@$DEPLOY_HOST" bash -s -- "$DEPLOY_PATH" <<'REMOTE'
+          set -euo pipefail
+          cd "$1"
+          git fetch origin main
+          git pull --ff-only origin main
+          npm ci --no-audit --no-fund
+          npm run deploy
+          REMOTE
+
+      - name: Check the live site
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          sleep 5
+          curl -fsS -o /dev/null -w "firdavs.dev responded %{http_code}\n" https://firdavs.dev/
