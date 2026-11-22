@@ -156,9 +156,9 @@ export const AboutPage: React.FC = () => {
               <p>{t.about.extendedDescription}</p>
               <p>
                 {tx({
-                  en: "Long-term resident of Seoul. Currently at 3R Innovation Inc. building AI-powered EdTech solutions. KIIP Level 5 certified — fully capable of business communication in Korean. Seeking stable, long-term opportunities where I can contribute immediately.",
-                  ko: "서울에 장기 거주 중이며, 현재 3R Innovation에서 AI 에듀테크 솔루션을 개발하고 있습니다. KIIP 5단계 수료로 한국어 비즈니스 커뮤니케이션이 원활합니다. 안정적이고 즉시 기여할 수 있는 장기 근무 기회를 찾고 있습니다.",
-                  uz: "Seulda uzoq muddatli yashayman. Hozirda 3R Innovation da AI EdTech yechimlarini ishlab chiqyapman. KIIP 5-daraja sertifikatiga ega — koreys tilida ishga doir muloqotni to'liq olib bora olaman. Darhol hissa qo'shadigan barqaror va uzoq muddatli ish imkoniyatlarini qidirmoqdaman.",
+                  en: "Long-term resident of Seoul. Currently at 3R Innovation Inc. building the FocusPang online learning platform (focuspang.com). KIIP Level 5 certified — fully capable of business communication in Korean. Seeking stable, long-term opportunities where I can contribute immediately.",
+                  ko: "서울에 장기 거주 중이며, 현재 3R Innovation에서 온라인 학습 플랫폼 FocusPang(focuspang.com)을 개발하고 있습니다. KIIP 5단계 수료로 한국어 비즈니스 커뮤니케이션이 원활합니다. 안정적이고 즉시 기여할 수 있는 장기 근무 기회를 찾고 있습니다.",
+                  uz: "Seulda uzoq muddatli yashayman. Hozirda 3R Innovation'da FocusPang (focuspang.com) onlayn ta'lim platformasini ishlab chiqyapman. KIIP 5-daraja sertifikatiga ega — koreys tilida ishga doir muloqotni to'liq olib bora olaman. Darhol hissa qo'shadigan barqaror va uzoq muddatli ish imkoniyatlarini qidirmoqdaman.",
                 })}
               </p>
             </div>
