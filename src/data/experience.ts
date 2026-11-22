@@ -35,6 +35,7 @@ export const experiences: ExperienceEntry[] = [
       "TypeScript",
       "Node.js",
       "Express",
+      "WebRTC",
       "REST API",
       "PostgreSQL",
       "MongoDB",
@@ -50,9 +51,9 @@ export const experiences: ExperienceEntry[] = [
         uz: "FocusPang (focuspang.com) onlayn ta'lim platformasini yarataman: React va Next.js asosidagi o'quvchi va o'qituvchi veb ilovalari.",
       },
       {
-        en: "Develop the platform's media server and REST APIs (Node.js, Express) for sensor data collection and real-time learning analytics, serving 500+ concurrent users.",
-        ko: "플랫폼 미디어 서버 및 REST API(Node.js, Express) 개발 — 센서 데이터 수집·실시간 학습 분석, 동시 접속 500명 이상 처리",
-        uz: "Platformaning media serveri va REST API'larini (Node.js, Express) ishlab chiqaman — sensor ma'lumotlarini yig'ish va real vaqtda o'quv tahlili, 500+ bir vaqtdagi foydalanuvchi.",
+        en: "Develop the platform's WebRTC media server for real-time audio and video, plus REST APIs (Node.js, Express) for sensor data collection and learning analytics, serving 500+ concurrent users.",
+        ko: "WebRTC 기반 실시간 음성·영상 미디어 서버 및 REST API(Node.js, Express) 개발 — 센서 데이터 수집·학습 분석, 동시 접속 500명 이상 처리",
+        uz: "Real vaqtdagi audio va video uchun WebRTC media serverini hamda REST API'larni (Node.js, Express) ishlab chiqaman — sensor ma'lumotlarini yig'ish va o'quv tahlili, 500+ bir vaqtdagi foydalanuvchi.",
       },
       {
         en: "Designed PostgreSQL and MongoDB schemas and data pipelines for student behavior data, cutting query response time by 40%.",
