@@ -15,7 +15,21 @@ import { SEO } from "../utils/seo";
 
 const SKILL_CATEGORIES = [
   {
-    title: { en: "Frontend", ko: "프론트엔드", uz: "Frontend" },
+    title: { en: "Backend", ko: "백엔드", uz: "Backend" },
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Python",
+      "Django",
+      "REST APIs",
+      "AWS Lambda",
+      "Java (learning)",
+      "Spring Boot (learning)",
+    ],
+    color: "green",
+  },
+  {
+    title: { en: "Frontend & Mobile", ko: "프론트엔드 & 모바일", uz: "Frontend & Mobil" },
     skills: [
       "React",
       "Next.js",
@@ -27,19 +41,6 @@ const SKILL_CATEGORIES = [
       "Tailwind CSS",
     ],
     color: "blue",
-  },
-  {
-    title: { en: "Backend", ko: "백엔드", uz: "Backend" },
-    skills: [
-      "Node.js",
-      "Express.js",
-      "Python",
-      "Django",
-      "Java Spring Boot",
-      "AWS Lambda",
-      "REST APIs",
-    ],
-    color: "green",
   },
   {
     title: { en: "Database", ko: "데이터베이스", uz: "Ma'lumotlar bazasi" },
@@ -138,9 +139,9 @@ export const AboutPage: React.FC = () => {
             <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded mb-6"></div>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               {tx({
-                en: "Full-Stack Developer · Available for hire · Based in Seoul",
-                ko: "풀스택 개발자 · 즉시 입사 가능 · 서울 거주",
-                uz: "Full-Stack Dasturchi · Ishga tayyor · Seulda joylashgan",
+                en: "Backend-focused Full-Stack Developer · Open to new roles · Based in Seoul",
+                ko: "백엔드 중심 풀스택 개발자 · 입사일 협의 가능 · 서울 거주",
+                uz: "Backendga yo'naltirilgan Full-Stack Dasturchi · Yangi takliflarga ochiq · Seulda joylashgan",
               })}
             </p>
           </header>
@@ -148,7 +149,7 @@ export const AboutPage: React.FC = () => {
           {/* Bio */}
           <section className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 sm:p-8 mb-8">
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              {tx({ en: "About Me", ko: "나에 대해", uz: "Men haqimda" })}
+              {tx({ en: "About Me", ko: "소개", uz: "Men haqimda" })}
             </h2>
             <div className="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>{t.about.description}</p>
@@ -223,15 +224,15 @@ export const AboutPage: React.FC = () => {
               {(tx({
                 en: [
                   "Frontend: Vue.js, Nuxt.js, React, Next.js, Flutter — financial platforms, marketplace apps, and learning management systems",
-                  "Backend: Node.js, Express, Django, AWS Lambda — RESTful API design, JWT auth, serverless architecture, SQL Stored Procedures",
+                  "Backend: Node.js, Express, Django, AWS Lambda — RESTful API design, JWT auth, serverless architecture, SQL Stored Procedures. Currently learning Java & Spring Boot",
                   "Database: MySQL, PostgreSQL, MongoDB — schema design, query optimization, location-based search, real-time data processing",
                   "Mobile: Flutter cross-platform apps shipped to App Store + Play Store with real-time chat, payments, and push notifications",
-                  "Project Management: led 4-5 dev teams across multinational collaboration, full lifecycle from planning to deployment",
+                  "Project Management: led 4–5-person dev teams on multinational projects, full lifecycle from planning to deployment",
                   "DevOps: Docker, AWS (EC2, S3, CloudFront, Lambda), CI/CD pipelines, production app maintenance and monitoring",
                 ],
                 ko: [
                   "프론트엔드: Vue.js, Nuxt.js, React, Next.js, Flutter — 금융 플랫폼, 마켓플레이스, LMS 개발",
-                  "백엔드: Node.js, Express, Django, AWS Lambda — RESTful API 설계, JWT 인증, 서버리스 아키텍처, SQL Stored Procedures",
+                  "백엔드: Node.js, Express, Django, AWS Lambda — RESTful API 설계, JWT 인증, 서버리스 아키텍처, SQL Stored Procedures. 현재 Java·Spring Boot 학습 중",
                   "데이터베이스: MySQL, PostgreSQL, MongoDB — 스키마 설계, 쿼리 최적화, 위치 기반 검색, 실시간 처리",
                   "모바일: Flutter 크로스플랫폼 앱을 App Store · Play Store에 출시 — 실시간 채팅, 결제, 푸시 알림",
                   "프로젝트 관리: 4~5명 개발팀 리딩, 다국적 협업, 기획부터 배포까지 전 과정",
@@ -239,10 +240,10 @@ export const AboutPage: React.FC = () => {
                 ],
                 uz: [
                   "Frontend: Vue.js, Nuxt.js, React, Next.js, Flutter — moliyaviy platformalar, bozor ilovalari va LMS",
-                  "Backend: Node.js, Express, Django, AWS Lambda — RESTful API loyihalash, JWT autentifikatsiya, serverless, SQL Stored Procedures",
+                  "Backend: Node.js, Express, Django, AWS Lambda — RESTful API loyihalash, JWT autentifikatsiya, serverless, SQL Stored Procedures. Hozir Java va Spring Boot'ni o'rganyapman",
                   "Ma'lumotlar bazasi: MySQL, PostgreSQL, MongoDB — sxema loyihalash, so'rov optimallashtirish, geolokatsion qidiruv, real-time qayta ishlash",
                   "Mobil: Flutter kross-platforma ilovalar App Store va Play Store'da — real-time chat, to'lov, push bildirishnomalar",
-                  "Loyiha boshqaruvi: 4-5 kishilik jamoalarni boshqargan, xalqaro hamkorlik, rejalashtrishdan deployga qadar",
+                  "Loyiha boshqaruvi: 4-5 kishilik jamoalarni boshqargan, xalqaro hamkorlik, rejalashtirishdan deployga qadar",
                   "DevOps: Docker, AWS (EC2, S3, CloudFront, Lambda), CI/CD quvurlari, ishlab chiqarish va monitoring",
                 ],
               }) as string[]).map((item, i) => (
@@ -365,7 +366,7 @@ export const AboutPage: React.FC = () => {
           <section className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl shadow-lg p-6 sm:p-8">
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
               <Award className="w-5 h-5 text-yellow-600 dark:text-yellow-400" />
-              {tx({ en: "Awards & Certifications", ko: "수상 및 자격증", uz: "Mukofotlar va sertifikatlar" })}
+              {tx({ en: "Awards & Certifications", ko: "수상 및 교육", uz: "Mukofotlar va sertifikatlar" })}
             </h2>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -373,9 +374,9 @@ export const AboutPage: React.FC = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">
                     {tx({
-                      en: "HackSeoul 2025 — 2nd Prize",
-                      ko: "HackSeoul 2025 — 2등상",
-                      uz: "HackSeoul 2025 — 2-o'rin",
+                      en: "Coupang AngelHack HackSeoul 2025 — 2nd Prize",
+                      ko: "쿠팡 주최 AngelHack HackSeoul 2025 — 2위",
+                      uz: "Coupang AngelHack HackSeoul 2025 — 2-o'rin",
                     })}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">

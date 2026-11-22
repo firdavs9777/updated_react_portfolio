@@ -102,9 +102,9 @@ export const LiveProjectsPage: React.FC = () => {
               </h2>
               <p className="text-blue-100 dark:text-blue-200 mb-6 max-w-2xl mx-auto text-sm sm:text-base">
                 {tx({
-                  en: "Open to full-time roles and freelance projects. Let's talk.",
-                  ko: "정규직 및 프리랜서 프로젝트에 열려 있습니다. 이야기해봐요.",
-                  uz: "Doimiy ish va freelance loyihalarga ochiqman. Gaplashaylik.",
+                  en: "Open to full-time backend roles. Let's talk.",
+                  ko: "정규직 백엔드 포지션을 찾고 있습니다. 편하게 연락 주세요.",
+                  uz: "Doimiy backend lavozimlariga ochiqman. Bog'laning.",
                 })}
               </p>
               <a

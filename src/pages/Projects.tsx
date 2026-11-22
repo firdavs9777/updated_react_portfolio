@@ -197,7 +197,7 @@ export const ProjectsPage: React.FC = () => {
             <span className="text-sm text-gray-600 dark:text-gray-400 capitalize">
               {project.status === "in-progress"
                 ? tx({ en: "In Progress", ko: "진행 중", uz: "Jarayonda" })
-                : tx({ en: "Completed", ko: "완료됨", uz: "Tugallangan" })}
+                : tx({ en: "Completed", ko: "완료", uz: "Tugallangan" })}
             </span>
           </div>
 
@@ -256,7 +256,7 @@ export const ProjectsPage: React.FC = () => {
       })
     : tx({
         en: "A showcase of my recent work and contributions to innovative digital solutions.",
-        ko: "혁신적인 디지털 솔루션에 대한 최근 작업과 기여를 소개합니다.",
+        ko: "실무 및 개인 프로젝트를 소개합니다.",
         uz: "Innovatsion raqamli yechimlar bo'yicha so'nggi ishlarim va hissalarim.",
       });
 
@@ -277,7 +277,7 @@ export const ProjectsPage: React.FC = () => {
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-6 max-w-3xl mx-auto">
             {tx({
               en: "A showcase of my recent work and contributions to innovative digital solutions.",
-              ko: "혁신적인 디지털 솔루션에 대한 최근 작업과 기여를 소개합니다.",
+              ko: "실무 및 개인 프로젝트를 소개합니다.",
               uz: "Innovatsion raqamli yechimlar bo'yicha so'nggi ishlarim va hissalarim.",
             })}
           </p>
@@ -473,7 +473,7 @@ export const ProjectsPage: React.FC = () => {
               <div className="text-center p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg hover:shadow-md transition-shadow">
                 <div className="text-3xl mb-2">☕️</div>
                 <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">
-                  Java / Spring Boot
+                  Java / Spring Boot (learning)
                 </p>
               </div>
 

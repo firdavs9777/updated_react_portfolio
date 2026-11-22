@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { BANANATALK_USERS_DISPLAY } from "../data/site-facts";
 
 interface SEOProps {
   title?: string;
@@ -13,11 +12,11 @@ interface SEOProps {
   type?: string;
 }
 
-const DEFAULT_TITLE = "Firdavs Mutalipov (Davis) — Full-Stack Developer in Seoul";
+const DEFAULT_TITLE = "Firdavs Mutalipov (Davis) — Backend-focused Full-Stack Developer in Seoul";
 const DEFAULT_DESCRIPTION =
-  `Full-Stack Developer in Seoul. 4+ yrs React, Vue, Flutter, Node, Django. ${BANANATALK_USERS_DISPLAY} users on shipped apps. Available for hire.`;
+  "Backend-focused Full-Stack Developer in Seoul. 5+ yrs shipping web & mobile products; REST APIs, data modeling & business logic in Node.js and Django — now Java & Spring Boot. Open to new roles.";
 const DEFAULT_KEYWORDS =
-  "Firdavs Mutalipov, Davis Mutalipov, hire developer Seoul, freelance developer Korea, full-stack developer for hire, React developer Seoul, Vue.js developer, Flutter developer, Node.js developer, TypeScript developer, Django developer, web developer Seoul, mobile app developer Korea, BananaTalk, TezSell, HackSeoul 2025, 풀스택 개발자 채용, 프리랜서 개발자 서울";
+  "Firdavs Mutalipov, Davis Mutalipov, backend developer Korea, backend developer Seoul, Spring Boot developer, Java backend developer, Node.js developer, Django developer, full-stack developer Seoul, TypeScript developer, React developer Seoul, Vue.js developer, Flutter developer, mobile app developer Korea, BananaTalk, TezSell, AngelHack HackSeoul 2025, 백엔드 개발자, 스프링 백엔드 개발자, 풀스택 개발자 채용";
 
 export const SEO: React.FC<SEOProps> = ({
   title = DEFAULT_TITLE,

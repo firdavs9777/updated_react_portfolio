@@ -70,7 +70,7 @@ export const CertificatesPage: React.FC = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {tx({
               en: "Certificates & Certifications",
-              ko: "자격증 및 인증서",
+              ko: "교육 이수 및 자격",
               uz: "Sertifikatlar va malaka guvohnomalari",
             })}
           </h1>
@@ -78,7 +78,7 @@ export const CertificatesPage: React.FC = () => {
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-6 max-w-3xl mx-auto">
             {tx({
               en: "A collection of certificates and certifications I've earned throughout my career.",
-              ko: "제가 획득한 자격증 및 인증서를 소개합니다.",
+              ko: "이수한 교육 과정과 자격을 소개합니다.",
               uz: "Kasbiy faoliyatim davomida olgan sertifikatlar va malaka guvohnomalarim.",
             })}
           </p>

@@ -52,9 +52,9 @@ export const Footer: React.FC = () => {
             </h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               {tx({
-                en: "Full-Stack Developer & Project Manager passionate about creating innovative digital solutions.",
-                ko: "풀스택 개발자 및 프로젝트 관리자로, 혁신적인 디지털 솔루션을 만드는 것에 열정을 가지고 있습니다.",
-                uz: "Innovatsion raqamli yechimlar yaratishga ishtiyoqli to'liq stekli dasturchi va loyiha boshqaruvchisi.",
+                en: "Backend-focused full-stack developer in Seoul — Node.js, Django, now Java & Spring Boot.",
+                ko: "서울의 백엔드 중심 풀스택 개발자 — Node.js, Django, 현재 Java·Spring Boot 학습 중.",
+                uz: "Seuldagi backendga yo'naltirilgan full-stack dasturchi — Node.js, Django, hozir Java va Spring Boot.",
               })}
             </p>
             <div className="flex items-center gap-2 text-gray-400 text-sm">

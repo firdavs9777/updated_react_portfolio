@@ -232,7 +232,7 @@ export const ContactPage: React.FC = () => {
             {/* Social Links */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-                {tx({ en: "Connect with me", ko: "소셜 미디어", uz: "Men bilan bog'laning" })}
+                {tx({ en: "Connect with me", ko: "링크", uz: "Men bilan bog'laning" })}
               </h3>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => {

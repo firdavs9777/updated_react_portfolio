@@ -14,7 +14,7 @@ import React from "react";
 import { useLanguage } from "../context/languageContext";
 import { SEO } from "../utils/seo";
 import { experiences } from "../data/experience";
-import { BANANATALK_USERS_DISPLAY } from "../data/site-facts";
+import { BANANATALK_USERS_DISPLAY, TEZSELL_USERS_DISPLAY } from "../data/site-facts";
 
 export const ExperiencePage: React.FC = () => {
   const { t, tx } = useLanguage();
@@ -24,9 +24,9 @@ export const ExperiencePage: React.FC = () => {
       <SEO
         title={`${t.experience.title} — ${t.hero.name}`}
         description={tx({
-          en: "4+ years of full-stack work across 3R Innovation, Quintet Systems, and Ebridge World — shipped financial platforms, AI EdTech, and consumer apps.",
-          ko: "3R Innovation, Quintet Systems, Ebridge World에서 4년 이상의 풀스택 경력 — 금융 플랫폼, AI 에듀테크, 소비자 앱 출시.",
-          uz: "3R Innovation, Quintet Systems va Ebridge World'da 4+ yillik full-stack tajriba — moliyaviy platformalar, AI EdTech va iste'molchi ilovalari.",
+          en: "5+ years of backend-focused full-stack work across 3R Innovation, Quintet Systems, and Ebridge World — shipped financial platforms, AI EdTech, and consumer apps.",
+          ko: "3R Innovation, Quintet Systems, Ebridge World에서 5년 이상의 백엔드 중심 풀스택 경력 — 금융 플랫폼, AI 에듀테크, 소비자 앱 출시.",
+          uz: "3R Innovation, Quintet Systems va Ebridge World'da 5+ yillik backendga yo'naltirilgan full-stack tajriba — moliyaviy platformalar, AI EdTech va iste'molchi ilovalari.",
         })}
         url="https://firdavs.dev/experience"
       />
@@ -48,10 +48,10 @@ export const ExperiencePage: React.FC = () => {
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/10 dark:to-orange-900/10 rounded-2xl border border-yellow-200 dark:border-yellow-800/50 p-5 sm:p-6 shadow-sm">
               <Trophy className="w-7 h-7 text-yellow-600 dark:text-yellow-400 mb-3" />
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1">
-                HackSeoul 2025
+                {tx({ en: "Coupang AngelHack HackSeoul 2025", ko: "쿠팡 주최 AngelHack HackSeoul 2025", uz: "Coupang AngelHack HackSeoul 2025" })}
               </h3>
               <p className="text-sm font-semibold text-yellow-700 dark:text-yellow-400 mb-2">
-                {tx({ en: "2nd Prize", ko: "2등상", uz: "2-o'rin" })}
+                {tx({ en: "2nd Prize", ko: "2위", uz: "2-o'rin" })}
               </p>
               <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                 {tx({
@@ -76,9 +76,9 @@ export const ExperiencePage: React.FC = () => {
               </p>
               <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                 {tx({
-                  en: "BananaTalk live on iOS + Android — that's where these active users come from. TezSell is also live on iOS + Android.",
-                  ko: "BananaTalk가 iOS·Android에서 운영 중이며, 이 활성 유저 수치는 BananaTalk 기준입니다. TezSell도 iOS·Android에서 함께 운영 중입니다.",
-                  uz: "BananaTalk iOS va Android'da faol — ushbu faol foydalanuvchilar soni BananaTalk'ga tegishli. TezSell ham iOS va Android'da faol.",
+                  en: `BananaTalk live on iOS + Android — that's where these active users come from. TezSell is also live on iOS + Android with ${TEZSELL_USERS_DISPLAY} users.`,
+                  ko: `BananaTalk가 iOS·Android에서 운영 중이며, 이 활성 유저 수치는 BananaTalk 기준입니다. TezSell도 iOS·Android에서 운영 중이며 유저 ${TEZSELL_USERS_DISPLAY}명입니다.`,
+                  uz: `BananaTalk iOS va Android'da faol — ushbu faol foydalanuvchilar soni BananaTalk'ga tegishli. TezSell ham iOS va Android'da faol, ${TEZSELL_USERS_DISPLAY} foydalanuvchi.`,
                 })}
               </p>
             </div>
@@ -89,7 +89,7 @@ export const ExperiencePage: React.FC = () => {
                 {tx({ en: "Team Leadership", ko: "팀 리더십", uz: "Jamoa rahbarligi" })}
               </h3>
               <p className="text-sm font-semibold text-purple-700 dark:text-purple-400 mb-2">
-                {tx({ en: "4-5 dev teams · multinational", ko: "4~5명 개발팀 · 다국적", uz: "4-5 kishilik jamoalar · xalqaro" })}
+                {tx({ en: "4–5-person dev teams · multinational", ko: "4~5명 개발팀 · 다국적", uz: "4-5 kishilik jamoalar · xalqaro" })}
               </p>
               <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                 {tx({
@@ -108,7 +108,7 @@ export const ExperiencePage: React.FC = () => {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
               {tx({
                 en: "What I Bring",
-                ko: "제가 가져다 드리는 것",
+                ko: "저의 강점",
                 uz: "Men nima taklif qilaman",
               })}
             </h2>
@@ -119,9 +119,9 @@ export const ExperiencePage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                   {tx({
-                    en: "Full-Stack Expertise",
-                    ko: "풀스택 전문성",
-                    uz: "To'liq stekli tajriba",
+                    en: "Backend-first, Full-Stack Capable",
+                    ko: "백엔드 중심의 풀스택 역량",
+                    uz: "Backendga yo'naltirilgan full-stack",
                   })}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -160,7 +160,7 @@ export const ExperiencePage: React.FC = () => {
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                   {tx({
                     en: "Quick Learner",
-                    ko: "빠른 학습자",
+                    ko: "빠른 학습 능력",
                     uz: "Tez o'rganuvchi",
                   })}
                 </h3>
@@ -180,7 +180,7 @@ export const ExperiencePage: React.FC = () => {
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                   {tx({
                     en: "Problem Solver",
-                    ko: "문제 해결자",
+                    ko: "문제 해결 능력",
                     uz: "Muammolarni hal qiluvchi",
                   })}
                 </h3>
@@ -283,7 +283,7 @@ export const ExperiencePage: React.FC = () => {
             <span className="text-sm text-gray-600 dark:text-gray-300 font-medium">
               {tx({
                 en: "Career Journey",
-                ko: "커리어 여정",
+                ko: "경력 요약",
                 uz: "Karyera sayohati",
               })}
             </span>

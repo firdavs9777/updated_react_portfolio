@@ -16,12 +16,12 @@ export const experiences: ExperienceEntry[] = [
     position: {
       en: "Full-Stack Developer",
       ko: "풀스택 개발자",
-      uz: "To'liq stekli dasturchi",
+      uz: "Full-stack dasturchi",
     },
     duration: {
-      en: "January 2025 - Present",
-      ko: "2025년 01월 - 현재",
-      uz: "2025-yil Yanvar - Hozirgi",
+      en: "January 2026 - Present",
+      ko: "2026년 01월 - 현재",
+      uz: "2026-yil Yanvar - Hozirgi",
     },
     location: {
       en: "Seoul, South Korea",
@@ -30,19 +30,20 @@ export const experiences: ExperienceEntry[] = [
     },
     current: true,
     tech: [
-      "React",
-      "Next.js",
-      "Vue.js",
-      "Nuxt.js",
-      "TypeScript",
       "Node.js",
-      "Django",
-      "Flutter",
+      "Express",
+      "REST API",
       "PostgreSQL",
       "MongoDB",
       "Docker",
       "AWS",
-      "REST API",
+      "Django",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Vue.js",
+      "Nuxt.js",
+      "Flutter",
       "Git",
     ],
     achievements: [
@@ -73,7 +74,7 @@ export const experiences: ExperienceEntry[] = [
     position: {
       en: "Full-Stack Web Developer",
       ko: "풀스택 웹 개발자",
-      uz: "To'liq stekli veb dasturchi",
+      uz: "Full-stack veb dasturchi",
     },
     duration: {
       en: "Mar 2023 - October 2025",
@@ -107,12 +108,12 @@ export const experiences: ExperienceEntry[] = [
     ],
     achievements: [
       {
-        en: "Built a reusable component library that our entire team adopted, significantly cutting down development time and ensuring design consistency across all our applications. This became so valuable that other teams started using it too.",
+        en: "Built a reusable component library that our entire team adopted, significantly cutting down development time and ensuring design consistency across all our applications.",
         ko: "팀 전체가 사용하는 재사용 가능한 컴포넌트 라이브러리를 구축하여 개발 시간을 크게 단축하고 프로젝트 전반에 걸쳐 일관된 디자인을 보장했습니다. 이 라이브러리는 다른 팀에서도 활용하게 되었습니다.",
         uz: "Butun jamoamiz qabul qilgan qayta foydalanish mumkin bo'lgan komponent kutubxonasini yaratdim, bu ishlab chiqish vaqtini sezilarli darajada qisqartirdi va barcha ilovalarimizda dizayn izchilligini ta'minladi. Bu shunchalik qimmatli bo'ldiki, boshqa jamoalar ham undan foydalanishni boshladi.",
       },
       {
-        en: "Tackled performance issues that were causing user complaints. By implementing smart code splitting and optimizing asset delivery, I transformed a slow, frustrating experience into a fast, responsive application that users actually enjoyed using.",
+        en: "Tackled performance issues that were causing user complaints. By implementing smart code splitting and optimizing asset delivery, I transformed a slow, frustrating experience into a fast, responsive application.",
         ko: "사용자들이 불만을 제기하던 성능 문제를 해결하기 위해 코드 분할과 지연 로딩 전략을 도입했습니다. 느리고 답답했던 사용자 경험을 빠르고 반응성 좋은 애플리케이션으로 변화시켰습니다.",
         uz: "Foydalanuvchilar shikoyat qilayotgan samaradorlik muammolarini hal qildim. Aqlli kod bo'lish va resurslarni yetkazib berishni optimallashtirishni joriy etish orqali sekin va asabiy tajribani foydalanuvchilar haqiqatan ham yoqtirib ishlatadigan tez va sezgir ilovaga aylantirdim.",
       },
@@ -128,7 +129,7 @@ export const experiences: ExperienceEntry[] = [
       },
       {
         en: "Focused on responsive design and cross-platform compatibility to ensure a consistent user experience across all devices. Created applications that work seamlessly on desktop, tablet, and mobile.",
-        ko: "모든 디바이스에서 일관된 사용자 경험을 제공하기 위해 반응형 디자인과 크로스 플랫폼 호환성에 중점을 두었습니다. 데스크톱, 태블릿, 모바일에서 모두 완벽하게 작동하는 애플리케이션을 만들었습니다.",
+        ko: "모든 디바이스에서 일관된 사용자 경험을 제공하기 위해 반응형 디자인과 크로스 플랫폼 호환성에 중점을 두었습니다. 데스크톱, 태블릿, 모바일에서 안정적으로 동작하는 애플리케이션을 만들었습니다.",
         uz: "Barcha qurilmalarda izchil foydalanuvchi tajribasini ta'minlash uchun moslashuvchan dizayn va kross-platformali muvofiqlikka e'tibor qaratdim. Ish stoli, planshet va mobil qurilmalarda muammosiz ishlaydigan ilovalar yaratdim.",
       },
     ],
@@ -159,7 +160,7 @@ export const experiences: ExperienceEntry[] = [
     tech: ["Flutter", "Vue.js", "Django", "Python", "Provider", "Bloc"],
     achievements: [
       {
-        en: "Created intuitive and responsive user interfaces for web and mobile applications using Flutter and Vue.js. Worked closely with designers to build user-centric experiences that people actually wanted to use.",
+        en: "Created intuitive and responsive user interfaces for web and mobile applications using Flutter and Vue.js. Worked closely with designers on user-centered flows.",
         ko: "Flutter와 Vue.js를 활용하여 사용자들이 직관적으로 사용할 수 있는 웹 및 모바일 인터페이스를 개발했습니다. 디자이너와 협업하여 사용자 중심의 경험을 만드는 데 집중했습니다.",
         uz: "Flutter va Vue.js yordamida veb va mobil ilovalar uchun intuitiv va moslashuvchan foydalanuvchi interfeyslarini yaratdim. Dizaynerlar bilan yaqin hamkorlik qilib, odamlar haqiqatan ham foydalanmoqchi bo'lgan foydalanuvchiga yo'naltirilgan tajribalar yaratdim.",
       },

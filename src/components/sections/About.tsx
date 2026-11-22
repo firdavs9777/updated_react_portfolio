@@ -274,7 +274,7 @@ export const AboutPage: React.FC = () => {
         <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl shadow-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
             <Award className="w-6 h-6 text-yellow-600" />
-            {tx({ en: "Awards & Certifications", ko: "수상 및 자격증", uz: "Mukofotlar va sertifikatlar" })}
+            {tx({ en: "Awards & Certifications", ko: "수상 및 교육", uz: "Mukofotlar va sertifikatlar" })}
           </h3>
           <div className="space-y-4">
             <div className="flex items-start gap-3">

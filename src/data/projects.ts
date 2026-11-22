@@ -16,9 +16,9 @@ export const projects: ProjectEntry[] = [
       uz: `StylerX — ${HACKSEOUL_PLACEMENT.label.uz}`,
     },
     description: {
-      en: "AI-powered fashion recommendation and style analysis platform that analyzes your wardrobe and suggests the best outfits. An award-winning project at HackSeoul 2025.",
-      ko: "AI 기반 패션 추천 및 스타일 분석 플랫폼으로, 사용자의 옷장을 분석하고 최적의 코디를 제안합니다. HackSeoul 2025에서 수상한 혁신적인 팀 프로젝트입니다.",
-      uz: "Sun'iy intellektga asoslangan moda tavsiya va stil tahlil platformasi. Gardrobingizni tahlil qilib, eng yaxshi kiyim kombinatsiyalarini taklif qiladi. HackSeoul 2025 da mukofotlangan loyiha.",
+      en: "AI-powered fashion recommendation and style analysis platform that analyzes your wardrobe and suggests the best outfits. 2nd prize at Coupang AngelHack HackSeoul 2025.",
+      ko: "AI 기반 패션 추천 및 스타일 분석 플랫폼으로, 사용자의 옷장을 분석하고 최적의 코디를 제안합니다. 쿠팡 주최 AngelHack HackSeoul 2025에서 2위를 수상한 팀 프로젝트입니다.",
+      uz: "Sun'iy intellektga asoslangan moda tavsiya va stil tahlil platformasi. Gardrobingizni tahlil qilib, eng yaxshi kiyim kombinatsiyalarini taklif qiladi. Coupang AngelHack HackSeoul 2025 da 2-o'rin olgan loyiha.",
     },
     role: {
       en: "Team Lead & Full-Stack Developer",
@@ -62,7 +62,6 @@ export const projects: ProjectEntry[] = [
     },
     year: "2024",
     tech: ["TypeScript", "React", "AI API", "WebSocket", "CSS3"],
-    url: "https://app-aibuddy.calsplatz.com:8000/gen-bi",
     featured: true,
     status: "completed",
     image: "🤖",
@@ -138,7 +137,7 @@ export const projects: ProjectEntry[] = [
     androidUrl: STORE_LINKS.tezsell.android,
     github: "https://github.com/firdavs9777/tezsell_app_front",
     featured: true,
-    status: "in-progress",
+    status: "completed",
     image: "🛒",
   },
   {
@@ -229,7 +228,6 @@ export const projects: ProjectEntry[] = [
     },
     year: "2023",
     tech: ["React", "TypeScript", "GitHub API", "CSS3"],
-    github: "https://github.com/firdavs9777/github-search",
     featured: false,
     status: "completed",
     image: "🔍",
@@ -292,7 +290,7 @@ export const projects: ProjectEntry[] = [
     description: {
       en: "Full-stack e-commerce platform with product management, shopping cart, payment processing, and user authentication.",
       ko: "풀스택 전자상거래 플랫폼으로 제품 관리, 장바구니, 결제 처리 및 사용자 인증 기능을 제공합니다.",
-      uz: "To'liq stekli elektron tijorat platformasi. Mahsulotlarni boshqarish, savatcha, to'lov qayta ishlash va foydalanuvchi autentifikatsiyasi.",
+      uz: "Full-stack elektron tijorat platformasi. Mahsulotlarni boshqarish, savatcha, to'lov qayta ishlash va foydalanuvchi autentifikatsiyasi.",
     },
     role: {
       en: "Full-Stack Developer",
@@ -421,7 +419,7 @@ export const projects: ProjectEntry[] = [
     },
     year: "2024",
     tech: ["React", "Redux Toolkit", "JavaScript", "State Management"],
-    github: "https://github.com/firdavs9777/react_redux_toolkit_practice",
+    github: "https://github.com/firdavs9777/React_Redux_Toolkit_Cars_Project",
     featured: false,
     status: "completed",
     image: "⚛️",
@@ -477,14 +475,14 @@ export const projects: ProjectEntry[] = [
   {
     id: "spring-boot-backend-application",
     title: {
-      en: "Spring Boot Backend Application",
-      ko: "Spring Boot 백엔드 애플리케이션",
-      uz: "Spring Boot Backend Ilovasi",
+      en: "Spring Boot Book List API",
+      ko: "Spring Boot 도서 목록 API",
+      uz: "Spring Boot Kitoblar ro'yxati API",
     },
     description: {
-      en: "Spring Boot backend application with PostgreSQL, featuring REST API endpoints and database management capabilities.",
-      ko: "Spring Boot와 PostgreSQL을 사용한 백엔드 애플리케이션으로 REST API 엔드포인트와 데이터베이스 관리 기능을 제공합니다.",
-      uz: "PostgreSQL bilan Spring Boot backend ilovasi. REST API endpointlari va ma'lumotlar bazasini boshqarish imkoniyatlari.",
+      en: "Learning project: book-list backend in Java 17 and Spring Boot 3.5 — REST endpoints, Spring Data JPA (Hibernate) on PostgreSQL with H2 for local runs, Bean Validation, and Thymeleaf views.",
+      ko: "학습 프로젝트: Java 17·Spring Boot 3.5 기반 도서 목록 백엔드 — REST 엔드포인트, Spring Data JPA(Hibernate)·PostgreSQL(로컬은 H2), Bean Validation, Thymeleaf 뷰.",
+      uz: "O'quv loyihasi: Java 17 va Spring Boot 3.5 asosidagi kitoblar ro'yxati backendi — REST endpointlar, PostgreSQL ustida Spring Data JPA (Hibernate), lokalda H2, Bean Validation, Thymeleaf.",
     },
     role: {
       en: "Backend Developer",
@@ -492,10 +490,10 @@ export const projects: ProjectEntry[] = [
       uz: "Backend Dasturchi",
     },
     year: "2025",
-    tech: ["Java", "Spring Boot", "PostgreSQL", "REST API", "Hibernate"],
-    github: "https://github.com/firdavs9777/spring_boot_backend",
+    tech: ["Java 17", "Spring Boot 3", "Spring Data JPA", "PostgreSQL", "REST API"],
+    github: "https://github.com/firdavs9777/spring_boot_booklist_project",
     featured: true,
-    status: "in progress",
+    status: "in-progress",
     image: "☕️",
   },
 ];

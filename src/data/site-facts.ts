@@ -32,9 +32,15 @@ export const BANANATALK_DOWNLOADS_DISPLAY = "3,000+";
 // google_mobile_ads and has a VIP tier, so the site no longer claims
 // "free forever". Confirm the current model and set the wording.
 
+/** Approximate TezSell users, as reported by the owner on 2026-11-22. */
+export const TEZSELL_USERS = 500;
+
+/** How the TezSell user count is written in prose. Derived from TEZSELL_USERS. */
+export const TEZSELL_USERS_DISPLAY = "~500";
+
 /**
  * HackSeoul 2025 result. Second place — not a win.
- * The Korean term for first place is 우승; second prize is 2등상.
+ * The Korean term for first place is 우승; second place is written 2위.
  */
 export const HACKSEOUL_PLACEMENT: {
   place: 2;
@@ -44,9 +50,9 @@ export const HACKSEOUL_PLACEMENT: {
   place: 2,
   year: 2025,
   label: {
-    en: "HackSeoul 2025, 2nd Prize",
-    ko: "HackSeoul 2025, 2등상",
-    uz: "HackSeoul 2025, 2-o'rin",
+    en: "Coupang AngelHack HackSeoul 2025, 2nd Prize",
+    ko: "쿠팡 주최 AngelHack HackSeoul 2025, 2위",
+    uz: "Coupang AngelHack HackSeoul 2025, 2-o'rin",
   },
 };
 

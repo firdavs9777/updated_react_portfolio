@@ -4,7 +4,12 @@
 // site-facts so a changed link is corrected in one place.
 
 import type { LiveProjectEntry } from "../types";
-import { BANANATALK_DOWNLOADS_DISPLAY, BANANATALK_USERS_DISPLAY, STORE_LINKS } from "./site-facts";
+import {
+  BANANATALK_DOWNLOADS_DISPLAY,
+  BANANATALK_USERS_DISPLAY,
+  STORE_LINKS,
+  TEZSELL_USERS_DISPLAY,
+} from "./site-facts";
 
 export const liveProjects: LiveProjectEntry[] = [
   {
@@ -37,9 +42,9 @@ export const liveProjects: LiveProjectEntry[] = [
       uz: "100+ til bo'yicha ona tili so'zlashuvchilar bilan tanishtiruvchi ilova: tezkor chat, ovozli xabarlar, WebRTC ovozli va video qo'ng'iroqlar, aqlli tarjimon, AI o'quv vositalari — bepul foydalanish mumkin.",
     },
     results: {
-      en: `${BANANATALK_USERS_DISPLAY} users across App Store and Google Play. Active community. Weekly feature releases. Designed, built, and operated solo end-to-end.`,
-      ko: `App Store와 Google Play 합산 ${BANANATALK_USERS_DISPLAY} 유저. 활성 커뮤니티. 매주 새 기능 출시. 기획·개발·운영 전 과정을 직접 담당.`,
-      uz: `App Store va Google Play'da jami ${BANANATALK_USERS_DISPLAY} foydalanuvchi. Faol jamoa. Har hafta yangi funksiyalar. Loyiha, ishlab chiqish va boshqaruvni yakka o'zim olib boryapman.`,
+      en: `${BANANATALK_USERS_DISPLAY} users across App Store and Google Play. Designed, built, and operated solo end-to-end.`,
+      ko: `App Store와 Google Play 합산 ${BANANATALK_USERS_DISPLAY} 유저. 기획·개발·운영 전 과정을 직접 담당.`,
+      uz: `App Store va Google Play'da jami ${BANANATALK_USERS_DISPLAY} foydalanuvchi. Loyiha, ishlab chiqish va boshqaruvni yakka o'zim olib boryapman.`,
     },
     role: {
       en: "Owner · Full-Stack Developer",
@@ -65,9 +70,9 @@ export const liveProjects: LiveProjectEntry[] = [
       uz: "Mahalla bozori ilovasi · iOS + Android",
     },
     metric: {
-      en: "Live in production",
-      ko: "프로덕션 운영 중",
-      uz: "Ishlab chiqarishda faol",
+      en: `${TEZSELL_USERS_DISPLAY} users`,
+      ko: `${TEZSELL_USERS_DISPLAY} 유저`,
+      uz: `${TEZSELL_USERS_DISPLAY} foydalanuvchi`,
     },
     metricLabel: {
       en: "iOS + Android · Live in App Store + Google Play",
@@ -85,9 +90,9 @@ export const liveProjects: LiveProjectEntry[] = [
       uz: "Yagona mahalla bozori ilovasi: narsalarni sotib oling va soting, xizmatlar taklif qiling, ko'chmas mulkni e'lon qiling. Foydalanuvchilar o'rtasida to'g'ridan-to'g'ri chat, joylashuvga asoslangan e'lonlar, xavfsiz va bepul foydalanish mumkin.",
     },
     results: {
-      en: "Live on App Store + Google Play. Ongoing growth and active users. Built and operated solo, from API and database design to mobile UI and DevOps.",
-      ko: "App Store와 Google Play에서 운영 중. 사용자 지속 증가. API·데이터베이스·모바일 UI·DevOps까지 1인 개발 및 운영.",
-      uz: "App Store va Google Play'da faol. Foydalanuvchilar soni o'sib bormoqda. API, ma'lumotlar bazasi, mobil UI va DevOps — barchasini yakka o'zim olib boryapman.",
+      en: "Live on App Store + Google Play. Built and operated solo, from API and database design to mobile UI and DevOps.",
+      ko: "App Store와 Google Play에서 운영 중. API·데이터베이스·모바일 UI·DevOps까지 1인 개발 및 운영.",
+      uz: "App Store va Google Play'da faol. API, ma'lumotlar bazasi, mobil UI va DevOps — barchasini yakka o'zim olib boryapman.",
     },
     role: {
       en: "Owner · Lead Developer",
@@ -113,14 +118,14 @@ export const liveProjects: LiveProjectEntry[] = [
       uz: "AI suhbat veb ilovasi · WebSocket real vaqtda",
     },
     metric: {
-      en: "Production deployment",
-      ko: "프로덕션 배포",
-      uz: "Ishlab chiqarish",
+      en: "Company project",
+      ko: "회사 프로젝트",
+      uz: "Kompaniya loyihasi",
     },
     metricLabel: {
-      en: "Live demo",
-      ko: "라이브 데모",
-      uz: "Jonli demo",
+      en: "Built for an employer · demo not public",
+      ko: "재직 중 개발 · 데모 비공개",
+      uz: "Ish joyida yaratilgan · demo yopiq",
     },
     problem: {
       en: "Customer-support style chat experiences need both intelligent responses and real-time UX. Most demos are slow and clunky.",
@@ -133,9 +138,9 @@ export const liveProjects: LiveProjectEntry[] = [
       uz: "AI asosidagi suhbat veb ilovasi. Real vaqtda WebSocket xabar almashinuvi va aqlli javob yaratish. Toza va moslashuvchan UI.",
     },
     results: {
-      en: "Deployed and accessible publicly. Demo credentials provided for evaluation. Showcases real-time architecture skills.",
-      ko: "공개 배포 완료. 데모 계정 제공. 실시간 아키텍처 역량을 보여주는 프로젝트.",
-      uz: "Ommaviy ravishda deploy qilingan. Baholash uchun demo hisob ma'lumotlari taqdim etilgan. Real vaqtdagi arxitektura mahoratini namoyish etadi.",
+      en: "Shipped as a company project; the demo is not public. Showcases real-time architecture skills.",
+      ko: "회사 프로젝트로 배포, 데모 비공개. 실시간 아키텍처 역량을 보여주는 프로젝트.",
+      uz: "Kompaniya loyihasi sifatida chiqarilgan; demo yopiq. Real vaqtdagi arxitektura mahoratini namoyish etadi.",
     },
     role: {
       en: "Full-Stack Developer",
@@ -145,7 +150,6 @@ export const liveProjects: LiveProjectEntry[] = [
     year: "2024",
     myStack: ["React", "TypeScript", "WebSocket", "CSS3"],
     backendStack: ["AI API"],
-    website: "https://app-aibuddy.calsplatz.com:8000/gen-bi",
     accent: "cyan",
   },
 ];

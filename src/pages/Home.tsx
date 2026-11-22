@@ -19,15 +19,16 @@ import { SEO } from "../utils/seo";
 import { BANANATALK_USERS_DISPLAY, STORE_LINKS } from "../data/site-facts";
 
 const TECH_STACK = [
-  "React",
-  "Next.js",
-  "Vue.js",
-  "TypeScript",
-  "Flutter",
   "Node.js",
   "Django",
+  "REST API",
   "PostgreSQL",
-  "MongoDB",
+  "MySQL",
+  "Redis",
+  "Java · Spring Boot (learning)",
+  "React",
+  "Vue.js",
+  "Flutter",
   "AWS",
 ];
 
@@ -36,15 +37,15 @@ export const HomePage: React.FC = () => {
   const navigate = useNavigate();
 
   const resumeHref = tx({
-    en: "/Davis_resume_updated.pdf",
-    ko: "/resume_korean_updated.pdf",
-    uz: "/Davis_resume_updated.pdf",
+    en: "/Firdavs_Mutalipov_CV_EN.pdf",
+    ko: "/Firdavs_Mutalipov_CV_KO.pdf",
+    uz: "/Firdavs_Mutalipov_CV_UZ.pdf",
   });
 
   const resumeDownload = tx({
-    en: "Davis_resume_updated.pdf",
-    ko: "resume_korean_updated.pdf",
-    uz: "Davis_resume_updated.pdf",
+    en: "Firdavs_Mutalipov_CV_EN.pdf",
+    ko: "Firdavs_Mutalipov_CV_KO.pdf",
+    uz: "Firdavs_Mutalipov_CV_UZ.pdf",
   });
 
   return (
@@ -70,8 +71,8 @@ export const HomePage: React.FC = () => {
                 </span>
                 {tx({
                   en: "Open to Work",
-                  ko: "구직 중",
-                  uz: "Ishga tayyor",
+                  ko: "이직 희망 · 채용 제안 환영",
+                  uz: "Yangi takliflarga ochiq",
                 })}
               </span>
               <span className="hidden sm:inline opacity-50">·</span>
@@ -92,7 +93,7 @@ export const HomePage: React.FC = () => {
               {t.hero.greeting}
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-4 leading-tight">
-              {tx({ en: "Firdavs Mutalipov", ko: "무탈리포프 피르다우스", uz: "Firdavs Mutalipov" })}
+              {tx({ en: "Firdavs Mutalipov", ko: "Firdavs Mutalipov", uz: "Firdavs Mutalipov" })}
               <span className="block sm:inline text-2xl sm:text-3xl md:text-4xl lg:text-5xl ml-0 sm:ml-3 text-gray-700 dark:text-gray-300 font-semibold">
                 ({t.hero.name})
               </span>
@@ -270,7 +271,7 @@ export const HomePage: React.FC = () => {
               </p>
             </div>
 
-            {/* HackSeoul 2nd Prize */}
+            {/* AngelHack HackSeoul 2nd Prize */}
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/10 dark:to-orange-900/10 rounded-2xl border border-yellow-200 dark:border-yellow-800/50 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-2 text-yellow-700 dark:text-yellow-400 mb-3">
                 <Trophy className="w-5 h-5" />
@@ -279,10 +280,10 @@ export const HomePage: React.FC = () => {
                 </span>
               </div>
               <div className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-1">
-                HackSeoul 2025
+                {tx({ en: "Coupang AngelHack HackSeoul 2025", ko: "쿠팡 주최 AngelHack HackSeoul 2025", uz: "Coupang AngelHack HackSeoul 2025" })}
               </div>
               <p className="text-base sm:text-lg font-semibold text-yellow-700 dark:text-yellow-400 mb-2">
-                {tx({ en: "2nd Prize", ko: "2등상", uz: "2-o'rin" })}
+                {tx({ en: "2nd Prize", ko: "2위", uz: "2-o'rin" })}
               </p>
               <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                 {tx({
@@ -293,7 +294,7 @@ export const HomePage: React.FC = () => {
               </p>
             </div>
 
-            {/* 4+ years experience */}
+            {/* 5+ years experience */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 mb-3">
                 <Smartphone className="w-5 h-5" />
@@ -302,13 +303,13 @@ export const HomePage: React.FC = () => {
                 </span>
               </div>
               <div className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2">
-                {tx({ en: "4+ years", ko: "4년+", uz: "4+ yil" })}
+                {tx({ en: "5+ years", ko: "5년+", uz: "5+ yil" })}
               </div>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                 {tx({
-                  en: "full-stack across React · Vue · Flutter · Node · Django",
-                  ko: "React · Vue · Flutter · Node · Django 풀스택",
-                  uz: "React · Vue · Flutter · Node · Django bo'yicha to'liq stek",
+                  en: "backend-focused full-stack · Node · Django · now Spring Boot",
+                  ko: "백엔드 중심 풀스택 · Node · Django · Spring Boot 학습 중",
+                  uz: "backendga yo'naltirilgan full-stack · Node · Django · hozir Spring Boot",
                 })}
               </p>
             </div>
@@ -323,15 +324,15 @@ export const HomePage: React.FC = () => {
             <h3 className="text-2xl sm:text-3xl font-bold mb-3">
               {tx({
                 en: "Let's build something together",
-                ko: "함께 만들어봐요",
+                ko: "함께 일하고 싶습니다",
                 uz: "Birgalikda yaratamiz",
               })}
             </h3>
             <p className="text-blue-100 text-sm sm:text-base mb-6 max-w-xl mx-auto">
               {tx({
-                en: "Open to full-time roles and freelance projects. I respond within 24-48 hours.",
-                ko: "정규직 및 프리랜서 프로젝트 가능합니다. 24-48시간 이내에 답변드립니다.",
-                uz: "Doimiy ish va freelance loyihalar uchun ochiq. 24-48 soat ichida javob beraman.",
+                en: "Open to full-time backend roles in Seoul. I reply within 24–48 hours.",
+                ko: "서울 지역 정규직 백엔드 포지션을 찾고 있습니다. 24~48시간 이내에 회신드립니다.",
+                uz: "Seuldagi doimiy backend lavozimlariga ochiqman. 24–48 soat ichida javob beraman.",
               })}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center max-w-xl mx-auto">

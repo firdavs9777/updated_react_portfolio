@@ -45,15 +45,17 @@ describe("award claims", () => {
 describe("the current role's start year", () => {
   const allText = sources.map(({ text }) => text).join("\n");
 
-  it("states January 2025 in every locale", () => {
-    expect(allText).toContain('en: "January 2025 - Present"');
-    expect(allText).toContain('ko: "2025년 01월 - 현재"');
-    expect(allText).toContain('uz: "2025-yil Yanvar - Hozirgi"');
+  // Confirmed by the owner on 2026-11-22: 3R Innovation started January 2026
+  // (Quintet Systems ran 2023.03 – 2025.10, so the roles do not overlap).
+  it("states January 2026 in every locale", () => {
+    expect(allText).toContain('en: "January 2026 - Present"');
+    expect(allText).toContain('ko: "2026년 01월 - 현재"');
+    expect(allText).toContain('uz: "2026-yil Yanvar - Hozirgi"');
   });
 
-  it("no longer claims a 2026 start anywhere in the codebase", () => {
+  it("no longer claims a 2025 start for the current role anywhere", () => {
     const offenders = sources
-      .filter(({ text }) => text.includes("2026년 01월"))
+      .filter(({ text }) => /January 2025 - Present|2025년 01월 - 현재|2025-yil Yanvar - Hozirgi/.test(text))
       .map(({ path }) => path);
     expect(offenders).toEqual([]);
   });
