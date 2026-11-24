@@ -57,7 +57,6 @@ export const liveProjects: LiveProjectEntry[] = [
     website: "https://banatalk.com",
     iosUrl: STORE_LINKS.bananatalk.ios,
     androidUrl: STORE_LINKS.bananatalk.android,
-    github: "https://github.com/firdavs9777/language_exchange_web_front",
     accent: "blue",
   },
   {
@@ -105,7 +104,6 @@ export const liveProjects: LiveProjectEntry[] = [
     website: "https://webtezsell.com",
     iosUrl: STORE_LINKS.tezsell.ios,
     androidUrl: STORE_LINKS.tezsell.android,
-    github: "https://github.com/firdavs9777/tezsell_app_front",
     accent: "orange",
   },
   {
